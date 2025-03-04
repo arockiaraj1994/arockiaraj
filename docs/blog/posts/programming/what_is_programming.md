@@ -8,27 +8,44 @@ date:
   updated: 2024-02-01
 ---
 
+# Why Computer Programming is Important? What is the Need? 
 
-# Computer Programming: An Overview
+
+I took an example if Banking to explain the need for computer programming, So that every one can easily understand the need for computer programming.
+
+
+Let me explain the evolution of banking, which is a great example of how technology has transformed industries.
+
+**Bank Visits**: Earlier, checking balance or transferring money required visiting a bank and waiting in long queues.
+
+**ATMs**: Automated Teller Machines (ATMs) allowed customers to withdraw cash, check balances, and deposit money without entering a bank.
+
+**Online Banking**: Internet banking enabled users to manage accounts, transfer funds, and pay bills from anywhere using secure websites.
+
+**NEFT & RTGS**: Electronic fund transfers like NEFT and RTGS allowed faster and more secure money transfers between banks.
+
+**IMPS**: Immediate Payment Service (IMPS) introduced real-time 24/7 money transfers, making banking instant and seamless.
+
+**UPI**: Unified Payments Interface (UPI) enabled instant transactions using mobile numbers and QR codes, simplifying digital payments.
+
+**Chat based banking**: Chat-based banking services like Google Pay and PhonePe's chatbots now allow users to check balances, transfer funds, and perform banking tasks via messaging apps.
+
+
+Now you can understand the need for computer programming in our daily life. It's just a simple example, but it shows how programming has transformed various aspects of our lives.
+
+
 
 ## What is Computer Programming?
 
-Computer programming is the process of designing, writing, testing, and maintaining code that enables a computer to perform specific tasks. It involves using programming languages (such as Python, Java, C++, etc.) to write instructions that a computer can understand and execute.
+Let say If we want to coommunicate with someone, we need to know their language. Similarly, to communicate with a computer, we need to use a programming language.
 
-Programming allows developers to create software applications, automate processes, analyze data, and build intelligent systems.
+If I wanted to communicate with you, I would need to know English. Similarly, to communicate with a computer, we need to use a programming language like Python, Java, or C++.
 
-## Why is Computer Programming Required?
+Likewise, I have a hardware (computer), How should I tell a computer to do something? That's where programming comes in. 
+A small and basic illustration of programming is shown below:
 
-Computer programming is essential for several reasons:
+![Programming Language](../../assets/images/computer_programs.png)
 
-1. **Automation** – It helps automate repetitive tasks, reducing manual effort and increasing efficiency.
-2. **Software Development** – It enables the creation of applications, websites, games, and enterprise solutions.
-3. **Data Analysis** – Programming is widely used in data science and artificial intelligence to analyze large datasets and generate insights.
-4. **Problem-Solving** – It provides logical solutions to real-world problems through algorithms and data structures.
-5. **Innovation & Technology Advancement** – Programming drives innovation in various fields like healthcare, finance, robotics, and artificial intelligence.
-6. **Communication & Connectivity** – It powers the internet, networking, and communication technologies.
-7. **Security** – Cybersecurity and encryption techniques rely on programming to protect digital information.
 
-## Conclusion
 
-Computer programming is the foundation of modern technology. It plays a vital role in various industries, from automation to artificial intelligence. As technology evolves, the demand for skilled programmers continues to grow, making programming an essential skill for the future.
+Programming language allows developers to create software applications, automate processes, analyze data, and build intelligent systems.
