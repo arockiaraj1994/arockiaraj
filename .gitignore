@@ -1,0 +1,43 @@
+# Ignore build files
+site/
+
+# Ignore Python cache files
+__pycache__/
+*.py[cod]
+
+# Ignore virtual environment
+venv/
+
+# Ignore system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE files
+.idea/
+.vscode/
+
+# Ignore logs
+*.log
+
+# Ignore temporary files
+*.tmp
+*.swp
+*.swo
+
+# Ignore compiled files
+*.o
+*.so
+*.a
+*.out
+
+# Ignore coverage files
+.coverage
+coverage.xml
+
+# Ignore distribution files
+dist/
+build/
+*.egg-info/
+
+# Ignore mkdocs build files
+site/
