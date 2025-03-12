@@ -1,5 +1,4 @@
 site_name: Arockiaraj
-site_description: Comprehensive project documentation
 site_author: Arockiaraj
 site_url: https://arockiaraj.co.in/
 
@@ -14,6 +13,8 @@ copyright: Copyright &copy; 2024 Arockiaraj
 # Configuration
 theme:
   name: material
+  logo: null
+  favicon: null
   features:
     - navigation.tabs
     - navigation.sections
