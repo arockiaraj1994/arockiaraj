@@ -33,7 +33,11 @@ hide:
         <div class="year">2014</div>
         <div class="step-title">Software Engineer</div>
         <div class="step-sub-title">Wellspring software Labs Private Limited, Chennai</div>
-        <div class="step-text">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</div>
+        <ul class="step-bullet">
+            <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</li>
+            <li>Second bullet point describing additional responsibilities or achievements.</li>
+            <li>Third bullet point detailing further experiences or accomplishments.</li>
+        </ul>
     </div>
 
     <div class="timeline-box right">

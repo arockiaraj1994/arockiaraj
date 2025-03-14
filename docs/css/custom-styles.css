@@ -57,7 +57,7 @@ body {
 .timeline-line {
   content: '';
   position: absolute;
-  width: 6px;
+  width: 4px;
   background-color: #00aaff;
   top: 0;
   bottom: 0;
@@ -117,12 +117,18 @@ body {
 }
 
 .step-sub-title {
-  font-size: 16px;
+  font-size: 15px;
 }
 
 /* Step Description */
 .step-text {
   font-size: 14px;
+}
+
+.step-bullet {
+  color: #000000;
+  font-size: 15px;
+  margin-right: 10px;
 }
 
 .container {
