@@ -23,8 +23,10 @@ body {
 /* Main content wrapper */
 .content-wrapper {
     display: flex;
+    flex-direction: row;
     gap: 30px;
     width: 100%;
+    flex-wrap: wrap;
 }
 
 /* Profile Card Container */
@@ -33,6 +35,7 @@ body {
     display: flex;
     flex-direction: column;
     gap: 15px;
+    min-width: 280px;
 }
 
 /* Sections Container */
@@ -41,6 +44,8 @@ body {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    flex: 1;
+    min-width: 280px;
 }
 
 .sections-container-100 {
@@ -66,6 +71,7 @@ body {
     height: 120px;
     border-radius: 50%;
     border: 3px solid #007BFF;
+    max-width: 100%;
 }
 
 /* Styling for the Top Section (Professional Info) */
@@ -105,6 +111,8 @@ body {
     text-decoration: none;
     border-radius: 5px;
     margin-top: 10px;
+    width: auto;
+    max-width: 200px;
 }
 
 .download-btn:hover {
@@ -114,18 +122,22 @@ body {
 /* Sections */
 .section {
     background: white;
-    padding: 30px;
+    padding: 20px;
     border-radius: 15px;
     box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 20px;
     border-top: 5px solid#777777;
+    width: 100%;
+    box-sizing: border-box;
 }
+
 /* Contact Icons Section */
 .contact-icons {
     display: flex;
     justify-content: center;
     gap: 15px;
     margin-top: 20px;
+    flex-wrap: wrap;
 }
 
 /* Circular Buttons */
@@ -133,13 +145,13 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 50px;
-    height: 50px;
+    width: 45px;
+    height: 45px;
     background-color: #e4e4e4;
     color: white;
     border-radius: 50%;
     text-decoration: none;
-    font-size: 22px;
+    font-size: 20px;
     transition: background 0.3s ease-in-out;
 }
 
@@ -148,7 +160,61 @@ body {
     background-color: #8e9092;
 }
 
+/* Mobile Responsive Styles */
+@media screen and (max-width: 768px) {
+    .content-wrapper {
+        flex-direction: column;
+        gap: 20px;
+    }
 
+    .profile-card-container {
+        width: 100%;
+    }
+
+    .sections-container-70 {
+        width: 100%;
+    }
+
+    .section {
+        padding: 15px;
+    }
+
+    /* Adjust text sizes for mobile */
+    h3 {
+        font-size: 20px !important;
+    }
+
+    p, li {
+        font-size: 16px !important;
+    }
+
+    .contact-icons {
+        gap: 10px;
+    }
+
+    .contact-btn {
+        width: 40px;
+        height: 40px;
+        font-size: 18px;
+    }
+}
+
+/* Ensure proper text wrapping and list display on small screens */
+ul {
+    padding-left: 20px;
+    margin: 10px 0;
+    word-wrap: break-word;
+}
+
+li {
+    margin-bottom: 8px;
+}
+
+/* Improve readability on small screens */
+p {
+    line-height: 1.6;
+    margin: 10px 0;
+}
 </style>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
 
