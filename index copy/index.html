@@ -10,7 +10,7 @@
         <meta name="author" content="Arockiaraj">
       
       
-        <link rel="canonical" href="https://arockiaraj.co.in/contributing/">
+        <link rel="canonical" href="https://arockiaraj.co.in/index%20copy/">
       
       
       
@@ -20,7 +20,7 @@
     
     
       
-        <title>Contributing Guide - Arockiaraj</title>
+        <title>Home - Arockiaraj</title>
       
     
     
@@ -72,7 +72,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#contributing-guide" class="md-skip">
+        <a href="#welcome" class="md-skip">
           Skip to content
         </a>
       
@@ -106,7 +106,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Contributing Guide
+              Home
             
           </span>
         </div>
@@ -228,7 +228,9 @@
           
             
               
-              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" hidden>
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
                     
@@ -509,6 +511,8 @@
             
             
               
+                
+              
               <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
@@ -528,56 +532,71 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#setting-up-development-environment" class="md-nav__link">
+  <a href="#how-i-am-looking-for" class="md-nav__link">
     <span class="md-ellipsis">
-      Setting Up Development Environment
+      How I am looking for ...
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How I am looking for ...">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#understand" class="md-nav__link">
+    <span class="md-ellipsis">
+      Understand
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-style" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#ideate" class="md-nav__link">
     <span class="md-ellipsis">
-      Code Style
+      Ideate
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#pull-request-process" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#learn" class="md-nav__link">
     <span class="md-ellipsis">
-      Pull Request Process
+      Learn
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#running-tests" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#implement" class="md-nav__link">
     <span class="md-ellipsis">
-      Running Tests
+      Implement
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#documentation" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#share" class="md-nav__link">
     <span class="md-ellipsis">
-      Documentation
+      Share
     </span>
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
-  <a href="#code-of-conduct" class="md-nav__link">
+        
+          <li class="md-nav__item">
+  <a href="#collaborate" class="md-nav__link">
     <span class="md-ellipsis">
-      Code of Conduct
+      Collaborate
     </span>
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -594,52 +613,29 @@
               <article class="md-content__inner md-typeset">
                 
                   
+  
+
 
 
   
   
 
 
-<h1 id="contributing-guide">Contributing Guide</h1>
-<p>We welcome contributions to our project! This document provides guidelines for contributing to our codebase.</p>
-<h2 id="setting-up-development-environment">Setting Up Development Environment</h2>
-<ol>
-<li>Fork the repository</li>
-<li>Clone your fork:
-   <div class="highlight"><pre><span></span><code>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/your-username/project-name.git
-<span class="nb">cd</span><span class="w"> </span>project-name
-</code></pre></div></li>
-<li>Install dependencies:
-   <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements.txt
-</code></pre></div></li>
-<li>Install development dependencies:
-   <div class="highlight"><pre><span></span><code>pip<span class="w"> </span>install<span class="w"> </span>-r<span class="w"> </span>requirements-dev.txt
-</code></pre></div></li>
-</ol>
-<h2 id="code-style">Code Style</h2>
-<p>We follow PEP 8 style guidelines for Python code. Please ensure your code adheres to these standards.</p>
-<div class="highlight"><pre><span></span><code><span class="c1"># Run the linter</span>
-flake8<span class="w"> </span>.
-
-<span class="c1"># Run the formatter</span>
-black<span class="w"> </span>.
-</code></pre></div>
-<h2 id="pull-request-process">Pull Request Process</h2>
-<ol>
-<li>Create a new branch for your feature or bugfix</li>
-<li>Make your changes and commit them with clear, descriptive messages</li>
-<li>Push your branch to your fork</li>
-<li>Submit a pull request to our main repository</li>
-<li>Address any code review feedback</li>
-</ol>
-<h2 id="running-tests">Running Tests</h2>
-<p>Before submitting a pull request, make sure all tests pass:</p>
-<div class="highlight"><pre><span></span><code>pytest
-</code></pre></div>
-<h2 id="documentation">Documentation</h2>
-<p>If your changes require documentation updates, please include them in your pull request.</p>
-<h2 id="code-of-conduct">Code of Conduct</h2>
-<p>Please note that this project is released with a Contributor Code of Conduct. By participating in this project, you agree to abide by its terms.</p>
+<h1 id="welcome">Welcome</h1>
+<p>Welcome to my website! This is a place where I share my thoughts, ideas, and experiences. I hope you find something interesting here.</p>
+<h2 id="how-i-am-looking-for">How I am looking for ...</h2>
+<h3 id="understand">Understand</h3>
+<p>First understand the problem/process what ever it is. Even understand something how it works.</p>
+<h3 id="ideate">Ideate</h3>
+<p>Think and generate multiple ideas</p>
+<h3 id="learn">Learn</h3>
+<p>Learn/Gain the knowledge to convert your ideas into reality. By reading, watching, listening, practicing, etc.</p>
+<h3 id="implement">Implement</h3>
+<p>Implement your ideas with your knowledge.</p>
+<h3 id="share">Share</h3>
+<p>Share your knowledge/experience with others. It can be in the form of writing, speaking, teaching, etc. It is a way to learn and understand better. Of course, failure experiments as well</p>
+<h3 id="collaborate">Collaborate</h3>
+<p>Collaborate with others to solve the problem. It is a way to learn and understand better.</p>
 
 
 
@@ -647,8 +643,13 @@ black<span class="w"> </span>.
 
 
 
+  
+  
 
 
+
+
+  
 
 
 
