@@ -38,5 +38,14 @@ Hope you got some idea about what is Agent.
 
 There are few terminologey you need to understand how AI Agent works.
 
-1. LLM - Large Language Model
+1. LLM - Large Language Model. Basics about LLM.
 2. Data set (Training data, Testing Data, Data sampling)
+3. Vector DB. A basics about Vector 
+4. Training LLM
+5. Agent Knowledge base
+6. Agent Instruction
+7. Agent Tools
+
+## LLM
+
+LLM (Large Language Model), A component which is trained using a set of algorims and huge amout of data. Let assume our brain. A human brain trained based on the experiece (data) and stored. Brain can think and collect the date from the memory
