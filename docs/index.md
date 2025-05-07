@@ -26,4 +26,3 @@ The short answer is <b>Nothing</b>. I would like to share the some articles and 
 
 [Blogs](blog/index.md) <br>
 [Events](event/index.md)
-
