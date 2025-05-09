@@ -224,7 +224,7 @@ p {
     <div class="profile-card-container">
         <!-- Top Section - Professional Info -->
         <div class="profile-card profile-top">
-            <img src="./assets/image/profile.jpeg" alt="Profile Photo">
+            <!-- <img src="./assets/image/profile.jpeg" alt="Profile Photo"> -->
             <h3>Arockiaraj Rayappan</h3>
             <p><b>Technical Engineering Lead</b><br> Baton-Ubixi Systems India Private Limited, Chennai </p>
             <!-- Contact Section with Circular Icons -->
