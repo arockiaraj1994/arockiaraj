@@ -18,6 +18,7 @@ A person who have start the carrier as a Software engineer with Bachlor of Arts 
 [Profile page](profile.md) <br>
 [LinkedIn](https://www.linkedin.com/in/arockiaraj-rayappan/)
 
+
 ## What is the Purpose of the website?
 
 The short answer is <b>Nothing</b>. I would like to share the some articles and blogs. I am not sure about how realistic to be But I try to keep writing the blogs. 
@@ -26,3 +27,4 @@ The short answer is <b>Nothing</b>. I would like to share the some articles and 
 
 [Blogs](blog/index.md) <br>
 [Events](event/index.md)
+
