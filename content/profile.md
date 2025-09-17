@@ -1,102 +1,52 @@
 ---
-title: "Profile"
+title: "Arockiaraj Rayappan"
 date: 2025-03-02
-summary: "Professional profile and experience of Arockiaraj Rayappan"
+summary: "Development manager specializing in FinTech solutions and scalable product development"
 ---
 
-# Welcome to My Portfolio
+**Development manager @ Baton Systems| CFP & Mentorship @ PyCondia 2024/25 | MCA @ SRM | System Design | Engineering excellence | EIP | No code & Low code**
 
-## Arockiaraj Rayappan
-**Technical Engineering Lead**  
-Baton-Ubixi Systems India Private Limited, Chennai
+## Contact
+- 📧 [arockiaraj1994@gmail.com](mailto:arockiaraj1994@gmail.com)
+- 💼 [LinkedIn](https://www.linkedin.com/in/arockiaraj-rayappan-5a513558)
+- 🔗 [GitHub](https://github.com/arockiaraj1994)
 
-### Contact Information
-- 📧 **Email:** [arockiaraj1994@gmail.com](mailto:arockiaraj1994@gmail.com)
-- 📱 **Phone:** +91 7200790893
-- 💼 **LinkedIn:** [arockiaraj-rayappan](https://www.linkedin.com/in/arockiaraj-rayappan-5a513558)
-- 🔗 **GitHub:** [arockiaraj1994](https://github.com/arockiaraj1994)
+## About
+Development manager with 11+ years in FinTech (FX and Collateral Management). Expert in building configurable, reusable products with focus on automation and scalable architecture.
 
----
-
-## About Me
-
-A result-driven and proven Technical Engineering Lead with 11+ years of experience in FinTech (FX and Collateral Management).
-
-Specialized in **building configurable and reusable products**.
-
-Passionate about **design, documentation, automation, and mentorship**.
-
-### Roles and Responsibilities
-
-My entire journey has been with start-ups, allowing me to take on multiple roles and responsibilities. Each role has contributed to my expertise in software development, leadership, product strategy, and automation.
-
-- **Software Engineer:** Began as an individual contributor, honing core development skills and progressively advancing to a team lead role.
-- **Technical Leader:** Led teams in architectural design, strategic decision-making, and delivering high-quality, scalable projects.
-- **Architect:** Designed and implemented scalable, reusable, and configurable software solutions to improve efficiency and maintainability.
-- **Data Engineer:** Built and deployed robust data pipelines using AWS services such as Glue, Lambda, DataBrew, and QuickSight.
-- **Mentor:** Trained and guided freshers, fostering a knowledge-sharing culture and accelerating their technical and professional growth.
-- **Development Manager:** Aligned team objectives with project goals, driving productivity, collaboration, and long-term career success.
-- **Product Manager:** Engaged with clients to gather requirements, define product vision and roadmaps, and ensure customer satisfaction.
-- **Automation Tester:** Developed an AI-driven testing agent to automate test generation and execution, enhancing software reliability.
-
----
-
-## Skills
+## Core Expertise
 
 - **Languages:** Java, Python
-- **Frameworks:** Spring Boot, Microservices
-- **Cloud Tools:** AWS (Glue, Lambda, DataBrew, QuickSight)
-- **Databases & Big Data:** MySQL, NumPy, PySpark, Pandas
-- **Messaging & APIs:** Apache Camel, ActiveMQ, IBM MQ, Proto3, gRPC
-- **DevOps & CI/CD:** SonarQube, Jenkins, Prometheus, Grafana, Postman
-
----
+- **Cloud & Data:** AWS (Glue, Lambda, DataBrew, QuickSight), PySpark, Pandas
+- **Architecture:** Microservices, Spring Boot, gRPC, Apache Camel
+- **DevOps:** Jenkins, SonarQube, Prometheus, Grafana
 
 ## Experience
 
-### Technical Engineering Lead
-**Baton Ubixi Systems India Pvt. Ltd.** (May 2021 - Present)
 
-- Developed a **seamless integration toolkit** allowing GUI-based interface connections.
-- Built **AWS-based data pipelines** for analytics and reporting.
-- Designed a **configurable asset movement engine** with state management.
-- Led **SSI normalization** and custodian integrations.
-- Increased **code quality by 40%** across all services.
+### Development manager | Baton Ubixi Systems (2025 - Present)
 
-### Senior Software Engineer
-**Baton Ubixi Systems India Pvt. Ltd.** (Nov 2019 - May 2021)
+- Building developer tools
 
-- Developed **middleware solutions** for external/internal integrations.
-- Built an **authentication & authorization** service.
-- Created an **AR application for Google Glass** to validate labels.
+### Technical Engineering Lead | Baton Ubixi Systems (2021 - 2025)
 
-### Software Engineer
-**Fifth Generation Technologies India Pvt. Ltd.** (Mar 2016 - Oct 2019)
+- Built AWS-based data pipelines for analytics and reporting
+- Developed configurable asset movement engine with state management
+- Led SSI normalization and custodian integrations
+- Increased code quality by 40% across all services
 
-- Contributed to **Retail POS product development**.
-- Created multiple **billing and reporting formats**.
+### Senior Software Engineer | Baton Ubixi Systems (2019 - 2021)
 
----
+- Developed middleware solutions for system integrations
+- Built authentication & authorization service
+- Created AR application for Google Glass label validation
 
-## Certifications
+### Software Engineer | Fifth Generation Technologies (2016 - 2019)
 
-- **SWIFT Message** – Udemy
-- **Data Engineering** – Udemy
-
----
+- Contributed to Retail POS product development
+- Created billing and reporting formats
 
 ## Education
 
-- 🎓 **Master of Computer Applications (MCA)** – SRM University, Chennai
-- 🎓 **Bachelor of Computer Applications (BCA)** – Bharathidasan University, Tiruchirappalli
-
----
-
-## Interests
-
-- 🚀 Exploring new technologies and automation
-- 📖 Technical blogging and knowledge sharing
-- 🎤 Speaking at developer communities
-- 🤖 AI and Data Engineering advancements
-- 📈 Process optimization and automation
-- 💻 Open-source contributions
+- **MCA** - SRM University, Chennai
+- **BCA** - Bharathidasan University, Tiruchirappalli

@@ -24,11 +24,11 @@ unsafe = true
 [params]
 author = "Arockiaraj"
 # license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
-description = "Welcome to my personal website and blog! I'm Arockiaraj, a Technical Engineering Lead passionate about software development, automation, and mentorship."
+description = "Welcome to my page! I'm Arockiaraj, a Developement Manager passionate about software development, automation, and mentorship."
 keywords = "blog,developer,personal,software,automation,engineering"
-info = ["Technical Engineering Lead", "Software Developer", "Automation Enthusiast"]
-#avatarURL = "images/avatar.jpg"
-#gravatar = "john.doe@example.com"
+info = ["Developement Manager", "Automation Enthusiast"]
+avatarURL = "https://2.gravatar.com/avatar/9ec031c845d01fac746e27e067b31e13521b630adabfc64385ad490a53847527"
+gravatar = "arockiaraj1994@gmail.com"
 dateFormat = "January 2, 2006"
 since = 2019
 # Git Commit in Footer, uncomment the line below to enable it
