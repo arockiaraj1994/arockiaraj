@@ -143,19 +143,19 @@ author = "authors"
 
 [[params.social]]
 name = "Github"
-icon = "fa-brands fa-github fa-2x"
+icon = "fa fa-github"
 weight = 1
 url = "https://github.com/arockiaraj1994/"
 
 [[params.social]]
 name = "LinkedIn"
-icon = "fa-brands fa-linkedin fa-2x"
+icon = "fa fa-linkedin"
 weight = 2
 url = "https://www.linkedin.com/in/arockiaraj-rayappan/"
 
 [[params.social]]
 name = "Email"
-icon = "fa-solid fa-envelope fa-2x"
+icon = "fa fa-envelope"
 weight = 3
 url = "mailto:arockiaraj1994@gmail.com"
 
@@ -171,3 +171,8 @@ url = "/profile/"
 name = "Posts"
 weight = 2
 url = "/posts/"
+
+[[languages.en.menu.main]]
+name = "Projects"
+weight = 3
+url = "/projects/"
