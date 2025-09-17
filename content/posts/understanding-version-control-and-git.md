@@ -1,14 +1,13 @@
 ---
-authors:
-  - arockiaraj1994
-categories:
-  - General
-date:
-  created: 2024-05-09 
-  updated: 2024-05-09 
+title: "Understanding Version Control and Git"
+date: 2024-05-09T00:00:00Z
+lastmod: 2024-05-09T00:00:00Z
+tags: ["git", "version-control", "development", "collaboration"]
+categories: ["General"]
+author: "Arockiaraj"
+summary: "A comprehensive guide to understanding version control and how Git helps implement it effectively"
+draft: false
 ---
-
-# Understanding Version Control and Git
 
 Version control is one of the foundational tools every software developer should master. In this two-part blog, we'll explore what version control is and how Git helps implement it effectively.
 
@@ -20,9 +19,9 @@ Version control is one of the foundational tools every software developer should
 
 When working on software projects, especially with a team, some common problems arise:
 
-- **Overwriting code:** Two people edit the same file, and one person’s changes are lost.
-- **Tracking changes:** It’s hard to know what changed, when, and why.
-- **Reverting changes:** If something breaks, it’s not easy to go back to a previous working version.
+- **Overwriting code:** Two people edit the same file, and one person's changes are lost.
+- **Tracking changes:** It's hard to know what changed, when, and why.
+- **Reverting changes:** If something breaks, it's not easy to go back to a previous working version.
 - **Managing multiple versions:** Handling different features or fixes at the same time becomes messy.
 
 ### How Version Control Solves the Problem?
@@ -40,13 +39,13 @@ Version control provides a history of your project. Think of it as a **"time mac
 
 ## Part 2: Git
 
-Git is the most widely used version control system today. It's fast, flexible, and works both online and offline. Let’s dive into how Git helps manage version control.
+Git is the most widely used version control system today. It's fast, flexible, and works both online and offline. Let's dive into how Git helps manage version control.
 
 ### How Git Implements Version Control
 
 Git stores your project as a **series of snapshots**, not just differences. Every time you commit, Git takes a snapshot of your files and stores a reference to it.
 
-Git also works **distributed** — everyone has a full copy of the project history. That means you can work even when you’re not connected to the internet.
+Git also works **distributed** — everyone has a full copy of the project history. That means you can work even when you're not connected to the internet.
 
 ---
 
@@ -138,4 +137,4 @@ git push origin main
 
 Version control is not just for big teams — it's essential for any coding project. Git makes it powerful, efficient, and accessible. Mastering these basics will make you a better collaborator and coder.
 
-In the next blog, we’ll cover more advanced Git workflows like branching strategies, resolving merge conflicts, and working with pull requests.
+In the next blog, we'll cover more advanced Git workflows like branching strategies, resolving merge conflicts, and working with pull requests.

@@ -6,13 +6,10 @@
 
   # Use https://search.nixos.org/packages to find packages
   packages = [
-    # pkgs.go
-    pkgs.python311
-    pkgs.python311Packages.pip
-    pkgs.python311Packages.mkdocs
-    pkgs.python311Packages.mkdocs-material
-    pkgs.python311Packages.pymdown-extensions
-    pkgs.python311Packages.markdown
+    pkgs.hugo
+    pkgs.go
+    # pkgs.python311
+    # pkgs.python311Packages.pip
     # pkgs.nodejs_20
     # pkgs.nodePackages.nodemon
     #pkgs.jdk17

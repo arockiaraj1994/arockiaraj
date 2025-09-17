@@ -1,5 +1,7 @@
-# Ignore build files
-site/
+# Ignore Hugo build files
+public/
+resources/
+.hugo_build.lock
 
 # Ignore Python cache files
 __pycache__/
@@ -38,6 +40,3 @@ coverage.xml
 dist/
 build/
 *.egg-info/
-
-# Ignore mkdocs build files
-site/
