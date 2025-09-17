@@ -1,0 +1,21 @@
+{{ define "main" }}
+    <h1>{{ .Title }}</h1>
+    {{ if .Date }}
+        <div class="post-meta">
+            Published on {{ .Date.Format "January 2, 2006" }}
+            {{ if .Lastmod }}
+                • Updated on {{ .Lastmod.Format "January 2, 2006" }}
+            {{ end }}
+            {{ if .Params.tags }}
+                <br>Tags: 
+                {{ range .Params.tags }}
+                    <span style="background: #e3f2fd; padding: 2px 8px; border-radius: 3px; font-size: 12px; margin-right: 5px;">#{{ . }}</span>
+                {{ end }}
+            {{ end }}
+        </div>
+    {{ end }}
+    
+    <div class="post-content">
+        {{ .Content }}
+    </div>
+{{ end }}
