@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      - dev  # Added dev branch for testing
+      #- dev  # Added dev branch for testing
   workflow_dispatch:
 
 permissions:
