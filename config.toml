@@ -23,7 +23,7 @@ unsafe = true
 
 [params]
 author = "Arockiaraj"
-# license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
+license = '<a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">CC BY-SA-4.0</a>'
 description = "Welcome to my page! I'm Arockiaraj, a Developement Manager passionate about software development, automation, and mentorship."
 keywords = "blog,developer,personal,software,automation,engineering"
 info = ["Developement Manager", "Automation Enthusiast"]
