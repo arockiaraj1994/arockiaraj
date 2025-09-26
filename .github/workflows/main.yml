@@ -3,7 +3,7 @@ on:
   push:
     branches:
       - main
-      #- dev  # Added dev branch for testing
+      - dev  # Added dev branch for testing
   workflow_dispatch:
 
 permissions:
@@ -33,13 +33,23 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          submodules: recursive
+          submodules: true
           fetch-depth: 0
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Update submodules
         run: |
           git submodule sync --recursive
           git submodule update --init --recursive
+      
+      - name: Debug submodules
+        run: |
+          echo "Checking submodule status:"
+          git submodule status
+          echo "Checking themes directory:"
+          ls -la themes/
+          echo "Checking hugo-coder theme:"
+          ls -la themes/hugo-coder/ || echo "hugo-coder directory not found"
       
       - name: Setup Pages
         id: pages
@@ -47,6 +57,15 @@ jobs:
       
       - name: Install Node.js dependencies
         run: "[[ -f package-lock.json || -f npm-shrinkwrap.json ]] && npm ci || true"
+      
+      - name: Verify Hugo setup
+        run: |
+          echo "Hugo version:"
+          hugo version
+          echo "Theme directory contents:"
+          ls -la themes/hugo-coder/layouts/ || echo "No layouts directory found"
+          echo "Config check:"
+          hugo config | grep -i theme || echo "No theme config found"
       
       - name: Build with Hugo
         env:
