@@ -67,7 +67,7 @@ theme = 'LoveIt'
       # Whether to use typeit animation for subtitle
       typeit = true
       # Whether to show social links
-      social = true
+      social = false
       # Disclaimer (HTML format is supported)
       disclaimer = ""
       
@@ -86,7 +86,7 @@ theme = 'LoveIt'
     Facebook = ""
     Telegram = ""
     Email = ""
-    RSS = true
+    RSS = false
 
   # Page global config
   [params.page]
@@ -97,28 +97,36 @@ theme = 'LoveIt'
     [params.page.style]
       # Custom CSS to include
       customCSS = ["/css/custom.css"]
+    
+    # Social share links in posts
+    [params.page.share]
+      enable = false
+    
+    # Comment config
+    [params.page.comment]
+      enable = false
 
 # Menu config
 [menu]
   [[menu.main]]
+    identifier = "about"
+    name = "About"
+    url = "/profile/"
+    weight = 1
+  [[menu.main]]
     identifier = "posts"
     name = "Posts"
     url = "/posts/"
-    weight = 1
+    weight = 2
   [[menu.main]]
     identifier = "projects"
     name = "Projects"
     url = "/projects/"
-    weight = 2
+    weight = 3
   [[menu.main]]
     identifier = "conferences"
     name = "Conferences"
     url = "/conferences/"
-    weight = 3
-  [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
     weight = 4
   [[menu.main]]
     identifier = "categories"

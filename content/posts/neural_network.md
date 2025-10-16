@@ -1,6 +1,6 @@
 ---
 title: "What is Neural Networks? How it works?"
-date: 2024-10-15
+date: 2025-10-15
 lastmod: 2024-10-15
 tags: ["ai", "llm", "neural network", "artificial intelligence"]
 categories: ["AI/ML"]

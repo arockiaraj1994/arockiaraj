@@ -1,7 +1,7 @@
 ---
 title: "Understanding Version Control and Git"
-date: 2024-05-09T00:00:00Z
-lastmod: 2024-05-09T00:00:00Z
+date: 2025-05-09T00:00:00Z
+lastmod: 2025-05-09T00:00:00Z
 tags: ["git", "version-control", "development", "collaboration"]
 categories: ["General"]
 author: "Arockiaraj"

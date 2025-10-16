@@ -1,7 +1,7 @@
 ---
 title: "Why Computer Programming is Important? What is the Need?"
-date: 2024-01-31T00:00:00Z
-lastmod: 2024-02-01T00:00:00Z
+date: 2025-01-31T00:00:00Z
+lastmod: 2025-02-01T00:00:00Z
 tags: ["programming", "technology", "banking", "evolution"]
 categories: ["Programming"]
 author: "Arockiaraj"
