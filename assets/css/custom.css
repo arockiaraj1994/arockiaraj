@@ -1,0 +1,53 @@
+/* Custom styles for the website */
+
+/* Custom colors for the theme */
+:root {
+  --custom-primary-color: #3498db;
+  --custom-secondary-color: #2c3e50;
+  --custom-accent-color: #e74c3c;
+}
+
+/* Custom styling for the home page profile */
+.home .home-profile .home-avatar img {
+  border: 3px solid var(--custom-primary-color);
+  border-radius: 50%;
+}
+
+/* Custom button styling */
+.btn-primary {
+  background-color: var(--custom-primary-color);
+  border-color: var(--custom-primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--custom-secondary-color);
+  border-color: var(--custom-secondary-color);
+}
+
+/* Custom link colors */
+a {
+  color: var(--custom-primary-color);
+}
+
+a:hover {
+  color: var(--custom-secondary-color);
+}
+
+/* Custom code block styling */
+pre {
+  border-left: 4px solid var(--custom-accent-color);
+}
+
+/* Custom blockquote styling */
+blockquote {
+  border-left: 4px solid var(--custom-primary-color);
+  padding-left: 20px;
+  font-style: italic;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+  .home .home-profile {
+    padding: 2rem 1rem;
+  }
+}
