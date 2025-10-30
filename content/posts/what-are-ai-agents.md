@@ -1,7 +1,7 @@
 ---
 title: "What are AI Agents?"
-date: 2024-03-22T00:00:00Z
-lastmod: 2024-03-22T00:00:00Z
+date: 2025-03-22T00:00:00Z
+lastmod: 2025-03-22T00:00:00Z
 tags: ["ai", "agents", "automation", "llm"]
 categories: ["AI/ML"]
 author: "Arockiaraj"
