@@ -11,7 +11,7 @@ Welcome to my personal website! I'm Arockiaraj, passionate about technology, cre
 
 ## Who Am I?
 
-I'm a tech enthusiast and developer who loves to explore new technologies and share my experiences through this blog. Whether it's web development, programming, attending conferences, or working on exciting projects, I enjoy diving deep into topics that drive innovation and learning.
+I'm a tech enthusiast and developer who loves to explore new technologies and share my experiences through this blog. Whether it's web development, programming, giving talks, or working on exciting projects, I enjoy diving deep into topics that drive innovation and learning.
 
 ## What You'll Find Here
 
@@ -19,7 +19,7 @@ On this website, you'll discover:
 
 - **Blog Posts**: My thoughts on technology, programming, and development trends
 - **Projects**: Showcases of my work, experiments, and technical solutions
-- **Conferences**: My experiences from tech conferences and industry events
+- **Talks**: My experiences from tech talks, conferences, and industry events
 - **Tutorials**: Step-by-step guides on various technical topics
 - **Resources**: Useful tools and links I've discovered in my journey
 

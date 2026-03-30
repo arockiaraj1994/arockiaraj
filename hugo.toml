@@ -10,7 +10,7 @@ theme = 'LoveIt'
   
   # Site description
   description = "Personal blog of Arockiaraj - Technology, Development, and Insights"
-  keywords = ["Arockiaraj", "Blog", "Technology", "Development", "Programming", "Conferences", "Projects"]
+  keywords = ["Arockiaraj", "Blog", "Technology", "Development", "Programming", "Talks", "Projects"]
   
   # Site default theme ("light", "dark", "auto")
   defaultTheme = "auto"
@@ -63,7 +63,7 @@ theme = 'LoveIt'
       # Title shown in home page (HTML format is supported)
       title = "Welcome to Arockiaraj's Blog"
       # Subtitle shown in home page
-      subtitle = "Technology enthusiast sharing insights on development, conferences, and projects"
+      subtitle = "Technology enthusiast sharing insights on development, talks, and projects"
       # Whether to use typeit animation for subtitle
       typeit = true
       # Whether to show social links
@@ -124,9 +124,9 @@ theme = 'LoveIt'
     url = "/projects/"
     weight = 3
   [[menu.main]]
-    identifier = "conferences"
-    name = "Conferences"
-    url = "/conferences/"
+    identifier = "talks"
+    name = "Talks"
+    url = "/talks/"
     weight = 4
   [[menu.main]]
     identifier = "categories"
