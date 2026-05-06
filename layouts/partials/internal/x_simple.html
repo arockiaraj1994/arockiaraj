@@ -1,0 +1,10 @@
+{{- $id := .Params.id -}}
+{{- $url := .Params.url | default (printf "https://x.com/i/status/%s" $id) -}}
+{{- $oembedURL := printf "https://publish.twitter.com/oembed?url=%s&dnt=true&omit_script=true" $url -}}
+{{- with resources.GetRemote $oembedURL -}}
+    {{- with .Err -}}
+        {{- warnf "x_simple shortcode: failed to get oEmbed for %s: %s" $url . -}}
+    {{- else -}}
+        {{- (.Content | transform.Unmarshal).html | safeHTML -}}
+    {{- end -}}
+{{- end -}}
