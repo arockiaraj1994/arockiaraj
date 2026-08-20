@@ -215,16 +215,86 @@ Compare it against `CURRENT_ANTI_VER` inside the target package's `flash_all.sh`
 
 Then verify you landed where you intended, don't assume. Boot the stock OS once, re-enable USB debugging, and make one call and send one SMS. That provisions IMS; skip it and VoLTE can break permanently on the custom ROM.
 
-**Phase 3, recovery.** Flash it and boot straight into it without letting the system start:
+**Phase 3, install the custom recovery.** You need a `recovery.img`. A useful thing about OrangeFox: its distribution `.zip` is not a flashable package in the usual sense, it's a container, and the image is sitting inside it:
 
 ```bash
-fastboot flash recovery recovery.img
+unzip -o OrangeFox-*-merlin.zip recovery.img -d ofox/
+file ofox/recovery.img     # should say: Android bootimg
+```
+
+Check the size matches your recovery partition before flashing. Mine is 64 MB, and `fastboot getvar all` reports `partition-size:recovery: 4000000` in hex, which is exactly 64 MB. A mismatch means you have the wrong image.
+
+Flash it and go straight into it, without letting the system boot in between:
+
+```bash
+fastboot flash recovery ofox/recovery.img
 fastboot reboot recovery
 ```
 
-**Phase 4, wipe properly.** Format Data **from the recovery's own menu**. Not `mke2fs`, not a hand-rolled equivalent. This removes encryption and produces a `/data` that Android will actually initialise.
+If `fastboot reboot recovery` isn't supported, power off and hold **Volume Up + Power** the moment the screen goes dark. The reason for the hurry is that some MIUI builds restore stock recovery on the next normal boot. Check whether yours does:
 
-**Phase 5, install.** Sideload or install the ROM zip, then Magisk if you want root, then reboot. First boot takes 5 to 15 minutes.
+```bash
+adb shell ls /system/recovery-from-boot.p /system/bin/install-recovery.sh
+```
+
+Both missing means nothing will overwrite you and you can relax.
+
+Confirm the recovery is genuinely running, don't trust the screen:
+
+```bash
+adb devices          # should report: recovery
+adb shell getprop ro.orangefox.version
+```
+
+**Phase 4, wipe properly.** Format Data **from the recovery's own menu** (Wipe → Format Data → type `yes`). Not `mke2fs`, not a hand-rolled equivalent. This removes encryption and produces a `/data` that Android will actually initialise, and it reformats `/metadata` too.
+
+If the recovery boots to its logo and never draws a menu, that's the FBE hang from earlier, not a bad flash. Confirm it from the log rather than reflashing:
+
+```bash
+adb shell 'tail -20 /tmp/recovery.log'
+# stuck at "Attempting to initialize DE keys" = hung on decryption
+```
+
+Clearing the encryption is what lets the UI finish loading, so once data is formatted, reboot the recovery and the menu appears.
+
+**Phase 5, install the OS.** Push the ROM to the device and install it. Sideload works too, but pushing is easier to verify:
+
+```bash
+adb push <rom>.zip /data/media/0/
+adb shell twrp install /data/media/0/<rom>.zip
+```
+
+Watch the output for the installer banner and, critically, the exit status:
+
+```
+Android version : 14
+Device codename : merlinx
+script succeeded: result was [1.000000]
+```
+
+If you want to confirm it really landed rather than trusting the installer, mount the system image out of `super` and read its `build.prop`:
+
+```bash
+adb shell 'mount -o ro /dev/block/mapper/system /mnt/sys'
+adb shell 'grep -E "version.sdk|version.release" /mnt/sys/system/build.prop'
+```
+
+Then reboot. First boot takes 5 to 15 minutes while it builds the dalvik cache.
+
+**Phase 6, root.** Flashing a Magisk zip in recovery patches the boot image, and that is *not* enough on its own. It gives you a `su` binary with no daemon authorised to grant anything, so every call returns `Permission denied`. On a `user` build `adb root` won't help either, it just answers `adbd cannot run as root in production builds`.
+
+What actually works, and needs no pre-existing root:
+
+1. Install the current Magisk APK: `adb install -r Magisk-v30.7.apk`
+2. Extract the ROM's own `boot.img` from the ROM zip and push it to the phone
+3. In the Magisk app choose **Select and Patch a File**, not Direct Install. Direct Install needs working root to write the boot partition, which is the thing you don't have yet
+4. Pull the resulting `magisk_patched-*.img` and flash it:
+
+```bash
+fastboot flash boot magisk_patched.img
+```
+
+5. After it boots, set Magisk → Settings → **Superuser Access** → **"Apps and ADB"**, or `su` stays denied over adb even with everything else correct
 
 And the pre-flight check I now run on any ROM zip before flashing it, which reads the same metadata that would have exposed my entire problem on day one:
 
