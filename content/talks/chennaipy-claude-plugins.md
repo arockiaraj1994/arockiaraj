@@ -79,7 +79,7 @@ This is not an early-adopter bet anymore.
 
 ## The Chennaipy Experience
 
-This was my second **full talk** at Chennaipy, after a lightning talk in November 2025 and my first full talk in June 2026 on the [dev-agent-playbook](/talks/chennaipy-dev-playbook/) MCP server. Where that talk was about serving rules on demand over MCP, this one was about packaging those rules, and everything else Claude needs, into a single installable unit.
+This was my second **full talk** at Chennaipy, after a lightning talk in November 2025 and my first full talk in June 2026 on the [dev-playbook](/talks/chennaipy-dev-playbook/) MCP server. Where that talk was about serving rules on demand over MCP, this one was about packaging those rules, and everything else Claude needs, into a single installable unit.
 
 The questions from the room were sharp: how plugin versioning should work across teams, whether hooks can be shared between plugins, and where the line sits between a skill and a script. Good questions to keep chewing on.
 

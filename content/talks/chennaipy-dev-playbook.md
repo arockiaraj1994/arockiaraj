@@ -9,7 +9,7 @@ categories: ["Talks"]
 featuredImage: "/images/talks/chennaipy-dev-playbook/audience-view.jpeg"
 ---
 
-When your team adopts AI coding tools, the first few weeks feel great. Everyone is shipping faster, reviews go quicker, and the AI is genuinely helpful. Then, quietly, the cracks start to show, the new feature looks nothing like the existing ones, one developer's error handling is completely different from another's, and the AI keeps suggesting patterns you deprecated six months ago. Nobody is doing anything wrong. The AI is just working without your team's context. That was the problem I took to the June 2026 Chennaipy meetup, and the talk was about what I built to fix it.
+Three developers, three AI editors, one pull request that reads like it came from three different teams. That was the picture I put on screen at the June 2026 Chennaipy meetup. Everyone had shipped faster the first few weeks after adopting AI coding tools. Then the cracks showed: a new feature that looked nothing like the existing ones, one developer's error handling completely different from another's, the AI suggesting a pattern the team retired six months ago. Nobody had done anything wrong. The AI was just working without the team's context. That was the problem I took to the meetup, and the talk was about what I built to fix it.
 
 <!--more-->
 
@@ -38,7 +38,7 @@ Four things make it production-ready beyond that core:
 - **BM25 search fallback**: when a task does not exact-match a workflow trigger, the server searches the corpus and returns the closest match
 - **Usage dashboard**: tracks tool calls, latency, and zero-result searches; the zero-result rate is the most useful number, because every failed query is a rule doc you have not written yet
 
-For the full technical walkthrough and dashboard screenshots, see the <a href="/projects/dev-agent-playbook/">project write-up</a>.
+For the full technical walkthrough and dashboard screenshots, see the <a href="/projects/dev-agent-playbook/">project write-up</a> (the project has since been renamed dev-playbook).
 
 ## The Live Demo
 
@@ -48,7 +48,7 @@ I showed the sequence live on the projector. The AI calls `start_task(project="n
 
 <div style="margin: 32px 0; text-align: center;">
   <img src="/images/talks/chennaipy-dev-playbook/live-demo.jpeg" alt="Live demo on the projector, session-analyzer report on screen during the talk" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
-  <p style="font-size: 0.85em; color: #888; margin-top: 10px;">Live demo on the projector, showing the dev-agent-playbook dashboard during the talk</p>
+  <p style="font-size: 0.85em; color: #888; margin-top: 10px;">Live demo on the projector, showing the dev-playbook dashboard during the talk</p>
 </div>
 
 The contrast landed well. AI coding without loaded context produces code that runs. AI coding with the right rules loaded produces code that belongs.
@@ -69,6 +69,6 @@ The audience asked good questions, about how to handle multiple repos in the sam
 ## Links
 
 - **Slides**: <a href="/files/dev-playbook.pdf" target="_blank">Download PDF</a>
-- **Source code**: <a href="https://github.com/arockiaraj1994/dev-agent-playbook" target="_blank">GitHub Repository</a>
-- **Project write-up**: <a href="/projects/dev-agent-playbook/">dev-agent-playbook on this site</a>
+- **Source code**: <a href="https://github.com/arockiaraj1994/dev-playbook" target="_blank">GitHub Repository</a>
+- **Project write-up**: <a href="/projects/dev-agent-playbook/">dev-playbook on this site</a>
 - **Community**: <a href="https://chennaipy.org" target="_blank">Chennaipy</a>
