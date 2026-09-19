@@ -1,22 +1,22 @@
 # My Awesome Website
 
-A simple and elegant personal website built with [Hugo](https://gohugo.io/) and the beautiful [LoveIt](https://github.com/dillonzq/LoveIt) theme.
+A personal website built with [Hugo](https://gohugo.io/), using a custom, bespoke theme
+("engineering build-log") written directly in this repo's `layouts/` and `assets/` — no
+external theme dependency.
 
 ## Features
 
 - ⚡ Fast static site generation with Hugo
-- 🎨 Beautiful and responsive LoveIt theme
 - 📝 Markdown-based content management
 - 🔍 SEO optimized
 - 📱 Mobile-friendly design
-- 🌓 Dark/light theme support
-- 💬 Social media integration ready
+- 🌓 Dark/light theme support (auto, with a manual toggle)
 
 ## Getting Started
 
 ### Prerequisites
 
-- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.68.0 or later)
+- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.140.0 or later)
 - [Git](https://git-scm.com/)
 
 ### Development
@@ -27,17 +27,12 @@ A simple and elegant personal website built with [Hugo](https://gohugo.io/) and 
    cd arockiaraj
    ```
 
-2. Initialize the theme submodule:
-   ```bash
-   git submodule update --init --recursive
-   ```
-
-3. Start the development server:
+2. Start the development server:
    ```bash
    hugo server -D
    ```
 
-4. Open your browser and visit `http://localhost:1313`
+3. Open your browser and visit `http://localhost:1313`
 
 ### Building for Production
 
@@ -94,7 +89,6 @@ This site can be deployed to various platforms:
 ## Resources
 
 - [Hugo Documentation](https://gohugo.io/documentation/)
-- [LoveIt Theme Documentation](https://hugoloveit.com/)
 - [Markdown Guide](https://www.markdownguide.org/)
 
 ## License
@@ -103,4 +97,4 @@ This project is open source and available under the [MIT License](LICENSE).
 
 ---
 
-Built with ❤️ using Hugo and LoveIt theme.
+Built with ❤️ using Hugo.

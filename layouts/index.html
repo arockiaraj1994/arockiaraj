@@ -1,0 +1,53 @@
+{{ define "main" }}
+<section class="hero">
+  <p class="hero__role">{{ .Site.Params.role }}</p>
+  <h1 class="hero__name">{{ .Site.Params.name }}</h1>
+  <p>{{ .Site.Params.description }}</p>
+  <div class="hero__links">
+    {{ with .Site.Params.social.Email }}<a href="mailto:{{ . }}">email</a>{{ end }}
+    {{ with .Site.Params.social.GitHub }}<a href="{{ . }}">github</a>{{ end }}
+    {{ with .Site.Params.social.LinkedIn }}<a href="{{ . }}">linkedin</a>{{ end }}
+  </div>
+</section>
+
+{{ with .Site.GetPage "/projects" }}
+<div class="section-heading">
+  <h2>Projects</h2>
+  <a href="{{ .Permalink }}">all projects &rarr;</a>
+</div>
+<ul class="entry-list">
+  {{ range first 5 (where .Pages "Params.build.list" "ne" "never") }}
+  <li class="entry-row">
+    <div class="entry-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
+    <div class="entry-body">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      {{ with .Params.tags }}
+      <ul class="tag-list">
+        {{ range first 5 . }}<li><span class="tag">{{ . }}</span></li>{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+
+{{ with .Site.GetPage "/posts" }}
+<div class="section-heading">
+  <h2>Posts</h2>
+  <a href="{{ .Permalink }}">all posts &rarr;</a>
+</div>
+<ul class="entry-list">
+  {{ range first 5 .Pages }}
+  <li class="entry-row">
+    <div class="entry-meta"><time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time></div>
+    <div class="entry-body">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
+{{ end }}

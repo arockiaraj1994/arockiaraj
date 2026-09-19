@@ -1,0 +1,24 @@
+{{ define "main" }}
+<header style="padding-top: 2rem;">
+  <h1 class="page__title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="page__description">{{ . }}</div>{{ end }}
+</header>
+<ul class="entry-list">
+  {{ range where .Pages "Params.build.list" "ne" "never" }}
+  <li class="entry-row">
+    <div class="entry-meta">
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "Jan 2006" }}</time>
+    </div>
+    <div class="entry-body">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      {{ with .Params.tags }}
+      <ul class="tag-list">
+        {{ range . }}<li><a class="tag" href="{{ printf "%stags/%s/" $.Site.BaseURL (. | urlize) }}">{{ . }}</a></li>{{ end }}
+      </ul>
+      {{ end }}
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}
