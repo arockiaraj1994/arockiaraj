@@ -1,76 +1,25 @@
 ---
-title: "Building MedRecord: on-device health notes for Android"
+title: "MedRecord Became FamHeal: A Family Health App Rebuilt for Trust, Not Automation"
 date: 2026-04-21T10:00:00+05:30
 draft: false
 author: "Arockiaraj"
-description: "From Opus planning and Claude Design wireframes to Cursor Composer—Kotlin, Compose, Room + SQLCipher, and Phase 1 health tracking for family."
-tags: ["android", "kotlin", "jetpack-compose", "room", "sqlcipher", "hilt", "medrecord"]
+description: "Why a solo, on-device health vault wasn't enough for a family, and why I turned off the AI extraction I built to replace it with plain, trustworthy record-keeping."
+tags: ["android", "kotlin", "jetpack-compose", "firebase", "firestore", "room", "hilt", "medrecord", "famheal"]
 categories: ["Projects"]
 featuredImage: "/images/medrecord/app/dashboard-app.jpeg"
 ---
 
-Most days bring new tech updates and something new to learn. Lately the discourse around **AI tools** is noisy—some say they are too expensive, others that they underperform—and the reality I see is **mixed**. None of that stopped me from using them deliberately.
-
-Over time I have used **GitHub Copilot**, **ChatGPT**, **Gemini**, and **Claude** for planning, brainstorming, writing code, and review. Recently **Claude Design** joined the stack for turning plans into visuals.
-
-**MedRecord** is a personal and family **Android** app for **on-device** health notes: people, medications, labs, conditions, reminders, and documents. It is **not** a medical device; data stays encrypted on the device unless you add export later. The app README targets **0.2.0-phase1**, **min SDK 26**, **compile/target 35**, **Apache-2.0**.
+Every family ends up as the unpaid record keeper for its own health history. Someone has to remember which parent is on which medication, where last month's lab report went, and what the doctor actually said about a result that came back borderline. In my house that someone is me, and the record was never in one place - a photo of a prescription here, a PDF from a lab portal there, a dosage half-remembered from a phone call.
 
 <!--more-->
 
-## The problem
+I built an app to fix that. It has gone through two real shapes so far, and the second one exists because the first one solved the wrong half of the problem.
 
-I needed one place—app or site—to track **medicines**, **lab reports**, **prescriptions**, and **invoices** for myself and family members. The problem statement was simple; turning it into a scoped product and a codebase that stays honest under encryption, migrations, and deletes took structure, not vibes alone.
+## Attempt one: a vault on one phone
 
-## Ideating / planning
+The first version was **MedRecord** - a Kotlin and Jetpack Compose app that lived entirely on one device. People, medications, labs, conditions, reminders, and documents, all behind a PIN-protected, SQLCipher-encrypted database. No server, no account, no sync. I planned it with Claude in Opus's Adaptive Mode down to package names and module boundaries, had Claude Design turn that plan into wireframes, then built it in Cursor with Composer for the long implementation stretch. Full package-level notes from that build live on a companion page: **[MedRecord build plan (reference)](/projects/medrecord-build-plan/)**.
 
-I used **Claude Opus 4.7** in **Adaptive Mode** to brainstorm and produce a **very detailed plan**: not only features but **package names**, module boundaries, and folder layout so implementation would not drift. I chose an **Android app** so the experience stayed native, offline-first, and suitable for sensitive health-adjacent data on device.
-
-**Tooling:** Claude — Opus 4.7 (Adaptive Mode).
-
-Full package-level notes and migration-oriented detail live on a companion page: **[MedRecord build plan (reference)](/projects/medrecord-build-plan/)**.
-
-## Wireframes
-
-With the plan in place, I used **Claude Design** to generate wireframes anchored to that spec, then **reiterated with Claude Sonnet 4.6** using **minimal prompts**—enough to refine flows without rewriting the whole design system. The goal was **high-fidelity** references I could implement in Compose, not throwaway sketches.
-
-## Building
-
-Once the plan and wireframes were solid, execution moved to **Cursor** with the **Composer** model (**Composer 2**)—**relatively lower cost** than heavy planning models for long implementation sessions, which fit a long build phase (Kotlin, Compose, Room + **SQLCipher**, migrations, WorkManager workers, Detekt cleanups).
-
-The sections below are grounded in the **README** and **code layout** of the MedRecord repo, including work such as **records delete**, **medication delete**, and **Detekt-driven** UI refactors—verify any claim against **your** tree and commits if your branch differs.
-
----
-
-## Wireframe vs app (Claude Design → implementation)
-
-Side-by-side: **Claude Design** on the left, **shipped app** on the right. App captures live under `static/images/medrecord/app/` (JPEG). See **`docs/medrecord-site-assets.md`** for filenames.
-
-### Auth screen
-
-Vault-style entry (PIN / unlock before health data)—on-device protection first.
-
-<table>
-  <thead>
-    <tr>
-      <th>Wireframe (Claude Design)</th>
-      <th>App</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/design/auth-screen.png" alt="MedRecord wireframe — auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-      </td>
-      <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/app/auth-app.jpeg" alt="MedRecord app — auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-      </td>
-    </tr>
-  </tbody>
-</table>
-
-### Dashboard
-
-Home and overview—quick status and navigation into meds, records, labs, and more.
+Side by side, the wireframe and the shipped screen from that build:
 
 <table>
   <thead>
@@ -88,33 +37,41 @@ Home and overview—quick status and navigation into meds, records, labs, and mo
         <img src="/images/medrecord/app/dashboard-app.jpeg" alt="MedRecord app — dashboard" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
     </tr>
-  </tbody>
-</table>
-
-### Phase 1 medications
-
-Wireframe: Phase 1 medications scope (lists, dosing context, entry paths). App: **medication detail** from the running build (`med-details.jpeg`).
-
-<table>
-  <thead>
-    <tr>
-      <th>Wireframe (Claude Design)</th>
-      <th>App</th>
-    </tr>
-  </thead>
-  <tbody>
     <tr>
       <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/design/phase-1-medications.png" alt="MedRecord wireframe — Phase 1 medications" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+        <img src="/images/medrecord/design/auth-screen.png" alt="MedRecord wireframe — auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
       <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/app/med-details.jpeg" alt="MedRecord app — medication detail" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+        <img src="/images/medrecord/app/auth-app.jpeg" alt="MedRecord app — auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
     </tr>
   </tbody>
 </table>
 
----
+It worked, and it was genuinely private - your data never left your phone. But that was also the flaw. A family's health record is not one person's problem. If my mother's medication list lives only on her phone, I can't check it when she calls asking what she's supposed to take. If her phone is lost or replaced, the record goes with it. Encryption solved the wrong risk. The real risk was a single point of failure.
+
+## Attempt two: FamHeal, built cloud-first
+
+So I started over as **FamHeal**, with a different starting assumption: the data has to survive a lost phone and be reachable from more than one place. That ruled out an on-device-only vault from the beginning.
+
+The first cut of FamHeal used Google Drive as the backend - a folder per family member, synced files, shareable links. It worked, but it meant reimplementing sync, caching, and permissions on top of an API that wasn't built for structured records. A few weeks in, I retired the Drive backend and moved to Firebase: Google Sign-In for auth, Firestore for the structured data, Firebase Storage for the files themselves. Less plumbing to maintain, and a proper base to build family profiles, medications, and records on top of.
+
+## The bet I turned off
+
+The most consequential decision in FamHeal wasn't a backend choice. It was about how a document gets from a photo into a record.
+
+I built the obvious version first: scan a report with ML Kit's document scanner, send it to Gemini through a Cloud Function, get back structured fields - test name, value, date - and write them straight into the record. It worked often enough to look impressive in a demo.
+
+It also got things wrong in ways that matter more in health data than almost anywhere else. A misread decimal point on a lab value, or a wrong date on a prescription, doesn't just look bad - it can sit in a family's record for years and quietly mislead someone. Automatic extraction is a fair trade when the cost of a mistake is small. It isn't when the record is your parent's blood pressure history.
+
+So I turned it off. Uploads now go straight to storage as plain, dated documents - a report or a consult note, viewable in-app with pinch-to-zoom, no numbers pulled out and no fields auto-filled. The extraction pipeline still exists in the codebase, dormant, for a version where I trust it enough to re-enable as a genuine assist rather than the default path. Doing the data entry yourself is slower. Being wrong about a lab result is worse.
+
+## What the app does today
+
+- **Family profiles** - each person's medications, labs, conditions, and documents kept separate, switchable from the top bar.
+- **Records** - a plain, dated timeline of uploaded reports and consult notes, with an in-app PDF viewer instead of handing the file off to another app.
+- **Dashboard** - trend cards for each lab test, laid out like a small analytics board: reorder them, resize them, hide the ones you don't need. It replaced a fixed summary view that couldn't be adjusted per family member.
+- **Cloud-backed profiles** - one signed-in account, all of that family's data synced to Firestore and Storage so it survives a phone swap and is visible from any device on that account.
 
 ## Tech stack
 
@@ -123,77 +80,25 @@ Wireframe: Phase 1 medications scope (lists, dosing context, entry paths). App: 
 | Language | Kotlin |
 | UI | Jetpack Compose, Material 3 |
 | DI | Hilt |
-| Persistence | Room + **SQLCipher** (encrypted DB) |
-| Preferences | DataStore |
-| Background | WorkManager (Hilt workers, e.g. daily pill logic) |
-| Static analysis | Detekt |
+| Cloud data | Firestore + Firebase Storage, scoped per signed-in account |
+| Local | Room, as an on-device cache |
+| Auth | Firebase Auth via Google Sign-In (Credential Manager) |
+| Capture | ML Kit Document Scanner |
+| Extraction (dormant) | Firebase Functions calling Gemini |
+| Images | Coil |
 
-## High-level architecture
+## What actually hurt
 
-- **`core/`** — Database (entities, DAOs, migrations, seed), repositories, security (PIN, biometric wrap, auto-lock), storage (`DocumentStore`), lab matching, medication dosing helpers, reminder scheduling and notifications.
-- **`feature/`** — **Auth** flow (vault, disclaimer gate) and **main** shell: bottom nav (**Home, Meds, Records, Labs, More**), nested flows (person detail, lab trends, add medication, medication detail, manual records, etc.).
-- **`wireframes/`** — PNG references in the app repo; the README also mentions `MedRecord.html`.
+**Person scoping, now with higher stakes.** Every screen that lists medications, labs, or records has to filter by the selected family member. That was true in the on-device version too, but a missed filter used to be a UI bug. In a cloud-synced, multi-person account it's a real privacy bug.
 
-## Phase 1 features (README + code)
+**A refactor broke a dependency nobody had written down.** Decoupling the Records screen from the old report-syncing repository - part of moving to plain document storage - silently broke the dashboard, which turned out to depend on that same sync call as an undocumented side effect. The fix was straightforward once found; finding it meant tracing a "why did the dashboard stop updating" report back to a change in an unrelated screen.
 
-1. **Vault** — PIN, optional biometric, encrypted DB, auto-lock on background.
-2. **Profiles / family** — Multiple people; conditions from person detail.
-3. **Medications** — Manual entry, dosing patterns, refill-style alerts, **WorkManager** daily decrement worker; **medication detail** (mark taken, info table); **delete medication** from detail with confirmation (DAO `DELETE`, repository layer, reminders cascading via Room FKs where modeled).
-4. **Labs** — Manual results, canonical test catalog + fuzzy matching, **trend** UI when a numeric series exists.
-5. **Records** — Aggregated timeline-style UI with filters; **delete** for labs, encounters, and documents (repositories + encrypted file cleanup for documents where applicable).
-6. **Reminders** — Scheduling and notifications (including OS permissions).
-7. **UI shell** — Compose navigation, disclaimer on first run, theme in `core/ui/theme`.
+**Blurry scans under zoom.** The PDF viewer rendered pages at their native point size with no DPI scaling, so a standard letter-size report looked fine at a glance but turned to mush the moment you pinch-zoomed in to actually read a number. The fix scales pages up to a resolution cap while leaving already-sharp scans alone - an easy bug to miss because it only shows up once someone tries to read the fine print, which is exactly when a health record matters most.
 
-## Schema and migrations
+## What's next
 
-- **Migration 1→2** — V2 schema creation plus lab canonical seed (`MedRecordMigrations`, `SchemaV2Creator`, `LabCanonicalSeed`).
-- **Migration 2→3** — Medication model extensions such as `genericName`, `packSize`, `scheduleType`, `route`, `eveningDoseMinuteOfDay`, `lastTakenAtEpochMs`—supporting richer **add/edit medication** and dashboard refill logic.
-
-Confirm entity and migration names in your checkout before you treat this as documentation of record.
-
-## Quality and maintainability
-
-- **Detekt** in the same spirit as CI-style checks—alongside lint and tests per the README, e.g.:
-
-```bash
-./gradlew :app:detekt
-```
-
-- UI refactors to satisfy rules: bundling composable parameters, extracting **confirm-delete** dialogs, so the codebase stays merge-friendly.
-
-## Design process
-
-- Wireframe-driven UI (`wireframes/` in the app repo), implemented in Compose with Material 3.
-- A clear **disclaimer** in-app and in the README: **not** for diagnosis or treatment decisions.
-
-## Challenges (what actually hurt)
-
-**Encryption + Room.** Session lifecycle matters: opening and closing the DB, seeding after unlock (`MedRecordDatabaseHolder`, seed callback). Getting that wrong looks like flaky first launch or empty screens after biometric unlock.
-
-**Family + person scoping.** Anything that lists meds, labs, or records has to respect the selected person; missing a filter becomes a privacy bug as much as a logic bug.
-
-**Deleting linked data.** Documents need **disk + DB** consistency. For medications, reminders must follow deletes—Room FK **`CASCADE`** on `ReminderEntity` → `MedicationEntity` (where that schema applies) avoids orphan notifications.
-
-**Detekt vs Compose.** Long `@Composable` signatures and fat parameter lists trigger rules quickly; smaller data classes and extracted dialogs kept refactors mechanical instead of argumentative.
-
-## What’s next
-
-- Export or backup, optional cloud sync later, richer notifications, accessibility pass, Play release hardening (ProGuard notes in the README where applicable).
-
-## What I shipped (actions checklist)
-
-- Defined scope: **on-device**, **family**, **Phase 1** feature set; legal disclaimer.
-- Chose **Kotlin + Compose + Material 3 + Hilt**.
-- Implemented **SQLCipher + Room** with **migrations** and **seed data** for the lab catalog.
-- Built **main navigation** (Home, Meds, Records, Labs, More) and nested screens (labs trend, person detail, add medication, medication detail, manual record entry).
-- Implemented **MedicationDosing** / refill-style behaviour and **DailyPillDecrementWorker** scheduling.
-- Implemented **Records** aggregation and **delete** paths (labs, encounters, documents + file store).
-- Implemented **medication delete** on detail with confirmation and DB delete.
-- Ran **Detekt** and refactored composables where rules complained.
-- Documented build (`assembleDebug`, `installDebug`, detekt/lint/tests) in the app **README**.
-
-If you want the story to reflect **only** Cursor-assisted sessions, narrow this list to the slices you actually landed there (for example records delete, Detekt refactors, medication delete, and any migrations or UI from those sessions).
+Today, FamHeal is still one signed-in account managing all of that family's data - not yet separate logins for each family member with their own access to a shared record. That's the next real piece: a token-scoped, read-only view so a sibling or a doctor can check a record without holding the primary account's keys. After that, I'd like to bring the extraction pipeline back as an optional assist - suggest the fields, let a person confirm them, never write anything unreviewed.
 
 ## Closing
 
-Different tools for different phases beat **one model for everything**: a detailed Opus plan and **high-fidelity** wireframes made **Composer** in Cursor productive instead of expensive thrash. If the repository or Play listing goes public, add a link here—[same pattern as the vacation app](/projects/vacation-app/).
+The lesson from MedRecord wasn't about encryption or architecture. It was that the right unit for a health record is the family, not the device, and that a feature working in a demo isn't the same as a feature worth trusting with your parents' medication list. FamHeal is slower to use in a couple of places than the flashier version would have been. That's the trade I'd make again.
