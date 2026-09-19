@@ -1,6 +1,6 @@
 ---
-title: "Welcome to Arockiaraj's Blog"
-description: "Development Manager passionate about software development, automation, and mentorship"
+title: "Arockiaraj"
+description: "Engineering build log — projects, posts, and talks from Arockiaraj Rayappan"
 ---
 
 # Welcome to My Blog

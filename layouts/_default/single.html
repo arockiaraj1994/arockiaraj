@@ -1,0 +1,39 @@
+{{ define "main" }}
+<article class="page">
+  <aside class="page__meta">
+    {{ if not .Date.IsZero }}
+    <div>
+      <span class="label">date</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    </div>
+    {{ end }}
+    {{ with .Params.author }}
+    <div>
+      <span class="label">author</span>
+      {{ . }}
+    </div>
+    {{ end }}
+    {{ with .Params.categories }}
+    <div>
+      <span class="label">category</span>
+      {{ range . }}<a class="tag" href="{{ printf "%scategories/%s/" $.Site.BaseURL (. | urlize) }}">{{ . }}</a> {{ end }}
+    </div>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div>
+      <span class="label">tags</span>
+      <ul class="tag-list">
+        {{ range . }}<li><a class="tag" href="{{ printf "%stags/%s/" $.Site.BaseURL (. | urlize) }}">{{ . }}</a></li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </aside>
+  <div>
+    <h1 class="page__title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page__description">{{ . }}</p>{{ end }}
+    <div class="page__body">
+      {{ .Content }}
+    </div>
+  </div>
+</article>
+{{ end }}

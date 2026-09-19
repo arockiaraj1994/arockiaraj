@@ -1,110 +1,19 @@
 baseURL = 'https://example.org/'
 languageCode = 'en'
 title = 'Arockiaraj'
-theme = 'LoveIt'
 
-# Theme configuration
 [params]
-  # LoveIt theme version
-  version = "0.2.X"
-  
-  # Site description
-  description = "Personal blog of Arockiaraj - Technology, Development, and Insights"
-  keywords = ["Arockiaraj", "Blog", "Technology", "Development", "Programming", "Talks", "Projects"]
-  
-  # Site default theme ("light", "dark", "auto")
-  defaultTheme = "auto"
-  
-  # Public git repo url only then enableGitInfo is true
-  gitRepo = ""
-  
-  # Header config
-  [params.header]
-    # Desktop header mode ("fixed", "normal", "auto")
-    desktopMode = "fixed"
-    # Mobile header mode ("fixed", "normal", "auto")
-    mobileMode = "auto"
-    
-    # Header title config
-    [params.header.title]
-      # URL of the LOGO
-      logo = ""
-      # Title name
-      name = "Arockiaraj"
-      # You can add extra information before the name (HTML format is supported)
-      pre = ""
-      # You can add extra information after the name (HTML format is supported)
-      post = ""
-      # Whether to use typeit animation for title name
-      typeit = false
+  # Site identity
+  name = "Arockiaraj Rayappan"
+  shortId = "arockiaraj"
+  role = "Engineering lead building AI-native software"
+  description = "Engineering build log — projects, posts, and talks from Arockiaraj Rayappan"
+  since = 2025
 
-  # Footer config
-  [params.footer]
-    enable = true
-    # Whether to show Hugo and theme info
-    hugo = true
-    copyright = true
-    author = true
-    # Site creation time
-    since = 2025
-    
-  # Home page config
-  [params.home]
-    # RSS article number
-    rss = 10
-    
-    # Home page profile
-    [params.home.profile]
-      enable = true
-      # Gravatar Email for preferred avatar in home page
-      gravatarEmail = ""
-      # URL of avatar shown in home page
-      avatarURL = ""
-      # Title shown in home page (HTML format is supported)
-      title = "Welcome to Arockiaraj's Blog"
-      # Subtitle shown in home page
-      subtitle = "Technology enthusiast sharing insights on development, talks, and projects"
-      # Whether to use typeit animation for subtitle
-      typeit = true
-      # Whether to show social links
-      social = false
-      # Disclaimer (HTML format is supported)
-      disclaimer = ""
-      
-    # Home page posts
-    [params.home.posts]
-      enable = true
-      # Special amount of posts in each home posts page
-      paginate = 6
-
-  # Social config about the author
   [params.social]
-    GitHub = ""
-    Linkedin = ""
-    Twitter = ""
-    Instagram = ""
-    Facebook = ""
-    Telegram = ""
-    Email = ""
-    RSS = false
-
-  # Page global config
-  [params.page]
-    # Custom CSS files
-    [params.page.header]
-      # Desktop header mode ("fixed", "normal", "auto")
-      desktopMode = "fixed"
-    [params.page.style]
-      # Custom CSS to include
-      customCSS = ["/css/custom.css"]
-    
-    # Social share links in posts
-    [params.page.share]
-      enable = false
-    
-    # Comment config
-    [params.page.comment]
-      enable = false
+    Email = "arockiaraj1994@gmail.com"
+    GitHub = "https://github.com/arockiaraj1994"
+    LinkedIn = "https://www.linkedin.com/in/arockiaraj-rayappan-5a513558"
 
 # Menu config
 [menu]
@@ -129,15 +38,20 @@ theme = 'LoveIt'
     url = "/talks/"
     weight = 4
   [[menu.main]]
+    identifier = "courses"
+    name = "Courses"
+    url = "/courses/generative-ai-software-engineering/"
+    weight = 5
+  [[menu.main]]
     identifier = "categories"
     name = "Categories"
     url = "/categories/"
-    weight = 5
+    weight = 6
   [[menu.main]]
     identifier = "tags"
     name = "Tags"
     url = "/tags/"
-    weight = 6
+    weight = 7
 
 # Markup config
 [markup]

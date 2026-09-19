@@ -48,7 +48,4 @@ hugo --gc --minify
 
 - Ensure GitHub Pages is enabled in repository settings
 - Check that the workflow has necessary permissions
-- Verify that the theme submodule is properly initialized
 - Check the Actions tab for any build errors
-
-The workflow includes all necessary steps including theme submodule initialization, so your site should deploy successfully on the first run.
