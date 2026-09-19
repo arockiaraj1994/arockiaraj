@@ -31,18 +31,18 @@ Side by side, the wireframe and the shipped screen from that build:
   <tbody>
     <tr>
       <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/design/dashboard.png" alt="MedRecord wireframe — dashboard" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+        <img src="/images/medrecord/design/dashboard.png" alt="MedRecord wireframe - dashboard" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
       <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/app/dashboard-app.jpeg" alt="MedRecord app — dashboard" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+        <img src="/images/medrecord/app/dashboard-app.jpeg" alt="MedRecord app - dashboard" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
     </tr>
     <tr>
       <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/design/auth-screen.png" alt="MedRecord wireframe — auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+        <img src="/images/medrecord/design/auth-screen.png" alt="MedRecord wireframe - auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
       <td style="vertical-align: top; width: 50%; padding: 0.5rem;">
-        <img src="/images/medrecord/app/auth-app.jpeg" alt="MedRecord app — auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+        <img src="/images/medrecord/app/auth-app.jpeg" alt="MedRecord app - auth and vault entry" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
       </td>
     </tr>
   </tbody>
