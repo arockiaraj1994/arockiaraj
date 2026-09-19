@@ -18,7 +18,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;600;700;800&family=Source+Sans+3:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -26,8 +26,20 @@
       theme: {
         extend: {
           fontFamily: {
-            display: ["'Plus Jakarta Sans'", "sans-serif"],
-            body: ["'Source Sans 3'", "system-ui", "sans-serif"],
+            display: ["'IBM Plex Sans'", "sans-serif"],
+            body: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
+            mono: ["'IBM Plex Mono'", "ui-monospace", "monospace"],
+          },
+          colors: {
+            paper: "#FBFBF9",
+            surface: "#F1F1EC",
+            ink: "#1C2226",
+            inkmuted: "#5B6570",
+            line: "#D8DCE0",
+            blueprint: "#1B3A5C",
+            signal: "#2F7A63",
+            amber: "#B8860B",
+            plum: "#5B4B8A",
           },
         },
       },
@@ -40,7 +52,10 @@
     .scrollbar-none::-webkit-scrollbar { display: none; }
   </style>
 </head>
-<body class="bg-slate-50 font-body antialiased">
+<body class="bg-paper font-body antialiased">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 pt-4">
+    <a href="../../../" class="text-[13px] font-mono text-inkmuted hover:text-signal">&larr; arockiaraj</a>
+  </div>
   <div id="root"></div>
 
   <script crossorigin src="https://unpkg.com/react@18.3.1/umd/react.production.min.js"></script>

@@ -33,24 +33,24 @@ const COURSE_OVERVIEW = [
    DESIGN TOKENS
 ──────────────────────────────────────────────── */
 const ACCENT = {
-  c1: { name: "Claude Code", badge: "bg-blue-600", text: "text-blue-600", border: "border-blue-600", bg50: "bg-blue-50", pillBg: "bg-blue-100", pillText: "text-blue-700", dot: "bg-blue-600" },
-  c2: { name: "AI Agents", badge: "bg-violet-600", text: "text-violet-600", border: "border-violet-600", bg50: "bg-violet-50", pillBg: "bg-violet-100", pillText: "text-violet-700", dot: "bg-violet-600" },
-  c3: { name: "Prompt Engineering", badge: "bg-teal-600", text: "text-teal-600", border: "border-teal-600", bg50: "bg-teal-50", pillBg: "bg-teal-100", pillText: "text-teal-700", dot: "bg-teal-600" },
-  c4: { name: "Custom GPTs", badge: "bg-amber-600", text: "text-amber-600", border: "border-amber-600", bg50: "bg-amber-50", pillBg: "bg-amber-100", pillText: "text-amber-700", dot: "bg-amber-600" },
+  c1: { name: "Claude Code", badge: "bg-blueprint", text: "text-blueprint", border: "border-blueprint", bg50: "bg-blueprint/5", dot: "bg-blueprint" },
+  c2: { name: "AI Agents", badge: "bg-plum", text: "text-plum", border: "border-plum", bg50: "bg-plum/5", dot: "bg-plum" },
+  c3: { name: "Prompt Engineering", badge: "bg-signal", text: "text-signal", border: "border-signal", bg50: "bg-signal/5", dot: "bg-signal" },
+  c4: { name: "Custom GPTs", badge: "bg-amber", text: "text-amber", border: "border-amber", bg50: "bg-amber/5", dot: "bg-amber" },
 };
 
 const TAG_STYLES = {
-  fw: { label: "Framework", cls: "bg-blue-100 text-blue-700" },
-  pt: { label: "Pattern", cls: "bg-pink-100 text-pink-800" },
-  rl: { label: "Rule", cls: "bg-green-100 text-green-800" },
-  ky: { label: "Key Insight", cls: "bg-amber-100 text-amber-800" },
-  sm: { label: "Summary", cls: "bg-amber-100 text-amber-800" },
+  fw: { label: "Framework", cls: "border border-blueprint text-blueprint" },
+  pt: { label: "Pattern", cls: "border border-plum text-plum" },
+  rl: { label: "Rule", cls: "border border-amber text-amber" },
+  ky: { label: "Key Insight", cls: "border border-signal text-signal" },
+  sm: { label: "Summary", cls: "border border-signal text-signal" },
 };
 
 const CALLOUT_STYLES = {
-  rule: "bg-red-50 border-red-200 text-red-800",
-  insight: "bg-amber-50 border-amber-200 text-amber-900",
-  tip: "bg-green-50 border-green-200 text-green-800",
+  rule: "bg-amber/5 border-amber/40 text-ink",
+  insight: "bg-signal/5 border-signal/40 text-ink",
+  tip: "bg-plum/5 border-plum/40 text-ink",
 };
 
 /* ────────────────────────────────────────────────
@@ -625,7 +625,7 @@ function renderRich(text, query) {
       }
       if (found > start) pieces.push(wrapSeg({ ...seg, content: seg.content.slice(start, found) }, `s${segIdx}-${count++}`));
       pieces.push(
-        <mark key={`s${segIdx}-m-${count++}`} className="bg-yellow-200 rounded px-0.5">
+        <mark key={`s${segIdx}-m-${count++}`} className="bg-amber/25 rounded px-0.5">
           {seg.content.slice(found, found + q.length)}
         </mark>
       );
@@ -636,8 +636,8 @@ function renderRich(text, query) {
 }
 
 function wrapSeg(seg, key) {
-  if (seg.type === "bold") return <strong key={key} className="font-semibold text-slate-900">{seg.content}</strong>;
-  if (seg.type === "ex") return <span key={key} className="text-slate-500 text-[14px]">{seg.content}</span>;
+  if (seg.type === "bold") return <strong key={key} className="font-semibold text-ink">{seg.content}</strong>;
+  if (seg.type === "ex") return <span key={key} className="text-inkmuted text-[14px]">{seg.content}</span>;
   return <span key={key}>{seg.content}</span>;
 }
 
@@ -649,8 +649,8 @@ function Block({ block, query }) {
     return (
       <ul className="space-y-1.5 mt-2">
         {block.items.map((it, i) => (
-          <li key={i} className="relative pl-5 text-[15px] leading-relaxed text-slate-800">
-            <span className="absolute left-0 top-[3px] text-slate-400 text-xs">→</span>
+          <li key={i} className="relative pl-5 text-[15px] leading-relaxed text-ink">
+            <span className="absolute left-0 top-[3px] text-inkmuted text-xs">→</span>
             {renderRich(it, query)}
           </li>
         ))}
@@ -661,8 +661,8 @@ function Block({ block, query }) {
     return (
       <ul className="pl-5 mt-1.5 space-y-1">
         {block.items.map((it, i) => (
-          <li key={i} className="relative pl-4 text-[14.5px] text-slate-600">
-            <span className="absolute left-0 top-[1px] text-slate-400">·</span>
+          <li key={i} className="relative pl-4 text-[14.5px] text-inkmuted">
+            <span className="absolute left-0 top-[1px] text-inkmuted">·</span>
             {renderRich(it, query)}
           </li>
         ))}
@@ -671,7 +671,7 @@ function Block({ block, query }) {
   }
   if (block.kind === "callout") {
     return (
-      <div className={`flex items-start gap-2.5 rounded-lg border px-3.5 py-2.5 mt-3 text-[15px] leading-relaxed ${CALLOUT_STYLES[block.variant]}`}>
+      <div className={`flex items-start gap-2.5 rounded border px-3.5 py-2.5 mt-3 text-[15px] leading-relaxed ${CALLOUT_STYLES[block.variant]}`}>
         <span className="flex-shrink-0">{block.icon}</span>
         <span>{renderRich(block.text, query)}</span>
       </div>
@@ -679,13 +679,13 @@ function Block({ block, query }) {
   }
   if (block.kind === "flow") {
     return (
-      <div className="bg-slate-50 rounded-lg px-4 py-3 mt-3">
-        <div className="text-[11.5px] font-extrabold tracking-wider uppercase text-slate-400 mb-2">{block.label}</div>
+      <div className="bg-surface rounded px-4 py-3 mt-3">
+        <div className="text-[11.5px] font-semibold tracking-wide uppercase text-inkmuted mb-2 font-mono">{block.label}</div>
         <div className="flex flex-wrap items-center gap-1.5">
           {block.steps.map((s, i) => (
             <React.Fragment key={i}>
-              <span className="px-2.5 py-1 bg-white border border-slate-200 rounded-full text-[14px] font-medium text-slate-800">{s}</span>
-              {i < block.steps.length - 1 && <IconArrowRight size={13} className="text-slate-400 flex-shrink-0" />}
+              <span className="px-2.5 py-1 bg-paper border border-line rounded-full text-[14px] font-medium text-ink">{s}</span>
+              {i < block.steps.length - 1 && <IconArrowRight size={13} className="text-inkmuted flex-shrink-0" />}
             </React.Fragment>
           ))}
         </div>
@@ -694,7 +694,7 @@ function Block({ block, query }) {
   }
   if (block.kind === "format") {
     return (
-      <pre className="bg-slate-50 border-l-2 border-slate-300 rounded-md px-3.5 py-2.5 mt-3 text-[14px] text-slate-600 whitespace-pre-wrap font-mono leading-relaxed">
+      <pre className="bg-surface border-l-2 border-line rounded px-3.5 py-2.5 mt-3 text-[14px] text-inkmuted whitespace-pre-wrap font-mono leading-relaxed">
         {block.text}
       </pre>
     );
@@ -708,27 +708,27 @@ function Block({ block, query }) {
 function Section({ section, index, accent, isOpen, onToggle, query }) {
   const tagInfo = TAG_STYLES[section.tag];
   return (
-    <div className="bg-white border border-slate-200 rounded-xl mb-2.5 overflow-hidden hover:shadow-sm transition-shadow">
+    <div className="bg-paper border border-line mb-[-1px]">
       <button
         onClick={onToggle}
-        className="w-full flex items-center gap-3 px-4 py-3.5 text-left hover:bg-slate-50 transition-colors"
+        className="w-full flex items-center gap-3 px-4 py-3.5 text-left hover:bg-surface transition-colors"
       >
-        <div className={`flex-shrink-0 w-6 h-6 rounded-md flex items-center justify-center text-white text-[12.5px] font-extrabold ${accent.badge}`}>
+        <div className={`flex-shrink-0 w-6 h-6 flex items-center justify-center text-paper text-[12.5px] font-bold font-mono ${accent.badge}`}>
           {index + 1}
         </div>
-        <div className="flex-1 font-semibold text-[16px] text-slate-900" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+        <div className="flex-1 font-semibold text-[16px] text-ink">
           {renderRich(section.title, query)}
         </div>
-        <span className={`hidden sm:inline-block flex-shrink-0 px-2 py-0.5 rounded-full text-[12px] font-bold ${tagInfo.cls}`}>
+        <span className={`hidden sm:inline-block flex-shrink-0 px-2 py-0.5 rounded text-[12px] font-medium font-mono ${tagInfo.cls}`}>
           {tagInfo.label}
         </span>
-        <IconChevronDown size={15} className={`flex-shrink-0 text-slate-400 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
+        <IconChevronDown size={15} className={`flex-shrink-0 text-inkmuted transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
       </button>
       <div
         className="overflow-hidden transition-all duration-300 ease-in-out"
         style={{ maxHeight: isOpen ? 800 : 0 }}
       >
-        <div className="px-4 pb-4 pt-1 border-t border-slate-100">
+        <div className="px-4 pb-4 pt-1 border-t border-line">
           {section.blocks.map((b, i) => (
             <Block key={i} block={b} query={query} />
           ))}
@@ -786,27 +786,19 @@ function CourseNotesDashboard() {
   }
 
   return (
-    <div className="min-h-screen bg-slate-50" style={{ fontFamily: "'Source Sans 3', system-ui, sans-serif" }}>
+    <div className="min-h-screen bg-paper">
       {/* HERO */}
-      <div className="relative overflow-hidden border-b border-slate-200" style={{
-        background: "linear-gradient(145deg, #0f172a 0%, #1e293b 45%, #0f766e 100%)",
-      }}>
-        <div className="absolute inset-0 opacity-30" style={{
-          backgroundImage: "radial-gradient(circle at 20% 20%, rgba(59,130,246,0.35), transparent 40%), radial-gradient(circle at 80% 10%, rgba(245,158,11,0.25), transparent 35%), radial-gradient(circle at 70% 80%, rgba(139,92,246,0.3), transparent 40%)",
-        }} />
-        <div className="relative max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-8">
-          <p className="text-[12.5px] font-bold uppercase tracking-[0.14em] text-teal-200/90 mb-3" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
-            Coursera Specialization
+      <div className="border-b border-line bg-blueprint">
+        <div className="max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-8">
+          <p className="text-[13px] font-mono text-signal mb-2">
+            Coursera specialization &middot; Vanderbilt University &middot; Dr. Jules White
           </p>
-          <h1 className="text-[30px] sm:text-[36px] font-extrabold text-white leading-tight" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+          <h1 className="text-[28px] sm:text-[32px] font-extrabold text-paper leading-tight">
             Generative AI Software Engineering
           </h1>
-          <p className="mt-3 text-[16px] text-slate-300 max-w-xl leading-relaxed">
-            Vanderbilt University · Dr. Jules White · Personal study notes from all four courses.
+          <p className="mt-2 text-[15px] text-paper/70 max-w-xl leading-relaxed">
+            Personal study notes from all four courses. All complete.
           </p>
-          <div className="mt-5 inline-flex items-center gap-2 rounded-full bg-emerald-500/15 border border-emerald-400/30 px-3.5 py-1.5">
-            <span className="text-[14px] font-semibold text-emerald-200">4-course specialization · All complete</span>
-          </div>
 
           <div className="mt-6 grid grid-cols-2 lg:grid-cols-4 gap-2">
             {COURSE_OVERVIEW.map((c) => (
@@ -818,20 +810,20 @@ function CourseNotesDashboard() {
                     document.getElementById("notes-header")?.scrollIntoView({ behavior: "smooth", block: "start" });
                   });
                 }}
-                className={`text-left rounded-lg border px-2.5 py-2 transition-colors ${
+                className={`text-left border px-2.5 py-2 transition-colors ${
                   activeTab === c.id
-                    ? "bg-white/15 border-white/40"
-                    : "bg-white/5 border-white/10 hover:bg-white/10"
+                    ? "bg-paper/10 border-paper/40"
+                    : "bg-transparent border-paper/15 hover:border-paper/30"
                 }`}
               >
-                <div className="flex items-center gap-1.5 mb-0.5">
+                <div className="flex items-center gap-1.5 mb-0.5 font-mono text-[10px] text-paper/60">
                   <span className={`w-1.5 h-1.5 rounded-full ${ACCENT[c.id].dot}`} />
-                  <span className="text-[10px] font-extrabold tracking-wider uppercase text-slate-300">{c.id.toUpperCase()}</span>
+                  {c.id.toUpperCase()}
                 </div>
-                <div className="text-[12.5px] font-bold text-white leading-snug" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+                <div className="text-[12.5px] font-semibold text-paper leading-snug">
                   {c.title}
                 </div>
-                <div className="text-[11px] text-slate-400 mt-0.5">{c.meta}</div>
+                <div className="text-[11px] text-paper/50 mt-0.5 font-mono">{c.meta}</div>
               </button>
             ))}
           </div>
@@ -839,25 +831,25 @@ function CourseNotesDashboard() {
       </div>
 
       {/* NOTES HEADER */}
-      <div id="notes-header" className="bg-white border-b border-slate-200 sticky top-0 z-10 shadow-sm">
+      <div id="notes-header" className="bg-paper border-b border-line sticky top-0 z-10">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 pt-4">
           <div className="flex items-start justify-between gap-4 flex-wrap mb-3">
             <div>
-              <h2 className="text-[18px] font-extrabold text-slate-900" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+              <h2 className="text-[18px] font-bold text-ink">
                 Study Notes
               </h2>
-              <p className="text-[13.5px] text-slate-400 mt-0.5">
+              <p className="text-[13.5px] text-inkmuted mt-0.5">
                 Browse by course or search across concepts, patterns, and rules
               </p>
             </div>
             <div className="relative">
-              <IconSearch size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-slate-400" />
+              <IconSearch size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-inkmuted" />
               <input
                 type="text"
                 value={search}
                 onChange={(e) => setSearch(e.target.value)}
                 placeholder="Search notes..."
-                className="pl-9 pr-4 py-2 w-full sm:w-64 border border-slate-200 rounded-lg text-[14.5px] bg-slate-50 outline-none focus:border-blue-500 focus:bg-white transition-colors"
+                className="pl-9 pr-4 py-2 w-full sm:w-64 border border-line rounded text-[14.5px] bg-surface outline-none focus:border-signal focus:bg-paper transition-colors"
               />
             </div>
           </div>
@@ -871,10 +863,9 @@ function CourseNotesDashboard() {
                 <button
                   key={tabKey}
                   onClick={() => switchTab(tabKey)}
-                  className={`flex items-center gap-2 px-4 py-2.5 text-[14px] font-bold whitespace-nowrap border-b-[3px] transition-colors ${
-                    active ? `${a.text} ${a.border}` : "text-slate-400 border-transparent hover:text-slate-600"
+                  className={`flex items-center gap-2 px-4 py-2.5 text-[14px] font-semibold font-mono whitespace-nowrap border-b-[3px] transition-colors ${
+                    active ? `${a.text} ${a.border}` : "text-inkmuted border-transparent hover:text-ink"
                   }`}
-                  style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
                 >
                   <span className={`w-2 h-2 rounded-full ${a.dot}`}></span>
                   {tabKey.toUpperCase()}: {a.name}
@@ -889,14 +880,13 @@ function CourseNotesDashboard() {
       <div className="max-w-3xl mx-auto px-5 sm:px-8 py-6 pb-16">
 
         {/* KEY CONCEPTS */}
-        <div className={`rounded-xl px-4.5 py-4 mb-5 border ${accent.bg50} ${accent.border}`} style={{ paddingLeft: 18, paddingRight: 18 }}>
-          <div className="text-[11.5px] font-extrabold uppercase tracking-wider text-slate-400 mb-2.5">Core Concepts</div>
+        <div className={`rounded px-4.5 py-4 mb-5 border ${accent.bg50} ${accent.border}`} style={{ paddingLeft: 18, paddingRight: 18 }}>
+          <div className="text-[11.5px] font-semibold uppercase tracking-wide text-inkmuted mb-2.5 font-mono">Core Concepts</div>
           <div className="flex flex-wrap gap-1.5">
             {course.concepts.map((c, i) => (
               <span
                 key={i}
-                className={`px-2.5 py-1 rounded-full text-[13.5px] font-bold ${accent.pillBg} ${accent.pillText}`}
-                style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}
+                className={`px-2.5 py-1 rounded text-[13.5px] font-medium border ${accent.border} ${accent.text}`}
               >
                 {c}
               </span>
@@ -906,28 +896,29 @@ function CourseNotesDashboard() {
 
         {/* SEARCH COUNT */}
         {query && (
-          <div className="text-[13.5px] text-slate-400 mb-2 px-1">
+          <div className="text-[13.5px] text-inkmuted mb-2 px-1">
             {filteredSections.length} section{filteredSections.length !== 1 ? "s" : ""} found
           </div>
         )}
 
         {/* SECTIONS */}
         {filteredSections.length > 0 ? (
-          filteredSections.map(({ s, idx }) => (
-            <Section
-              key={idx}
-              section={s}
-              index={idx}
-              accent={accent}
-              isOpen={query ? true : openSet[activeTab].includes(idx)}
-              onToggle={() => toggleSection(idx)}
-              query={query}
-            />
-          ))
+          <div>
+            {filteredSections.map(({ s, idx }) => (
+              <Section
+                key={idx}
+                section={s}
+                index={idx}
+                accent={accent}
+                isOpen={query ? true : openSet[activeTab].includes(idx)}
+                onToggle={() => toggleSection(idx)}
+                query={query}
+              />
+            ))}
+          </div>
         ) : (
-          <div className="text-center py-16 text-slate-400">
-            <div className="text-3xl mb-3">🔍</div>
-            <h3 className="text-[16px] font-bold text-slate-600 mb-1" style={{ fontFamily: "'Plus Jakarta Sans', sans-serif" }}>
+          <div className="text-center py-16 text-inkmuted">
+            <h3 className="text-[16px] font-semibold text-ink mb-1">
               No results found
             </h3>
             <p className="text-[14px]">Try a different search term</p>
