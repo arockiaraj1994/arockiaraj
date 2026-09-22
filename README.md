@@ -16,7 +16,7 @@ external theme dependency.
 
 ### Prerequisites
 
-- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.140.0 or later)
+- [Hugo Extended](https://gohugo.io/getting-started/installing/) (v0.156.0 or later — the courses layouts use `hugo.Data`)
 - [Git](https://git-scm.com/)
 
 ### Development
