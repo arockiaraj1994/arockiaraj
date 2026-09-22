@@ -1,0 +1,26 @@
+{{ define "main" }}
+<header style="padding-top: 2rem;">
+  <h1 class="page__title">{{ .Title }}</h1>
+  {{ with .Content }}<div class="page__description">{{ . }}</div>{{ end }}
+</header>
+<ul class="entry-list">
+  {{ range where .Pages "Params.build.list" "ne" "never" }}
+  <li class="entry-row">
+    <div class="entry-meta">
+      {{ with .Params.provider }}<span>{{ . }}</span>{{ end }}
+      {{ with .Params.meta }}<span>{{ . }}</span>{{ end }}
+    </div>
+    <div class="entry-body">
+      <h3><a href="{{ .Permalink }}">{{ .Title }}</a></h3>
+      {{ with .Description }}<p>{{ . }}</p>{{ end }}
+      <div class="course-links">
+        <a href="{{ .Permalink }}">notes &rarr;</a>
+        {{ with .Params.certificate }}
+        <a href="{{ . | relURL }}" target="_blank" rel="noopener">certificate &#8599;</a>
+        {{ end }}
+      </div>
+    </div>
+  </li>
+  {{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,91 @@
+<script>
+  (function () {
+    var root = document.querySelector("[data-course-notes]");
+    if (!root) return;
+
+    var toolbar = root.querySelector("[data-course-toolbar]");
+    var tabs = Array.prototype.slice.call(root.querySelectorAll("[data-course-tab]"));
+    var panels = Array.prototype.slice.call(root.querySelectorAll("[data-course-panel]"));
+    var search = root.querySelector("[data-course-search]");
+    var count = root.querySelector("[data-course-count]");
+    var empty = root.querySelector("[data-course-empty]");
+    var expandBtn = root.querySelector("[data-course-expand]");
+
+    var activeId = panels.length ? panels[0].getAttribute("data-course-panel") : null;
+
+    function activePanel() {
+      for (var i = 0; i < panels.length; i++) {
+        if (panels[i].getAttribute("data-course-panel") === activeId) return panels[i];
+      }
+      return null;
+    }
+
+    function sectionsOf(panel) {
+      return Array.prototype.slice.call(panel.querySelectorAll("[data-course-section]"));
+    }
+
+    function applyFilter() {
+      var panel = activePanel();
+      if (!panel) return;
+      var query = (search ? search.value : "").trim().toLowerCase();
+      var sections = sectionsOf(panel);
+      var shown = 0;
+
+      sections.forEach(function (section) {
+        var match = !query || section.textContent.toLowerCase().indexOf(query) !== -1;
+        section.hidden = !match;
+        if (match) {
+          shown++;
+          if (query) section.open = true;
+        }
+      });
+
+      if (count) {
+        count.hidden = !query;
+        count.textContent = shown + (shown === 1 ? " section" : " sections") + " match";
+      }
+      if (empty) empty.hidden = !(query && shown === 0);
+      var concepts = panel.querySelector(".course-concepts");
+      if (concepts) concepts.hidden = !!query;
+    }
+
+    function selectTab(id) {
+      activeId = id;
+      panels.forEach(function (panel) {
+        panel.hidden = panel.getAttribute("data-course-panel") !== id;
+      });
+      tabs.forEach(function (tab) {
+        tab.setAttribute("aria-selected", tab.getAttribute("data-course-tab") === id ? "true" : "false");
+      });
+      applyFilter();
+    }
+
+    tabs.forEach(function (tab) {
+      tab.addEventListener("click", function () {
+        selectTab(tab.getAttribute("data-course-tab"));
+      });
+    });
+
+    if (search) {
+      search.addEventListener("input", applyFilter);
+    }
+
+    if (expandBtn) {
+      expandBtn.addEventListener("click", function () {
+        var panel = activePanel();
+        if (!panel) return;
+        var expand = expandBtn.getAttribute("aria-expanded") !== "true";
+        sectionsOf(panel).forEach(function (section) {
+          if (!section.hidden) section.open = expand;
+        });
+        expandBtn.setAttribute("aria-expanded", expand ? "true" : "false");
+        expandBtn.textContent = expand ? "collapse all" : "expand all";
+      });
+    }
+
+    /* Markup ships every panel visible so the notes read fine without JS;
+       the tab UI only appears once it can actually work. */
+    if (toolbar) toolbar.hidden = false;
+    if (activeId) selectTab(activeId);
+  })();
+</script>
