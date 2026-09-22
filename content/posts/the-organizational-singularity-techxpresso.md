@@ -1,6 +1,6 @@
 ---
 title: "The Organizational Singularity: Notes from TechXpresso"
-date: 2026-09-23
+date: 2026-09-23T00:00:00+05:30
 categories: ["AI/ML"]
 tags: ["Ai", "Agents", "Organization", "Conference", "Techxpresso"]
 description: "Salim Ismail's talk at TechXpresso argued that AI breaks the economics that made companies necessary. Here is what he said and what I think holds up."
