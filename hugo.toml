@@ -40,7 +40,7 @@ title = 'Arockiaraj'
   [[menu.main]]
     identifier = "courses"
     name = "Courses"
-    url = "/courses/generative-ai-software-engineering/"
+    url = "/courses/"
     weight = 5
   [[menu.main]]
     identifier = "categories"

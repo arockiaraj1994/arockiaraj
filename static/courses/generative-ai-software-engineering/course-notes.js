@@ -21,6 +21,13 @@ function IconArrowRight({ size = 13, className = "" }) {
     </svg>
   );
 }
+function IconCertificate({ size = 13, className = "" }) {
+  return (
+    <svg width={size} height={size} className={className} viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+      <circle cx="12" cy="8" r="6" /><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5" />
+    </svg>
+  );
+}
 
 const COURSE_OVERVIEW = [
   { id: "c1", title: "Claude Code", meta: "5 modules" },
@@ -790,12 +797,25 @@ function CourseNotesDashboard() {
       {/* HERO */}
       <div className="border-b border-line bg-blueprint">
         <div className="max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-8">
-          <p className="text-[13px] font-mono text-signal mb-2">
-            Coursera specialization &middot; Vanderbilt University &middot; Dr. Jules White
-          </p>
-          <h1 className="text-[28px] sm:text-[32px] font-extrabold text-paper leading-tight">
-            Generative AI Software Engineering
-          </h1>
+          <div className="flex items-start justify-between gap-4 flex-wrap">
+            <div>
+              <p className="text-[13px] font-mono text-signal mb-2">
+                Coursera specialization &middot; Vanderbilt University &middot; Dr. Jules White
+              </p>
+              <h1 className="text-[28px] sm:text-[32px] font-extrabold text-paper leading-tight">
+                Generative AI Software Engineering
+              </h1>
+            </div>
+            <a
+              href="/certificates/generative-ai-software-engineering.pdf"
+              target="_blank"
+              rel="noopener"
+              className="flex-shrink-0 inline-flex items-center gap-1.5 text-[12.5px] font-semibold text-paper border border-paper/25 hover:border-paper/40 bg-paper/5 hover:bg-paper/10 px-3 py-1.5 rounded transition-colors"
+            >
+              <IconCertificate size={13} />
+              View Certificate
+            </a>
+          </div>
           <p className="mt-2 text-[15px] text-paper/70 max-w-xl leading-relaxed">
             Personal study notes from all four courses. All complete.
           </p>

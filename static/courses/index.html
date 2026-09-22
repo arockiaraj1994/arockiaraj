@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Courses | Study Notes</title>
+  <meta name="description" content="Courses and specializations Arockiaraj has completed, with study notes and certificates." />
+  <meta name="author" content="Arockiaraj" />
+
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Courses | Study Notes" />
+  <meta property="og:description" content="Courses and specializations Arockiaraj has completed, with study notes and certificates." />
+  <meta property="og:url" content="https://arockiaraj1994.github.io/arockiaraj/courses/" />
+
+  <meta name="twitter:card" content="summary" />
+  <meta name="twitter:title" content="Courses | Study Notes" />
+  <meta name="twitter:description" content="Courses and specializations Arockiaraj has completed, with study notes and certificates." />
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          fontFamily: {
+            display: ["'IBM Plex Sans'", "sans-serif"],
+            body: ["'IBM Plex Sans'", "system-ui", "sans-serif"],
+            mono: ["'IBM Plex Mono'", "ui-monospace", "monospace"],
+          },
+          colors: {
+            paper: "#FBFBF9",
+            surface: "#F1F1EC",
+            ink: "#1C2226",
+            inkmuted: "#5B6570",
+            line: "#D8DCE0",
+            blueprint: "#1B3A5C",
+            signal: "#2F7A63",
+            amber: "#B8860B",
+            plum: "#5B4B8A",
+          },
+        },
+      },
+    };
+  </script>
+
+  <style>
+    body { margin: 0; }
+  </style>
+</head>
+<body class="bg-paper font-body antialiased min-h-screen">
+  <div class="max-w-3xl mx-auto px-5 sm:px-8 pt-4">
+    <a href="../" class="text-[13px] font-mono text-inkmuted hover:text-signal">&larr; arockiaraj</a>
+  </div>
+
+  <div class="border-b border-line bg-blueprint">
+    <div class="max-w-3xl mx-auto px-5 sm:px-8 pt-10 pb-8">
+      <p class="text-[13px] font-mono text-signal mb-2">Study log</p>
+      <h1 class="text-[28px] sm:text-[32px] font-extrabold text-paper leading-tight">Courses</h1>
+      <p class="mt-2 text-[15px] text-paper/70 max-w-xl leading-relaxed">
+        Courses and specializations I've completed, with study notes and certificates.
+      </p>
+    </div>
+  </div>
+
+  <div id="course-list" class="max-w-3xl mx-auto px-5 sm:px-8 py-6 pb-16 grid grid-cols-1 sm:grid-cols-2 gap-4"></div>
+
+  <script>
+    const COURSES = [
+      {
+        slug: "generative-ai-software-engineering",
+        title: "Generative AI Software Engineering",
+        provider: "Vanderbilt University · Coursera · Dr. Jules White",
+        meta: "4 courses · Complete",
+        blurb: "Claude Code, AI Agents, Prompt Engineering, Custom GPTs.",
+        notesUrl: "./generative-ai-software-engineering/",
+        certUrl: "/certificates/generative-ai-software-engineering.pdf",
+      },
+    ];
+
+    const IconCert = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="6"/><path d="M8.5 13.5 7 22l5-3 5 3-1.5-8.5"/></svg>`;
+    const IconArrow = `<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg>`;
+
+    const list = document.getElementById("course-list");
+    list.innerHTML = COURSES.map((c) => `
+      <div class="border border-line bg-paper hover:border-blueprint/40 transition-colors p-5 flex flex-col">
+        <div class="text-[11.5px] font-mono text-inkmuted mb-1.5">${c.provider}</div>
+        <h2 class="text-[17px] font-bold text-ink leading-snug mb-1.5">${c.title}</h2>
+        <p class="text-[13.5px] text-inkmuted leading-relaxed mb-3 flex-1">${c.blurb}</p>
+        <div class="text-[11.5px] font-mono text-signal mb-3">${c.meta}</div>
+        <div class="flex items-center gap-3">
+          <a href="${c.notesUrl}" class="inline-flex items-center gap-1.5 text-[13.5px] font-semibold text-blueprint hover:underline">
+            View Notes ${IconArrow}
+          </a>
+          <a href="${c.certUrl}" target="_blank" rel="noopener" class="inline-flex items-center gap-1.5 text-[13px] font-medium text-inkmuted hover:text-amber border border-line hover:border-amber px-2.5 py-1 rounded transition-colors">
+            ${IconCert} Certificate
+          </a>
+        </div>
+      </div>
+    `).join("");
+  </script>
+</body>
+</html>
