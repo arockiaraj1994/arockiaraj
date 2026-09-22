@@ -1,0 +1,29 @@
+{{- if eq .kind "notes" -}}
+<ul class="course-notes-list">
+  {{- range .items }}
+  <li>{{ partial "course-rich.html" . }}</li>
+  {{- end }}
+</ul>
+{{- else if eq .kind "sub" -}}
+<ul class="course-sub-list">
+  {{- range .items }}
+  <li>{{ partial "course-rich.html" . }}</li>
+  {{- end }}
+</ul>
+{{- else if eq .kind "callout" -}}
+<div class="course-callout" data-variant="{{ .variant }}">
+  <span class="course-callout__icon" aria-hidden="true">{{ .icon }}</span>
+  <span>{{ partial "course-rich.html" .text }}</span>
+</div>
+{{- else if eq .kind "flow" -}}
+<div class="course-flow">
+  <span class="course-flow__label">{{ .label }}</span>
+  <ol class="course-flow__steps">
+    {{- range .steps }}
+    <li><span>{{ . }}</span></li>
+    {{- end }}
+  </ol>
+</div>
+{{- else if eq .kind "format" -}}
+<pre class="course-format">{{ .text }}</pre>
+{{- end -}}

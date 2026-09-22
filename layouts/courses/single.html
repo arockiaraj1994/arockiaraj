@@ -1,0 +1,127 @@
+{{ define "main" }}
+{{ $tagLabels := dict "fw" "Framework" "pt" "Pattern" "rl" "Rule" "ky" "Key Insight" "sm" "Summary" }}
+{{ $notes := false }}
+{{ with .Params.notesData }}{{ $notes = index hugo.Data.courses . }}{{ end }}
+<article class="page">
+  <aside class="page__meta">
+    {{ if not .Date.IsZero }}
+    <div>
+      <span class="label">date</span>
+      <time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "2006-01-02" }}</time>
+    </div>
+    {{ end }}
+    {{ with .Params.provider }}
+    <div>
+      <span class="label">provider</span>
+      {{ . }}
+    </div>
+    {{ end }}
+    {{ with .Params.instructor }}
+    <div>
+      <span class="label">instructor</span>
+      {{ . }}
+    </div>
+    {{ end }}
+    {{ with .Params.meta }}
+    <div>
+      <span class="label">progress</span>
+      {{ . }}
+    </div>
+    {{ end }}
+    {{ with .Params.certificate }}
+    <div>
+      <span class="label">certificate</span>
+      <a href="{{ . | relURL }}" target="_blank" rel="noopener">view &#8599;</a>
+    </div>
+    {{ end }}
+    {{ with .Params.tags }}
+    <div>
+      <span class="label">tags</span>
+      <ul class="tag-list">
+        {{ range . }}<li><a class="tag" href="{{ printf "%stags/%s/" $.Site.BaseURL (. | urlize) }}">{{ . }}</a></li>{{ end }}
+      </ul>
+    </div>
+    {{ end }}
+  </aside>
+  <div>
+    <h1 class="page__title">{{ .Title }}</h1>
+    {{ with .Description }}<p class="page__description">{{ . }}</p>{{ end }}
+    <div class="page__body">
+      {{ .Content }}
+    </div>
+
+    {{ with $notes }}
+    <div class="course-notes" data-course-notes>
+      <div class="course-toolbar" data-course-toolbar hidden>
+        <div class="course-tabs" role="tablist" aria-label="Courses in this specialization">
+          {{ range $i, $ov := .overview }}
+          {{ $course := index hugo.Data.courses $.Params.notesData "courses" $ov.id }}
+          <button
+            type="button"
+            role="tab"
+            class="course-tab"
+            id="tab-{{ $ov.id }}"
+            data-course-tab="{{ $ov.id }}"
+            data-accent="{{ $course.accent }}"
+            aria-controls="panel-{{ $ov.id }}"
+            aria-selected="{{ if eq $i 0 }}true{{ else }}false{{ end }}">
+            <span class="course-tab__title">{{ $ov.title }}</span>
+            <span class="course-tab__meta">{{ $ov.meta }}</span>
+          </button>
+          {{ end }}
+        </div>
+        <div class="course-controls">
+          <input
+            type="search"
+            class="course-search"
+            data-course-search
+            placeholder="Search notes…"
+            aria-label="Search notes">
+          <button type="button" class="course-expand" data-course-expand aria-expanded="false">expand all</button>
+        </div>
+      </div>
+
+      <p class="course-count" data-course-count hidden></p>
+
+      {{ range $i, $ov := .overview }}
+      {{ $course := index hugo.Data.courses $.Params.notesData "courses" $ov.id }}
+      <section
+        class="course-panel"
+        id="panel-{{ $ov.id }}"
+        role="tabpanel"
+        aria-labelledby="tab-{{ $ov.id }}"
+        data-course-panel="{{ $ov.id }}"
+        data-accent="{{ $course.accent }}">
+        <h2 class="course-panel__title">
+          {{ $ov.title }}
+          <span>{{ $ov.meta }}</span>
+        </h2>
+        <div class="course-concepts">
+          <span class="course-concepts__label">core concepts</span>
+          <ul class="course-chips">
+            {{ range $course.concepts }}<li>{{ . }}</li>{{ end }}
+          </ul>
+        </div>
+
+        {{ range $n, $s := $course.sections }}
+        <details class="course-section" data-course-section{{ if eq $n 0 }} open{{ end }}>
+          <summary>
+            <span class="course-section__num">{{ add $n 1 }}</span>
+            <span class="course-section__title">{{ partial "course-rich.html" $s.title }}</span>
+            <span class="course-section__tag">{{ index $tagLabels $s.tag }}</span>
+          </summary>
+          <div class="course-section__body">
+            {{ range $s.blocks }}{{ partial "course-block.html" . }}{{ end }}
+          </div>
+        </details>
+        {{ end }}
+      </section>
+      {{ end }}
+
+      <p class="course-empty" data-course-empty hidden>No sections match that search.</p>
+    </div>
+    {{ partial "course-notes.js.html" . }}
+    {{ end }}
+  </div>
+</article>
+{{ end }}

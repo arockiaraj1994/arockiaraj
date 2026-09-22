@@ -1,0 +1,2 @@
+{{- /* Inline note markup: **bold** and ~aside~. Escaped first, so data can never inject HTML. */ -}}
+{{- . | htmlEscape | replaceRE `\*\*([^*]+)\*\*` "<strong>$1</strong>" | replaceRE `~([^~]+)~` `<span class="course-ex">$1</span>` | safeHTML -}}
