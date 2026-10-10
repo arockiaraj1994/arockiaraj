@@ -5,7 +5,7 @@ lastmod: 2025-05-09T00:00:00Z
 tags: ["git", "version-control", "development", "collaboration"]
 categories: ["General"]
 author: "Arockiaraj"
-description: "A comprehensive guide to understanding version control and how Git helps implement it effectively"
+description: "A beginner's guide to version control and how Git helps implement it effectively"
 draft: false
 ---
 
@@ -28,10 +28,10 @@ When working on software projects, especially with a team, some common problems 
 
 Version control systems (VCS) are tools that:
 
-- **Track changes over time** — every time you save a new version, it's recorded.
-- **Allow collaboration** — multiple people can work on the same project without conflict.
-- **Enable rollback** — go back to any previous version when needed.
-- **Support branching** — work on different features or bug fixes in parallel without interfering with the main project.
+- **Track changes over time.** Every time you save a new version, it's recorded.
+- **Allow collaboration.** Multiple people can work on the same project without conflict.
+- **Enable rollback.** Go back to any previous version when needed.
+- **Support branching.** Work on different features or bug fixes in parallel without interfering with the main project.
 
 Version control provides a history of your project. Think of it as a **"time machine for code."**
 
@@ -45,7 +45,7 @@ Git is the most widely used version control system today. It's fast, flexible, a
 
 Git stores your project as a **series of snapshots**, not just differences. Every time you commit, Git takes a snapshot of your files and stores a reference to it.
 
-Git also works **distributed** — everyone has a full copy of the project history. That means you can work even when you're not connected to the internet.
+Git also works **distributed**: everyone has a full copy of the project history. That means you can work even when you're not connected to the internet.
 
 ---
 
@@ -135,6 +135,6 @@ git push origin main
 
 ## Conclusion
 
-Version control is not just for big teams — it's essential for any coding project. Git makes it powerful, efficient, and accessible. Mastering these basics will make you a better collaborator and coder.
+Version control is not just for big teams. It's essential for any coding project. Git makes it fast and free to use. Mastering these basics will make you a better collaborator and coder.
 
 In the next blog, we'll cover more advanced Git workflows like branching strategies, resolving merge conflicts, and working with pull requests.

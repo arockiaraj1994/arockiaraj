@@ -3,7 +3,7 @@
    Blowfish loads this file after its own stylesheet.
    ============================================================ */
 
-/* Course notes (layouts/courses/single.html) — maps the notes UI onto
+/* Course notes (layouts/courses/single.html). Maps the notes UI onto
    Blowfish's scheme colours so it follows light/dark mode. */
 .course-notes {
   --fg: rgb(var(--color-neutral-800));

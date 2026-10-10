@@ -4,7 +4,7 @@ date: 2026-09-19T10:00:00+05:30
 draft: false
 showReadingTime: false
 author: "Arockiaraj"
-description: "Study notes from Vanderbilt University's Generative AI Software Engineering specialization on Coursera — Claude Code, AI Agents, Prompt Engineering, and Custom GPTs."
+description: "Study notes from Vanderbilt University's Generative AI Software Engineering specialization on Coursera: Claude Code, AI Agents, Prompt Engineering, and Custom GPTs."
 provider: "Vanderbilt University · Coursera"
 instructor: "Dr. Jules White"
 meta: "4 courses · Complete"

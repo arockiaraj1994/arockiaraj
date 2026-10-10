@@ -1,9 +1,9 @@
 ---
-title: "Lightning Talk at Chennaipy - Building a Photo Organizer with Python"
+title: "Lightning Talk at Chennaipy: Building a Photo Organizer with Python"
 date: 2025-11-01T10:00:00+05:30
 draft: false
 author: "Arockiaraj"
-description: "A recap of my lightning talk at the Chennaipy November 2025 meetup - how I built a Python GUI tool to organize 10,000+ photos spread across 930 GB."
+description: "A recap of my lightning talk at the Chennaipy November 2025 meetup, about how I built a Python GUI tool to organize 10,000+ photos spread across 930 GB."
 tags: ["python", "chennaipy", "open-source", "chatgpt", "github-copilot", "talk"]
 categories: ["Talks"]
 ---

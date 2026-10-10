@@ -1,6 +1,6 @@
 ---
 title: "Arockiaraj Rayappan"
-description: "Engineering build log — projects, posts, and talks from Arockiaraj Rayappan"
+description: "Posts, projects, and talks by Arockiaraj Rayappan"
 ---
 
-Development manager in FinTech, writing about AI-assisted engineering and building side projects in the open. Read the [posts](/posts/), browse the [projects](/projects/), or see my [Chennaipy talks](/talks/).
+Hi, I'm Arockiaraj. I lead a development team in FinTech, and in my spare time I build small apps and tools and write about what I learn along the way. Start with the [posts](/posts/), look through the [projects](/projects/), or catch up on my [Chennaipy talks](/talks/).

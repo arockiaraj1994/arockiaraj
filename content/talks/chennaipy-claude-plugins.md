@@ -1,5 +1,5 @@
 ---
-title: "Full Talk at Chennaipy - Teach Claude to Work For You: Plugins Unlocked"
+title: "Full Talk at Chennaipy: Teach Claude to Work For You: Plugins Unlocked"
 date: 2026-07-25T15:00:00+05:30
 draft: false
 author: "Arockiaraj"

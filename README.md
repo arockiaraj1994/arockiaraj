@@ -6,7 +6,7 @@ deployed to GitHub Pages at <https://arockiaraj.co.in/>.
 
 ## Prerequisites
 
-- [Hugo Extended](https://gohugo.io/installation/) **0.164.0 – 0.167.x** (the range Blowfish v3.9.0 supports; CI uses 0.167.0)
+- [Hugo Extended](https://gohugo.io/installation/) **0.164.0 to 0.167.x** (the range Blowfish v3.9.0 supports; CI uses 0.167.0)
 - Git
 
 ## Development

@@ -1,0 +1,13 @@
+{{/* Plain 404 instead of Blowfish's random-quote page. */}}
+{{ define "main" }}
+  <section class="flex grow flex-col items-center justify-center py-24 text-center">
+    <p class="mb-5 text-sm font-semibold uppercase tracking-[0.25em] text-primary-600 dark:text-primary-400">404</p>
+    <h1 class="text-4xl font-extrabold text-neutral-900 dark:text-white sm:text-5xl">This page doesn't exist</h1>
+    <p class="mx-auto mt-6 max-w-xl text-lg text-neutral-600 dark:text-neutral-300">
+      It may have moved, or the link might have a typo. Try the search, or head back home.
+    </p>
+    <div class="mt-10">
+      {{ partial "cta-button.html" (dict "url" site.Home.RelPermalink "label" "Back to home") }}
+    </div>
+  </section>
+{{ end }}

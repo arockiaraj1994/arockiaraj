@@ -8,10 +8,10 @@ showAuthor: false
 sharingLinks: false
 showRelatedContent: false
 showPagination: false
-description: "Development manager specializing in FinTech solutions and scalable product development"
+description: "Development manager at Baton Systems with 11+ years in FinTech. Java, Python, and a lot of integration work."
 ---
 
-**Development manager @ Baton Systems | CFP & Mentorship @ PyCon India 2024/25 | MCA @ SRM | System Design | Engineering excellence | EIP | No code & Low code**
+I'm a development manager at Baton Systems. I was on the CFP and mentorship team for PyCon India 2024 and 2025, and I have an MCA from SRM University. I like system design, enterprise integration patterns, and no-code and low-code tools.
 
 ## Contact
 - 📧 [arockiaraj1994@gmail.com](mailto:arockiaraj1994@gmail.com)
@@ -19,9 +19,9 @@ description: "Development manager specializing in FinTech solutions and scalable
 - 🔗 [GitHub](https://github.com/arockiaraj1994)
 
 ## About
-Development manager with 11+ years in FinTech (FX and Collateral Management). Expert in building configurable, reusable products with focus on automation and scalable architecture.
+I've spent 11+ years in FinTech, mostly on FX and collateral management. Most of my work has been building configurable products that teams can reuse, and automating the repetitive parts.
 
-## Core Expertise
+## What I work with
 
 - **Languages:** Java, Python
 - **Cloud & Data:** AWS (Glue, Lambda, DataBrew, QuickSight), PySpark, Pandas

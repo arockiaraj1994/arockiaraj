@@ -23,7 +23,7 @@ Let me explain the evolution of banking, which is a great example of how technol
 
 **NEFT & RTGS**: Electronic fund transfers like NEFT and RTGS allowed faster and more secure money transfers between banks.
 
-**IMPS**: Immediate Payment Service (IMPS) introduced real-time 24/7 money transfers, making banking instant and seamless.
+**IMPS**: Immediate Payment Service (IMPS) introduced real-time 24/7 money transfers, so money moves in seconds.
 
 **UPI**: Unified Payments Interface (UPI) enabled instant transactions using mobile numbers and QR codes, simplifying digital payments.
 
