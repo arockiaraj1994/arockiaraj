@@ -2,7 +2,7 @@
 title: "Why Chasing the Latest AI Model Misses the Point"
 date: 2026-07-02
 categories: ["AI"]
-tags: ["ai", "llm", "ecosystem", "mcp", "tools", "agents"]
+tags: ["llm", "ecosystem", "mcp", "tools", "agents"]
 description: "Understanding why AI tool ecosystems matter more than chasing the newest model release"
 ---
 

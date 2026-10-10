@@ -1,11 +1,9 @@
 ---
-title: "NexRe: I Was Saving Links to Myself on WhatsApp and Never Reading Them"
+title: "NexRe: A Read-It-Later App for Links I Never Read"
 date: 2026-05-07T00:01:00+05:30
 draft: false
-author: "Arockiaraj"
-description: "How a habit of sharing links to myself on WhatsApp, and never reading them, turned into a full Android read-it-later app with two share targets, Gemini AI summaries, and a clean reading library."
+description: "How sending links to myself on WhatsApp, and never reading them, turned into an Android read-it-later app with Gemini summaries."
 tags: ["android", "kotlin", "jetpack-compose", "room", "workmanager", "hilt", "gemini", "nexre", "claude-design"]
-categories: ["Projects"]
 featureimage: "/images/nexre/app/app_home_page.png"
 images: ["/images/nexre/app/app_home_page.png"]  # og:image for link previews
 ---

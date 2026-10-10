@@ -4,7 +4,6 @@ date: 2025-05-09T00:00:00Z
 lastmod: 2025-05-09T00:00:00Z
 tags: ["git", "version-control", "development", "collaboration"]
 categories: ["General"]
-author: "Arockiaraj"
 description: "A beginner's guide to version control and how Git helps implement it effectively"
 draft: false
 ---

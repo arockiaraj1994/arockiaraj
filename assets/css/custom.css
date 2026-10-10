@@ -300,3 +300,7 @@ html.dark .course-notes {
   color: rgb(var(--color-neutral-500));
 }
 html.dark .img-caption { color: rgb(var(--color-neutral-400)); }
+
+/* Blowfish's fixed header reserves 148px, but the bar itself is only ~56-64px tall.
+   Trim the spacer so content starts closer to the header. */
+body > header > .min-h-\[148px\] { min-height: 80px; }

@@ -18,7 +18,6 @@ enableEmoji = true
 [taxonomies]
   tag = "tags"
   category = "categories"
-  series = "series"
 
 [sitemap]
   changefreq = "weekly"
@@ -37,9 +36,6 @@ enableEmoji = true
   [[related.indices]]
     name = "categories"
     weight = 100
-  [[related.indices]]
-    name = "series"
-    weight = 50
   [[related.indices]]
     name = "date"
     weight = 10

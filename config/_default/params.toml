@@ -10,7 +10,7 @@ mainSections = ["posts", "projects", "talks"]
 
 disableImageOptimization = false
 disableTextInHeader = false
-defaultSocialImage = "img/social-card.png"
+images = ["img/social-card.png"]  # default og:image when a page sets none
 thumbnailAspectRatio = "1.6"
 
 highlightCurrentMenuArea = true
