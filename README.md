@@ -69,6 +69,20 @@ These files copy a Blowfish template and change a few lines. Re-check them again
 - `layouts/404.html`: plain 404 page instead of Blowfish's random quotes
 - `assets/css/custom.css` trims the fixed-header spacer (`.min-h-[148px]`); check it still matches after a theme bump
 
+## Things that are easy to break
+
+- **Icons in `static/`.** Blowfish ships its own `favicon*.png`, `favicon.ico`, `apple-touch-icon.png`,
+  `android-chrome-*.png` and `site.webmanifest` (all with the Blowfish logo). Ours only win because they
+  have the same names. If you delete one of ours, the theme's copy is published in its place. Replace
+  files rather than deleting them.
+- **`main` is protected.** Every change needs a pull request with a passing `build` check.
+
+## Analytics
+
+Umami Cloud, configured in `config/_default/params.toml` under `[umamiAnalytics]`. It is off until
+`websiteid` is set, only loads on the production build, only counts visits on `arockiaraj.co.in`,
+and respects Do Not Track.
+
 ## Updating Blowfish
 
 ```bash
