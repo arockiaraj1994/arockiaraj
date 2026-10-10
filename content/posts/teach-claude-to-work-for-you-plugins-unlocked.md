@@ -2,10 +2,12 @@
 title: "Teach Claude to Work For You: Plugins Unlocked"
 date: 2026-07-26T00:00:00+05:30
 lastmod: 2026-07-26T00:00:00+05:30
-categories: ["AI/ML"]
-tags: ["Claude", "Plugins", "Agents", "Automation", "Chennaipy"]
+categories: ["AI"]
+tags: ["claude", "plugins", "agents", "automation", "chennaipy"]
 author: "Arockiaraj"
 description: "Notes from my ChennaiPy talk on turning Claude Code into a reusable plugin instead of a one-off prompt"
+featureimage: "/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg"
+images: ["/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg"]  # og:image for link previews
 draft: false
 ---
 

@@ -57,6 +57,10 @@
       tabs.forEach(function (tab) {
         tab.setAttribute("aria-selected", tab.getAttribute("data-course-tab") === id ? "true" : "false");
       });
+      if (expandBtn) {
+        expandBtn.setAttribute("aria-expanded", "false");
+        expandBtn.textContent = "expand all";
+      }
       applyFilter();
     }
 

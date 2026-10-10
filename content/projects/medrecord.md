@@ -6,7 +6,8 @@ author: "Arockiaraj"
 description: "Why a solo, on-device health vault wasn't enough for a family, and why I turned off the AI extraction I built to replace it with plain, trustworthy record-keeping."
 tags: ["android", "kotlin", "jetpack-compose", "firebase", "firestore", "room", "hilt", "medrecord", "famheal"]
 categories: ["Projects"]
-featuredImage: "/images/medrecord/app/dashboard-app.jpeg"
+featureimage: "/images/medrecord/app/dashboard-app.jpeg"
+images: ["/images/medrecord/app/dashboard-app.jpeg"]  # og:image for link previews
 ---
 
 Every family ends up as the unpaid record keeper for its own health history. Someone has to remember which parent is on which medication, where last month's lab report went, and what the doctor actually said about a result that came back borderline. In my house that someone is me, and the record was never in one place - a photo of a prescription here, a PDF from a lab portal there, a dosage half-remembered from a phone call.

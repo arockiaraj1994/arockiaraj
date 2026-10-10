@@ -3,10 +3,9 @@ title: "I Spent 1 Lakh on a Vacation and Built an App Because of It"
 date: 2026-03-30T10:00:00+05:30
 draft: false
 author: "Arockiaraj"
-description: "How a chaotic group vacation led me to build a full Android app using AI tools and vibe coding - from idea to Play Store in days."
+description: "How a chaotic group vacation led me to build a full Android app using AI tools and vibe coding. It went from idea to the Play Store in days."
 tags: ["vibe-coding", "android", "product-thinking", "side-project", "firebase"]
 categories: ["Projects"]
-featuredImage: ""
 ---
 
 I recently went on a long vacation with family and friends. The total cost crossed 1 lakh rupees. At that scale, poor planning becomes expensive. I had to manage an itinerary across multiple cities, checklists for each person and for the group, shared expenses that needed splitting, flight and train tickets, ID copies, and contact details for hotels, cab drivers, and local guides.
@@ -27,7 +26,7 @@ Every existing app solved one piece of the puzzle. None of them understood what 
 
 Instead of adapting my workflow to fit scattered tools, I decided to build what I actually needed.
 
-## The Build Journey
+## How I built it
 
 I didn't sit down and plan a four-version roadmap. Each version was born from hitting a real limitation in the previous one.
 
@@ -49,7 +48,7 @@ Each version took days, not months. No team. No sprints. Just a real problem, Gi
 
 **Google Apps Script has a ceiling.** It's incredible for prototypes and automation, but the moment you need real-time data, proper auth, or sub-second response times, you've outgrown it. Knowing when to migrate is the skill.
 
-**Publishing to the Play Store is a journey.** Store listings, screenshots, privacy policies, content ratings, review cycles - there's a whole process beyond just building the APK. It took longer than expected, but going through it once demystified the entire pipeline.
+**Publishing to the Play Store is a project of its own.** Store listings, screenshots, privacy policies, content ratings, review cycles - there's a whole process beyond just building the APK. It took longer than expected, but going through it once demystified the entire pipeline.
 
 **When you solve your own problem, motivation is never the bottleneck.** Every feature I built was something I personally needed. No guessing what users want. No feature debates. The requirements were crystal clear because I lived them.
 

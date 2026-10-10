@@ -3,9 +3,9 @@ title: "What are AI Agents?"
 date: 2025-03-22T00:00:00Z
 lastmod: 2025-03-22T00:00:00Z
 tags: ["ai", "agents", "automation", "llm"]
-categories: ["AI/ML"]
+categories: ["AI"]
 author: "Arockiaraj"
-summary: "Understanding AI Agents - autonomous programs that can perform actions like searching, analyzing, and making decisions"
+description: "What AI agents are: programs that can search, analyze, and make decisions on their own"
 draft: false
 ---
 

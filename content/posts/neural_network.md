@@ -1,11 +1,10 @@
 ---
-title: "What is Neural Networks? How it works?"
+title: "What Are Neural Networks, and How Do They Work?"
 date: 2025-10-15
-lastmod: 2024-10-15
-tags: ["ai", "llm", "neural network", "artificial intelligence"]
-categories: ["AI/ML"]
+tags: ["ai", "llm", "neural-networks"]
+categories: ["AI"]
 author: "Arockiaraj"
-summary: "A fun, simple guide to how neural networks in the human brain inspired artificial intelligence"
+description: "A fun, simple guide to how neural networks in the human brain inspired artificial intelligence"
 draft: false
 ---
 

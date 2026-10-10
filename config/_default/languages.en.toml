@@ -1,0 +1,25 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Arockiaraj Rayappan"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Posts, projects, and talks by Arockiaraj Rayappan"
+  copyright = "© 2025-2026 Arockiaraj Rayappan"
+
+[params.author]
+  name = "Arockiaraj Rayappan"
+  email = "arockiaraj1994@gmail.com"
+  image = "img/avatar.svg"
+  headline = "Development manager who builds side projects and writes about them"
+  bio = "I lead a development team in FinTech. In my spare time I build small apps, write about coding with AI tools, and give talks at Chennaipy."
+  links = [
+    { github = "https://github.com/arockiaraj1994" },
+    { linkedin = "https://www.linkedin.com/in/arockiaraj-rayappan-5a513558" },
+    { email = "mailto:arockiaraj1994@gmail.com" },
+  ]

@@ -1,5 +1,6 @@
 ---
 title: "Posts"
+description: "Notes on coding with AI tools, programming basics, and the odd thing I broke and then fixed."
 ---
 
-This is my blog where I share thoughts about programming, technology, and my experiences.
+Notes on coding with AI tools, programming basics, and the odd thing I broke and then fixed.

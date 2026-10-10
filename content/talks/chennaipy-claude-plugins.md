@@ -1,12 +1,13 @@
 ---
-title: "Full Talk at Chennaipy - Teach Claude to Work For You: Plugins Unlocked"
+title: "Full Talk at Chennaipy: Teach Claude to Work For You: Plugins Unlocked"
 date: 2026-07-25T15:00:00+05:30
 draft: false
 author: "Arockiaraj"
 description: "A recap of my full talk at the Chennaipy July 2026 meetup, on packaging Claude Code as a reusable plugin, skills, commands, agents, hooks, and scripts, instead of one-off prompts."
 tags: ["python", "chennaipy", "claude", "plugins", "agents", "automation", "talk"]
 categories: ["Talks"]
-featuredImage: "/images/talks/chennaipy-claude-plugins/cost-factor.jpeg"
+featureimage: "/images/talks/chennaipy-claude-plugins/cost-factor.jpeg"
+images: ["/images/talks/chennaipy-claude-plugins/cost-factor.jpeg"]  # og:image for link previews
 ---
 
 A prompt is something you type once and throw away. A plugin is something your whole team can reuse, tomorrow, without you in the room. That was the question behind my July 2026 Chennaipy talk: what changes when you stop prompting Claude and start packaging it?
