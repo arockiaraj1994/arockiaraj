@@ -2,9 +2,8 @@
 title: "What are AI Agents?"
 date: 2025-03-22T00:00:00Z
 lastmod: 2025-03-22T00:00:00Z
-tags: ["ai", "agents", "automation", "llm"]
+tags: ["agents", "automation", "llm"]
 categories: ["AI"]
-author: "Arockiaraj"
 description: "What AI agents are: programs that can search, analyze, and make decisions on their own"
 draft: false
 ---
@@ -38,9 +37,9 @@ Hope you got some idea about what an Agent is.
 
 There are a few terminologies you need to understand about how AI Agents work:
 
-1. **LLM** - Large Language Model. Basics about LLM.
+1. **LLM**: Large Language Model. Basics about LLM.
 2. **Data set** (Training data, Testing Data, Data sampling)
-3. **Vector DB** - Basics about Vector databases
+3. **Vector DB**: Basics about Vector databases
 4. **Training LLM**
 5. **Agent Knowledge base**
 6. **Agent Instruction**

@@ -1,11 +1,9 @@
 ---
-title: "Full Talk at Chennaipy: Teach Claude to Work For You: Plugins Unlocked"
+title: "Chennaipy Talk: Teach Claude to Work for You"
 date: 2026-07-25T15:00:00+05:30
 draft: false
-author: "Arockiaraj"
-description: "A recap of my full talk at the Chennaipy July 2026 meetup, on packaging Claude Code as a reusable plugin, skills, commands, agents, hooks, and scripts, instead of one-off prompts."
-tags: ["python", "chennaipy", "claude", "plugins", "agents", "automation", "talk"]
-categories: ["Talks"]
+description: "My July 2026 Chennaipy talk on packaging Claude Code as a reusable plugin with skills, commands, agents, hooks, and scripts, instead of one-off prompts."
+tags: ["python", "chennaipy", "claude", "plugins", "agents", "automation"]
 featureimage: "/images/talks/chennaipy-claude-plugins/cost-factor.jpeg"
 images: ["/images/talks/chennaipy-claude-plugins/cost-factor.jpeg"]  # og:image for link previews
 ---

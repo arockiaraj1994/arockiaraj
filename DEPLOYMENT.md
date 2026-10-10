@@ -1,14 +1,16 @@
 # Deployment
 
-`.github/workflows/hugo.yml` builds and deploys the site to GitHub Pages on every push to `main`
-(and on manual dispatch). The live site is <https://arockiaraj.co.in/>.
+`.github/workflows/hugo.yml` builds the site on every pull request into `main`, and builds and deploys it
+to GitHub Pages on every push to `main` (and on manual dispatch). The live site is <https://arockiaraj.co.in/>.
+
+`main` is protected: changes go through a pull request, and the `build` check must pass before merging.
 
 ## How it works
 
 1. Installs Hugo Extended `HUGO_VERSION` (currently 0.167.0).
 2. Checks out the repo **with submodules**, so the Blowfish theme is available.
-3. Builds with `hugo --gc --minify --baseURL <Pages URL>`. The Pages URL is the custom domain.
-4. Uploads `public/` and deploys it with `actions/deploy-pages`.
+3. Builds with `hugo --gc --minify`. On `main` it passes `--baseURL <Pages URL>` (the custom domain); pull requests use the `baseURL` from config.
+4. On `main` only: uploads `public/` and deploys it with `actions/deploy-pages`.
 
 ## Repository settings
 

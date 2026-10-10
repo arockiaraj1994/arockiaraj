@@ -1,9 +1,8 @@
 ---
 title: "What Are Neural Networks, and How Do They Work?"
 date: 2025-10-15
-tags: ["ai", "llm", "neural-networks"]
+tags: ["llm", "neural-networks"]
 categories: ["AI"]
-author: "Arockiaraj"
 description: "A fun, simple guide to how neural networks in the human brain inspired artificial intelligence"
 draft: false
 ---
@@ -80,12 +79,12 @@ remember it’s just **trying to copy your amazing brain [9]!**
 
 ### Key Terms 
 
-[1] **Neural Network** - A web of brain cells that work together to learn and make decisions.  
-[2] **Neuron** - A tiny brain cell that sends and receives messages.  
-[3] **Connection** - The link between neurons that gets stronger as you learn.  
-[4] **Learning** - The process of improving brain connections through practice.  
-[5] **Artificial Neural Network (ANN)** - A computer system designed to mimic how the brain learns.  
-[6] **Node** - The computer version of a neuron; it takes input, processes it, and sends output.  
-[7] **Weight** - A value in computers that shows how important a connection is.  
-[8] **Practice** - Repeating an action until the brain builds strong learning patterns.  
-[9] **Copying the Brain** - AI systems are modeled after how the human brain learns and adapts.
+[1] **Neural Network**: A web of brain cells that work together to learn and make decisions.  
+[2] **Neuron**: A tiny brain cell that sends and receives messages.  
+[3] **Connection**: The link between neurons that gets stronger as you learn.  
+[4] **Learning**: The process of improving brain connections through practice.  
+[5] **Artificial Neural Network (ANN)**: A computer system designed to mimic how the brain learns.  
+[6] **Node**: The computer version of a neuron; it takes input, processes it, and sends output.  
+[7] **Weight**: A value in computers that shows how important a connection is.  
+[8] **Practice**: Repeating an action until the brain builds strong learning patterns.  
+[9] **Copying the Brain**: AI systems are modeled after how the human brain learns and adapts.

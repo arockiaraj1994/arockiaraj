@@ -11,15 +11,11 @@ showPagination: false
 description: "Development manager at Baton Systems with 11+ years in FinTech. Java, Python, and a lot of integration work."
 ---
 
-I'm a development manager at Baton Systems. I was on the CFP and mentorship team for PyCon India 2024 and 2025, and I have an MCA from SRM University. I like system design, enterprise integration patterns, and no-code and low-code tools.
+I'm a development manager at Baton Systems. I've spent 11+ years in FinTech, mostly on FX and collateral management, building configurable products that teams can reuse and automating the repetitive parts.
 
-## Contact
-- 📧 [arockiaraj1994@gmail.com](mailto:arockiaraj1994@gmail.com)
-- 💼 [LinkedIn](https://www.linkedin.com/in/arockiaraj-rayappan-5a513558)
-- 🔗 [GitHub](https://github.com/arockiaraj1994)
+Outside work, I was on the CFP and mentorship team for PyCon India 2024 and 2025, and I speak at Chennaipy. I like system design, enterprise integration patterns, and no-code and low-code tools. I have an MCA from SRM University.
 
-## About
-I've spent 11+ years in FinTech, mostly on FX and collateral management. Most of my work has been building configurable products that teams can reuse, and automating the repetitive parts.
+You can reach me by [email](mailto:arockiaraj1994@gmail.com) or on [LinkedIn](https://www.linkedin.com/in/arockiaraj-rayappan-5a513558).
 
 ## What I work with
 
@@ -31,29 +27,29 @@ I've spent 11+ years in FinTech, mostly on FX and collateral management. Most of
 ## Experience
 
 
-### Development manager | Baton Ubixi Systems (2025 - Present)
+### Development manager | Baton Ubixi Systems (2025-present)
 
 - Building developer tools
 
-### Technical Engineering Lead | Baton Ubixi Systems (2021 - 2025)
+### Technical Engineering Lead | Baton Ubixi Systems (2021-2025)
 
 - Built AWS-based data pipelines for analytics and reporting
 - Developed configurable asset movement engine with state management
 - Led SSI normalization and custodian integrations
 - Increased code quality by 40% across all services
 
-### Senior Software Engineer | Baton Ubixi Systems (2019 - 2021)
+### Senior Software Engineer | Baton Ubixi Systems (2019-2021)
 
 - Developed middleware solutions for system integrations
 - Built authentication & authorization service
 - Created AR application for Google Glass label validation
 
-### Software Engineer | Fifth Generation Technologies (2016 - 2019)
+### Software Engineer | Fifth Generation Technologies (2016-2019)
 
 - Contributed to Retail POS product development
 - Created billing and reporting formats
 
 ## Education
 
-- **MCA** - SRM University, Chennai
-- **BCA** - Bharathidasan University, Tiruchirappalli
+- **MCA**: SRM University, Chennai
+- **BCA**: Bharathidasan University, Tiruchirappalli

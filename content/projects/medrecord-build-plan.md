@@ -2,15 +2,12 @@
 title: "MedRecord build plan (reference)"
 date: 2026-04-21T10:00:00+05:30
 draft: false
-author: "Arockiaraj"
 description: "Package-level plan, migrations, and engineering notes for MedRecord Phase 1. A companion to the main project page."
 tags: ["android", "kotlin", "medrecord", "architecture"]
-categories: ["Projects"]
 build:
   list: never
 ---
 
-# MedRecord: Android Build Plan
 
 On-device, encrypted, family medical records app. Phase 1 is offline-first; Play Store deferred.
 

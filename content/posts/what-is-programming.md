@@ -1,10 +1,9 @@
 ---
-title: "Why Computer Programming is Important? What is the Need?"
+title: "Why We Need Programming: Lessons from Banking"
 date: 2025-01-31T00:00:00Z
 lastmod: 2025-02-01T00:00:00Z
-tags: ["programming", "technology", "banking", "evolution"]
+tags: ["technology", "banking", "evolution"]
 categories: ["Programming"]
-author: "Arockiaraj"
 description: "Understanding the need for computer programming through the evolution of banking systems"
 draft: false
 ---

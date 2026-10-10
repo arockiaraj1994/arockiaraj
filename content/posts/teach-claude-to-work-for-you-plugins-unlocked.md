@@ -4,14 +4,13 @@ date: 2026-07-26T00:00:00+05:30
 lastmod: 2026-07-26T00:00:00+05:30
 categories: ["AI"]
 tags: ["claude", "plugins", "agents", "automation", "chennaipy"]
-author: "Arockiaraj"
-description: "Notes from my ChennaiPy talk on turning Claude Code into a reusable plugin instead of a one-off prompt"
+description: "Notes from my Chennaipy talk on turning Claude Code into a reusable plugin instead of a one-off prompt"
 featureimage: "/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg"
 images: ["/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg"]  # og:image for link previews
 draft: false
 ---
 
-Yesterday I gave a full talk at the ChennaiPy meetup: **"Teach Claude to Work For You: Plugins Unlocked."** The room was full of Python folks, and the question I wanted to answer was simple: what changes when you stop *prompting* Claude and start *packaging* it?
+Yesterday I gave a full talk at the Chennaipy meetup: **"Teach Claude to Work For You: Plugins Unlocked."** The room was full of Python folks, and the question I wanted to answer was simple: what changes when you stop *prompting* Claude and start *packaging* it?
 
 A prompt is something you type once and throw away. A plugin is something your whole team can reuse, tomorrow, without you in the room. (There's a fuller [recap of the talk itself](/talks/chennaipy-claude-plugins/) if you want the stage-side version.)
 
@@ -27,7 +26,7 @@ Which raises the actual question. If the tools are that cheap, why do people kee
 
 The cost isn't the model. The cost is **rework**. If the first pass doesn't hold up, you pay twice: once to build it, once to fix it.
 
-![Presenting the cost factor diagram at ChennaiPy: entry with no plan feeds a loop of wrong model, bad inputs, model doing script work, no verification, rework, and start from 0.5, exiting to multiple retry](/images/talks/chennaipy-claude-plugins/cost-factor.jpeg)
+![Presenting the cost factor diagram at Chennaipy: entry with no plan feeds a loop of wrong model, bad inputs, model doing script work, no verification, rework, and start from 0.5, exiting to multiple retry](/images/talks/chennaipy-claude-plugins/cost-factor.jpeg)
 
 It's a loop, not a line. You *enter* with **no plan**, and that entry feeds six steps:
 
@@ -62,7 +61,7 @@ Skills teach, commands trigger, agents delegate, hooks enforce, scripts compute.
 
 Before the talk I built a real one: [web-quote](https://github.com/arockiaraj1994/web-quote), a plugin that collects client requirements, researches domain and design in parallel, and produces a PDF quote.
 
-![Presenting the plugin anatomy slide at ChennaiPy, showing the web-quote folder structure with manifest, skills, commands, agents, hooks, and scripts](/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg)
+![Presenting the plugin anatomy slide at Chennaipy, showing the web-quote folder structure with manifest, skills, commands, agents, hooks, and scripts](/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg)
 
 Every block shows up where you'd expect it: a `.claude-plugin/plugin.json` manifest, two skills (`client-intake`, `quote-standards`), one command (`/quote`), three agents (`competitor-scanner`, `domain-checker`, `theme-recommender`), a `hooks/hooks.json`, and nine plain Python scripts doing the deterministic work. Nothing is wired up by hand. Claude discovers all of it from those paths.
 

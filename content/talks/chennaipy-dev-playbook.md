@@ -1,11 +1,9 @@
 ---
-title: "Full Talk at Chennaipy: Consistent AI Coding Across Multiple Tools"
+title: "Chennaipy Talk: Consistent AI Coding Across Tools"
 date: 2026-06-27T10:00:00+05:30
 draft: false
-author: "Arockiaraj"
-description: "A recap of my talk at the Chennaipy June 2026 meetup about the Python MCP server I built to give every AI editor the same coding rules, so a team on Cursor, Claude Code, and Windsurf writes code the same way."
-tags: ["python", "chennaipy", "mcp", "ai-coding", "claude-code", "open-source", "talk"]
-categories: ["Talks"]
+description: "My June 2026 Chennaipy talk on an MCP server that gives Cursor, Claude Code, and Windsurf the same coding rules, so a team writes code one way."
+tags: ["python", "chennaipy", "mcp", "ai-coding", "claude-code", "open-source"]
 featureimage: "/images/talks/chennaipy-dev-playbook/audience-view.jpeg"
 images: ["/images/talks/chennaipy-dev-playbook/audience-view.jpeg"]  # og:image for link previews
 ---

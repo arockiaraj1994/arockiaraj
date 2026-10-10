@@ -32,11 +32,11 @@ content/
 ├── courses/         course pages; notes come from data/courses/<notesData>.yaml
 └── profile.md       About page (also served at /about/)
 assets/
-├── css/custom.css   course-notes styles, loaded after Blowfish
+├── css/custom.css   course notes, image captions, header spacing; loaded after Blowfish
 ├── css/schemes/buildlog.css   site colour scheme
-└── img/             avatar and default social card
+└── img/             avatar
 layouts/             overrides of Blowfish templates (see below)
-static/              images, PDFs, favicons
+static/              images (WebP for inline images), PDFs, favicons, default social card
 themes/blowfish/     Blowfish theme (git submodule, pinned to v3.9.0)
 ```
 
@@ -52,8 +52,13 @@ Front matter used by the theme:
 |---|---|
 | `description` | Card text, meta description, and link-preview text |
 | `featureimage` | Card thumbnail, e.g. `"/images/<section>/<slug>/cover.jpg"` (files under `static/images/`) |
-| `images` | Link-preview (`og:image`) image; set it to the same path as `featureimage` |
-| `tags`, `categories` | Lowercase, hyphenated tags; one category per page |
+| `images` | Link-preview (`og:image`) image; set it to the same path as `featureimage`. Pages without one use `static/img/social-card.png` |
+| `tags` | Lowercase and hyphenated. Don't repeat the category as a tag |
+| `categories` | Posts only, one per post (`AI`, `Android`, `General`, `Programming`). Projects, talks and courses don't need one |
+
+## Images in posts
+
+For screenshots and photos placed with `<img>`, add a WebP copy no wider than twice the displayed width (about 750px for phone screenshots, 1500px for full-width images) and point `src` at it. Captions use `<p class="img-caption">`.
 
 ## Theme overrides
 
@@ -61,6 +66,8 @@ These files copy a Blowfish template and change a few lines. Re-check them again
 
 - `layouts/courses/single.html`: Blowfish `single.html` plus the certificate link and course notes
 - `layouts/partials/article-link/card.html`, `card-related.html`: cards show `description` instead of the auto summary
+- `layouts/404.html`: plain 404 page instead of Blowfish's random quotes
+- `assets/css/custom.css` trims the fixed-header spacer (`.min-h-[148px]`); check it still matches after a theme bump
 
 ## Updating Blowfish
 
