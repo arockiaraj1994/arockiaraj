@@ -1,5 +1,5 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 288 288" width="288" height="288">
   <rect width="288" height="288" fill="#1B3A5C"/>
   <path d="M0 216h288M0 72h288M72 0v288M216 0v288" stroke="#2F7A63" stroke-width="2" opacity=".55"/>
-  <text x="144" y="172" text-anchor="middle" font-family="IBM Plex Mono, DejaVu Sans Mono, monospace" font-size="104" font-weight="700" fill="#FBFBF9">AR</text>
+  <text x="144" y="172" text-anchor="middle" font-family="ui-monospace, SFMono-Regular, Menlo, Consolas, DejaVu Sans Mono, monospace" font-size="104" font-weight="700" fill="#FBFBF9">AR</text>
 </svg>
