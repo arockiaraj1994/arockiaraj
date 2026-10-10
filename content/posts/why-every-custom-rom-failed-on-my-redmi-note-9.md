@@ -3,7 +3,7 @@ title: "Why Every Custom ROM Failed on My Redmi Note 9"
 date: 2026-08-21T00:00:00+05:30
 lastmod: 2026-08-21T00:00:00+05:30
 categories: ["Android"]
-tags: ["Android", "Custom ROM", "Xiaomi", "MediaTek", "Debugging", "adb"]
+tags: ["android", "custom-rom", "xiaomi", "mediatek", "debugging", "adb"]
 author: "Arockiaraj"
 description: "Two sessions, three wrong theories, and the one property that explained every failure"
 draft: false

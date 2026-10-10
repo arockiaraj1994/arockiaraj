@@ -6,7 +6,8 @@ author: "Arockiaraj"
 description: "How a Python MCP server for serving a team's coding standards grew into a Docker-first server, a Claude Code plugin, a redesigned dashboard, and its own site at devplaybook.co.in."
 tags: ["mcp", "developer-tooling", "python", "claude-code", "cursor", "windsurf", "docker", "open-source"]
 categories: ["Projects"]
-featuredImage: "/images/dev-agent-playbook/dashboard.jpg"
+featureimage: "/images/dev-agent-playbook/dashboard.jpg"
+images: ["/images/dev-agent-playbook/dashboard.jpg"]  # og:image for link previews
 ---
 
 Three developers, three AI editors, one pull request that reads like it came from three different teams. That is what a shared codebase turns into a few weeks after everyone adopts an AI coding tool. The developer on Windsurf handles errors one way, the one on Claude Code another. A junior who joined last month is asking the AI to use a pattern the team retired six months ago. Nobody did anything wrong, which is exactly what makes it hard to fix.

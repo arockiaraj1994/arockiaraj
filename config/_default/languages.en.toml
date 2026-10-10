@@ -1,0 +1,25 @@
+disabled = false
+locale = "en"
+label = "English"
+weight = 1
+title = "Arockiaraj Rayappan"
+
+[params]
+  displayName = "EN"
+  isoCode = "en"
+  rtl = false
+  dateFormat = "2 January 2006"
+  description = "Engineering build log — projects, posts, and talks from Arockiaraj Rayappan"
+  copyright = "© 2025–2026 Arockiaraj Rayappan"
+
+[params.author]
+  name = "Arockiaraj Rayappan"
+  email = "arockiaraj1994@gmail.com"
+  image = "img/avatar.svg"
+  headline = "Engineering lead building AI-native software"
+  bio = "Development manager in FinTech. I write about AI-assisted engineering, build side projects, and speak at Chennaipy."
+  links = [
+    { github = "https://github.com/arockiaraj1994" },
+    { linkedin = "https://www.linkedin.com/in/arockiaraj-rayappan-5a513558" },
+    { email = "mailto:arockiaraj1994@gmail.com" },
+  ]

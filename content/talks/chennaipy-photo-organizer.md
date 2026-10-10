@@ -6,7 +6,6 @@ author: "Arockiaraj"
 description: "A recap of my lightning talk at the Chennaipy November 2025 meetup - how I built a Python GUI tool to organize 10,000+ photos spread across 930 GB."
 tags: ["python", "chennaipy", "open-source", "chatgpt", "github-copilot", "talk"]
 categories: ["Talks"]
-featuredImage: ""
 ---
 
 I gave y lightning talk at the Chennaipy November 2025 meetup. Ten minutes on stage, presenting a Python tool I built to solve a personal problem - organizing 15 years of photos scattered across 3 hard disks.

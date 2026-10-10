@@ -1,10 +1,17 @@
 ---
-title: "Arockiaraj Rayappan"
-date: 2025-03-02
-summary: "Development manager specializing in FinTech solutions and scalable product development"
+title: "About me"
+aliases: ["/about/"]
+showDate: false
+showReadingTime: false
+showTableOfContents: false
+showAuthor: false
+sharingLinks: false
+showRelatedContent: false
+showPagination: false
+description: "Development manager specializing in FinTech solutions and scalable product development"
 ---
 
-**Development manager @ Baton Systems| CFP & Mentorship @ PyCondia 2024/25 | MCA @ SRM | System Design | Engineering excellence | EIP | No code & Low code**
+**Development manager @ Baton Systems | CFP & Mentorship @ PyCon India 2024/25 | MCA @ SRM | System Design | Engineering excellence | EIP | No code & Low code**
 
 ## Contact
 - 📧 [arockiaraj1994@gmail.com](mailto:arockiaraj1994@gmail.com)

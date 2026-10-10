@@ -6,7 +6,6 @@ author: "Arockiaraj"
 description: "Package-level plan, migrations, and engineering notes for MedRecord Phase 1—companion to the main project page."
 tags: ["android", "kotlin", "medrecord", "architecture"]
 categories: ["Projects"]
-featuredImage: ""
 build:
   list: never
 ---

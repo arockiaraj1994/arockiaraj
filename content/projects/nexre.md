@@ -6,7 +6,8 @@ author: "Arockiaraj"
 description: "How a habit of sharing links to myself on WhatsApp—and never reading them—turned into a full Android read-it-later app with two share targets, Gemini AI summaries, and a clean reading library."
 tags: ["android", "kotlin", "jetpack-compose", "room", "workmanager", "hilt", "gemini", "nexre", "claude-design"]
 categories: ["Projects"]
-featuredImage: "/images/nexre/app/app_home_page.png"
+featureimage: "/images/nexre/app/app_home_page.png"
+images: ["/images/nexre/app/app_home_page.png"]  # og:image for link previews
 ---
 
 I have a habit. When I come across something interesting—a GitHub repo, an arXiv paper, a LinkedIn post, a dev.to article—I share it to myself on WhatsApp. Sometimes Telegram. The idea is always the same: I'll read it later.

@@ -5,7 +5,7 @@ lastmod: 2025-02-01T00:00:00Z
 tags: ["programming", "technology", "banking", "evolution"]
 categories: ["Programming"]
 author: "Arockiaraj"
-summary: "Understanding the need for computer programming through the evolution of banking systems"
+description: "Understanding the need for computer programming through the evolution of banking systems"
 draft: false
 ---
 

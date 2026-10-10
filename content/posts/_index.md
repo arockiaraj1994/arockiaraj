@@ -1,5 +1,6 @@
 ---
 title: "Posts"
+description: "Notes on AI-assisted engineering, programming fundamentals, and things I broke and fixed."
 ---
 
-This is my blog where I share thoughts about programming, technology, and my experiences.
+Notes on AI-assisted engineering, programming fundamentals, and things I broke and fixed.

@@ -4,9 +4,8 @@ date: 2026-03-16T10:00:00+05:30
 draft: false
 author: "Arockiaraj"
 description: "How I automated expense tracking using Google Apps Script and Gemini AI - zero cost, zero servers, fully automated."
-tags: ["google-apps-script", "gemini-ai", "automation", "personal-finance", "google-sheets"]
+tags: ["google-apps-script", "gemini", "automation", "personal-finance", "google-sheets"]
 categories: ["Projects"]
-featuredImage: ""
 ---
 
 Every month I'd spend hours copying transaction details from bank alert emails into a spreadsheet. Multiple credit cards, a savings account - each with its own email format. I finally automated the entire thing using Google's free tools.

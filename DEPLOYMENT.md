@@ -1,51 +1,28 @@
-# GitHub Pages Deployment Setup
+# Deployment
 
-This repository includes a GitHub Actions workflow that automatically builds and deploys your Hugo site to GitHub Pages whenever you push to the `main` branch.
+`.github/workflows/hugo.yml` builds and deploys the site to GitHub Pages on every push to `main`
+(and on manual dispatch). The live site is <https://arockiaraj.co.in/>.
 
-## Setup Instructions
+## How it works
 
-### 1. Repository Settings
+1. Installs Hugo Extended `HUGO_VERSION` (currently 0.167.0).
+2. Checks out the repo **with submodules**, so the Blowfish theme is available.
+3. Builds with `hugo --gc --minify --baseURL <Pages URL>`. The Pages URL is the custom domain.
+4. Uploads `public/` and deploys it with `actions/deploy-pages`.
 
-1. Go to your GitHub repository settings
-2. Navigate to **Pages** section in the left sidebar
-3. Under **Source**, select **GitHub Actions**
-4. The workflow will automatically trigger on the next push to `main` branch
+## Repository settings
 
-### 2. Branch Configuration
+- **Settings → Pages → Source:** GitHub Actions
+- **Custom domain:** `arockiaraj.co.in` (set in the Pages settings; with Actions deploys no `CNAME` file is needed), HTTPS enforced
 
-The workflow is configured to deploy from the `main` branch.
+## Gotchas
 
-### 3. Hugo Version
+- Hugo skips future-dated pages (`buildFuture = false`) and CI runs in UTC. Give new posts an explicit
+  offset, e.g. `date: 2026-10-10T00:00:00+05:30`, and make sure that moment has already passed when you push.
+- Keep `HUGO_VERSION` inside the range the pinned Blowfish version supports (see README).
 
-The workflow is configured to use Hugo v0.140.0 (extended) to match your local development environment. This ensures consistency between local builds and production deployments.
+## Local production check
 
-### 4. Base URL Configuration
-
-The workflow automatically configures the base URL for GitHub Pages. If you want to use a custom domain, update the `baseURL` in `hugo.toml` to your custom domain.
-
-### 4. First Deployment
-
-After pushing to the main branch:
-1. Go to the **Actions** tab in your repository
-2. You should see the "Build and deploy Hugo site" workflow running
-3. Once completed, your site will be available at `https://<username>.github.io/<repository-name>/`
-
-## Local Development
-
-Continue developing locally with:
 ```bash
-hugo server -D
+hugo --gc --minify && hugo server --environment production
 ```
-
-## Production Build
-
-To test a production build locally:
-```bash
-hugo --gc --minify
-```
-
-## Troubleshooting
-
-- Ensure GitHub Pages is enabled in repository settings
-- Check that the workflow has necessary permissions
-- Check the Actions tab for any build errors

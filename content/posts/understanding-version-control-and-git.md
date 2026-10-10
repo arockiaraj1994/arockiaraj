@@ -5,7 +5,7 @@ lastmod: 2025-05-09T00:00:00Z
 tags: ["git", "version-control", "development", "collaboration"]
 categories: ["General"]
 author: "Arockiaraj"
-summary: "A comprehensive guide to understanding version control and how Git helps implement it effectively"
+description: "A comprehensive guide to understanding version control and how Git helps implement it effectively"
 draft: false
 ---
 

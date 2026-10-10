@@ -6,7 +6,8 @@ author: "Arockiaraj"
 description: "A recap of my full talk at the Chennaipy June 2026 meetup, how I built a Python MCP server that delivers on-demand coding rules to any AI editor, so a team using Cursor, Claude Code, and Windsurf all write consistent code."
 tags: ["python", "chennaipy", "mcp", "ai-coding", "claude-code", "open-source", "talk"]
 categories: ["Talks"]
-featuredImage: "/images/talks/chennaipy-dev-playbook/audience-view.jpeg"
+featureimage: "/images/talks/chennaipy-dev-playbook/audience-view.jpeg"
+images: ["/images/talks/chennaipy-dev-playbook/audience-view.jpeg"]  # og:image for link previews
 ---
 
 Three developers, three AI editors, one pull request that reads like it came from three different teams. That was the picture I put on screen at the June 2026 Chennaipy meetup. Everyone had shipped faster the first few weeks after adopting AI coding tools. Then the cracks showed: a new feature that looked nothing like the existing ones, one developer's error handling completely different from another's, the AI suggesting a pattern the team retired six months ago. Nobody had done anything wrong. The AI was just working without the team's context. That was the problem I took to the meetup, and the talk was about what I built to fix it.

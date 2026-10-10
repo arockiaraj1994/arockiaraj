@@ -6,7 +6,6 @@ author: "Arockiaraj"
 description: "How a chaotic group vacation led me to build a full Android app using AI tools and vibe coding - from idea to Play Store in days."
 tags: ["vibe-coding", "android", "product-thinking", "side-project", "firebase"]
 categories: ["Projects"]
-featuredImage: ""
 ---
 
 I recently went on a long vacation with family and friends. The total cost crossed 1 lakh rupees. At that scale, poor planning becomes expensive. I had to manage an itinerary across multiple cities, checklists for each person and for the group, shared expenses that needed splitting, flight and train tickets, ID copies, and contact details for hotels, cab drivers, and local guides.
