@@ -292,3 +292,11 @@ html.dark .course-notes {
   .course-section__body { padding-left: 0; }
   .course-section__tag { display: none; }
 }
+
+/* Captions under inline images in posts. Muted, but still readable in both themes. */
+.img-caption {
+  font-size: 0.85em;
+  margin-top: 0.6rem;
+  color: rgb(var(--color-neutral-500));
+}
+html.dark .img-caption { color: rgb(var(--color-neutral-400)); }

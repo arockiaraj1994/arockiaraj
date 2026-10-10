@@ -66,7 +66,7 @@ It handles everything a group trip needs in one place:
 
 One app. One trip. Everything organized.
 
-<a href="https://play.google.com/store/apps/details?id=com.mindshift.mytrip" target="_blank">Download My Trip on Google Play</a>
+*My Trip was published on Google Play, but the listing is no longer available.*
 
 ## Closing Thought
 

@@ -60,12 +60,12 @@ This two-target design came directly from a real UX observation: most of the tim
 
 <div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0;">
   <div style="flex: 1; min-width: 200px; text-align: center;">
-    <img src="/images/nexre/app/share_sheet.png" alt="NexRe: Android share sheet showing both Save and Summarize targets" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-    <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Android share sheet with both NexRe targets visible</p>
+    <img src="/images/nexre/app/share_sheet.webp" alt="NexRe: Android share sheet showing both Save and Summarize targets" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+    <p class="img-caption">Android share sheet with both NexRe targets visible</p>
   </div>
   <div style="flex: 1; min-width: 200px; text-align: center;">
-    <img src="/images/nexre/app/app_share_summary.png" alt="NexRe: Summarize bottom sheet over the calling app" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-    <p style="font-size: 0.85em; color: #888; margin-top: 8px;">The Summarize bottom sheet floats over the calling app</p>
+    <img src="/images/nexre/app/app_share_summary.webp" alt="NexRe: Summarize bottom sheet over the calling app" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+    <p class="img-caption">The Summarize bottom sheet floats over the calling app</p>
   </div>
 </div>
 
@@ -103,20 +103,20 @@ The **onboarding carousel** is three screens shown only on first launch, tracked
 
 <div style="display: flex; gap: 16px; flex-wrap: wrap; margin: 24px 0;">
   <div style="flex: 1; min-width: 160px; text-align: center;">
-    <img src="/images/nexre/app/app_home_page.png" alt="NexRe home screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-    <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Home</p>
+    <img src="/images/nexre/app/app_home_page.webp" alt="NexRe home screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+    <p class="img-caption">Home</p>
   </div>
   <div style="flex: 1; min-width: 160px; text-align: center;">
-    <img src="/images/nexre/app/app_library.png" alt="NexRe library screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-    <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Library</p>
+    <img src="/images/nexre/app/app_library.webp" alt="NexRe library screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+    <p class="img-caption">Library</p>
   </div>
   <div style="flex: 1; min-width: 160px; text-align: center;">
-    <img src="/images/nexre/app/app_topics.png" alt="NexRe topics screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-    <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Topics</p>
+    <img src="/images/nexre/app/app_topics.webp" alt="NexRe topics screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+    <p class="img-caption">Topics</p>
   </div>
   <div style="flex: 1; min-width: 160px; text-align: center;">
-    <img src="/images/nexre/app/app_setting.png" alt="NexRe settings screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
-    <p style="font-size: 0.85em; color: #888; margin-top: 8px;">Settings</p>
+    <img src="/images/nexre/app/app_setting.webp" alt="NexRe settings screen" style="max-width: 100%; height: auto; border-radius: 8px;" loading="lazy" decoding="async" />
+    <p class="img-caption">Settings</p>
   </div>
 </div>
 
