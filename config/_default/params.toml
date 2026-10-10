@@ -22,7 +22,7 @@ smartTOC = true
 [footer]
   showMenu = true
   showCopyright = true
-  showThemeAttribution = true
+  showThemeAttribution = false
   showAppearanceSwitcher = true
   showScrollToTop = true
 
@@ -65,6 +65,16 @@ smartTOC = true
   cardView = true
   cardViewScreenWidth = false
   constrainItemsWidth = false
+
+# Umami analytics (no cookies). Loads on the production build only, and only
+# once websiteid is set. Create a free site at https://cloud.umami.is and paste
+# its Website ID below.
+[umamiAnalytics]
+  # websiteid = "00000000-0000-0000-0000-000000000000"
+  domain = "cloud.umami.is"
+  dataDomains = "arockiaraj.co.in"  # don't count local or preview builds
+  doNotTrack = true                 # respect the browser's Do Not Track setting
+  enableTrackEvent = false          # page views only; no extra custom event per view
 
 [sitemap]
   excludedKinds = ["taxonomy", "term"]
