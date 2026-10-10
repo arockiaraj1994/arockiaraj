@@ -48,8 +48,8 @@ The demo ran against the NexRe project, a Kotlin Android app I have been buildin
 I showed the sequence live on the projector. The AI calls `start_task(project="nexre", task="add a screen for viewing links")`, gets back the guardrails and the matched `add-screen` workflow, then follows the Next Calls chain, `get_skill`, `get_pattern("compose-screen")`, `get_pattern("viewmodel")`, `get_language_rules("kotlin")`. By the time it writes a single line of code, it has loaded the team's actual patterns for Compose screens and ViewModels.
 
 <div style="margin: 32px 0; text-align: center;">
-  <img src="/images/talks/chennaipy-dev-playbook/live-demo.jpeg" alt="Live demo on the projector, session-analyzer report on screen during the talk" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
-  <p style="font-size: 0.85em; color: #888; margin-top: 10px;">Live demo on the projector, showing the dev-playbook dashboard during the talk</p>
+  <img src="/images/talks/chennaipy-dev-playbook/live-demo.webp" alt="Live demo on the projector, session-analyzer report on screen during the talk" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
+  <p class="img-caption">Live demo on the projector, showing the dev-playbook dashboard during the talk</p>
 </div>
 
 The contrast landed well. AI coding without loaded context produces code that runs. AI coding with the right rules loaded produces code that belongs.
@@ -61,8 +61,8 @@ Chennaipy is Chennai's Python user group. They run monthly meetups with a mix of
 Preparing a full talk is a different kind of pressure than a lightning talk. Ten minutes forces you to cut everything except the punchline. A full talk forces you to earn the audience's attention from the first slide. You have to know why you are telling this story in this order. That process, more than anything, clarified what the project was actually about.
 
 <div style="margin: 32px 0; text-align: center;">
-  <img src="/images/talks/chennaipy-dev-playbook/audience-view.jpeg" alt="Audience at the Chennaipy June 2026 meetup" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
-  <p style="font-size: 0.85em; color: #888; margin-top: 10px;">The room at Chennaipy, June 2026</p>
+  <img src="/images/talks/chennaipy-dev-playbook/audience-view.webp" alt="Audience at the Chennaipy June 2026 meetup" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
+  <p class="img-caption">The room at Chennaipy, June 2026</p>
 </div>
 
 The audience asked good questions, about how to handle multiple repos in the same corpus, whether the server could be hosted on a shared server across teams, and how you decide what belongs in a guardrail versus a pattern. Those are exactly the questions worth writing down.

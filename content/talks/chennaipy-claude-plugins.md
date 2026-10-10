@@ -31,8 +31,8 @@ I put a diagram on screen I call "the cost factor". You enter with **no plan**, 
 The line that landed: none of those six are the model's fault. Every one of them is a setup problem.
 
 <div style="margin: 32px 0; text-align: center;">
-  <img src="/images/talks/chennaipy-claude-plugins/cost-factor.jpeg" alt="Presenting the cost factor diagram at Chennaipy: entry with no plan feeds a loop of wrong model, bad inputs, model doing script work, no verification, rework, and start from 0.5, exiting to multiple retry" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
-  <p style="font-size: 0.85em; color: #888; margin-top: 10px;">Walking the room through the Cost Factor loop: what an unplanned run really costs</p>
+  <img src="/images/talks/chennaipy-claude-plugins/cost-factor.webp" alt="Presenting the cost factor diagram at Chennaipy: entry with no plan feeds a loop of wrong model, bad inputs, model doing script work, no verification, rework, and start from 0.5, exiting to multiple retry" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
+  <p class="img-caption">Walking the room through the Cost Factor loop: what an unplanned run really costs</p>
 </div>
 
 ## The Five Building Blocks
@@ -48,8 +48,8 @@ The fix is a Claude Code plugin: one folder that answers all six failure points 
 Skills teach, commands trigger, agents delegate, hooks enforce, scripts compute. None of these pieces are exotic on their own. What matters is that they are bundled, versioned, and shipped together, so the plugin behaves the same way for every teammate who installs it.
 
 <div style="margin: 32px 0; text-align: center;">
-  <img src="/images/talks/chennaipy-claude-plugins/plugin-anatomy.jpeg" alt="Presenting the plugin anatomy slide at Chennaipy, showing the web-quote folder structure with manifest, skills, commands, agents, hooks, and scripts" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
-  <p style="font-size: 0.85em; color: #888; margin-top: 10px;">Plugin anatomy: all five building blocks in one folder, discovered by path</p>
+  <img src="/images/talks/chennaipy-claude-plugins/plugin-anatomy.webp" alt="Presenting the plugin anatomy slide at Chennaipy, showing the web-quote folder structure with manifest, skills, commands, agents, hooks, and scripts" style="max-width: 100%; height: auto; border-radius: 10px; border: 2px solid #c8c8c8; box-shadow: 0 8px 32px rgba(0,0,0,0.18);" loading="lazy" decoding="async" />
+  <p class="img-caption">Plugin anatomy: all five building blocks in one folder, discovered by path</p>
 </div>
 
 ## The Live Demo
