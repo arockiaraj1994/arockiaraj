@@ -95,21 +95,10 @@ that has never failed doesn't tell you much.
 This is the part that still feels new to me. Claude Code runs on my PC, next to the emulators. I
 talk to it from my phone using Claude Code's **Remote Control** feature.
 
-```
-  📱 PHONE (me)                          💻 PC (Claude Code)
+[![Flow: from my phone I brainstorm, plan and approve over Remote Control; Claude Code on my PC writes the code, builds, tests on phone and tablet emulators, runs the regression suite, opens the PR and releases; I upload to Play Console](/images/nexre/android-release-flow.svg)](/images/nexre/android-release-flow.svg)
 
-  Ask: fix this / add that  ┄┄┄┄┄┄▶     ticket + plan
-                                         code on a branch
-                                         build ──▶ 🤖 emulators (phone + tablet)
-                                         check on screen
-                                         regression suite
-  Review                    ◀┄┄┄┄┄┄     PR + test results
-  Approve: "go, merge"      ┄┄┄┄┄┄▶     merge
-                                         tag, signed build, upgrade test
-  Play Console upload       ◀┄┄┄┄┄┄     GitHub release ready
-```
-
-I ask from the phone. Claude does the work on the PC. I read the pull request and the test
+From the phone I brainstorm, shape the feature and agree the plan with Claude. Claude does
+the work on the PC. I read the pull request and the test
 results, and I approve. Then it releases.
 
 In one line: **do a release while you are having your coffee.**
