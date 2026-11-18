@@ -42,5 +42,5 @@ If you have a side project and a local meetup near you, I'd recommend presenting
 
 ## Links
 
-- **Source code**: <a href="https://lnkd.in/gSEja8kb" target="_blank">GitHub Repository</a>
+- **Source code**: <a href="https://github.com/arockiaraj1994/media_organizer" target="_blank">GitHub Repository</a>
 - **Community**: <a href="https://chennaipy.org" target="_blank">Chennaipy</a>

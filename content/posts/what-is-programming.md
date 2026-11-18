@@ -8,7 +8,7 @@ description: "Understanding the need for computer programming through the evolut
 draft: false
 ---
 
-I took an example of Banking to explain the need for computer programming, so that everyone can easily understand the need for computer programming.
+I'll use banking as an example to explain why we need computer programming, so that everyone can easily understand it.
 
 Let me explain the evolution of banking, which is a great example of how technology has transformed industries.
 
@@ -32,10 +32,8 @@ Now you can understand the need for computer programming in our daily life. It's
 
 ## What is Computer Programming?
 
-Let's say if we want to communicate with someone, we need to know their language. Similarly, to communicate with a computer, we need to use a programming language.
+If we want to communicate with someone, we need to know their language. If I wanted to communicate with you, I would need to know English. Similarly, to communicate with a computer, we need to use a programming language like Python, Java, or C++.
 
-If I wanted to communicate with you, I would need to know English. Similarly, to communicate with a computer, we need to use a programming language like Python, Java, or C++.
+I have hardware (a computer). How do I tell it to do something? That's where programming comes in.
 
-Likewise, I have a hardware (computer), How should I tell a computer to do something? That's where programming comes in.
-
-Programming language allows developers to create software applications, automate processes, analyze data, and build intelligent systems.
+A programming language allows developers to create software applications, automate processes, analyze data, and build intelligent systems.

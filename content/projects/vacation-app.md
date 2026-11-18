@@ -2,7 +2,7 @@
 title: "A 1 Lakh Vacation That Turned Into an App"
 date: 2026-03-30T10:00:00+05:30
 draft: false
-description: "How a chaotic group vacation led me to build a full Android app using AI tools and vibe coding. It went from idea to the Play Store in days."
+description: "How a chaotic group vacation led me to build a full Android app using AI tools and vibe coding. It went from idea to a working app in days."
 tags: ["vibe-coding", "android", "product-thinking", "side-project", "firebase"]
 ---
 
@@ -52,7 +52,7 @@ Each version took days, not months. No team. No sprints. Just a real problem, Gi
 
 ## The App Today
 
-The app is called **My Trip**, and it's live on the Play Store.
+The app is called **My Trip**.
 
 It handles everything a group trip needs in one place:
 
@@ -63,8 +63,6 @@ It handles everything a group trip needs in one place:
 - **Important Contacts**: hotels, cab drivers, local guides, emergency numbers
 
 One app. One trip. Everything organized.
-
-*My Trip was published on Google Play, but the listing is no longer available.*
 
 ## Closing Thought
 

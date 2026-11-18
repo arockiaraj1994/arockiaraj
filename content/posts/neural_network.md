@@ -13,18 +13,18 @@ Have you ever wondered how you remember your best friend’s face or how you kno
 That’s your **brain’s neural network [1]** at work!
 
 A neural network is a web of tiny brain cells called **neurons [2]**.
-Each neuron connects to thousands of others like a giant spider web of messages passing around in your head!
+Each neuron connects to thousands of others, like a giant spider web of messages passing around in your head!
 
 ## An Example
 
 Let’s imagine a school classroom.
 
 - The teacher shows you pictures of cats and dogs.
-- At first, you make mistakes you might think a small dog is a cat!
+- At first, you make mistakes: you might think a small dog is a cat!
 - But every time you make a mistake, your brain corrects itself.
 - After seeing many pictures, you can easily say, "That’s a cat!" or "That’s a dog!"
 
-That’s how a **neural network [1]** learns by making small adjustments every time it gets something wrong.
+That’s how a **neural network [1]** learns: by making small adjustments every time it gets something wrong.
 It’s almost like the brain is saying,
 
 `Oops, I made a mistake! Let me fix my connections [3] a little.`
@@ -35,7 +35,7 @@ Each **neuron [2]** passes a message to the next one.
 If the answer is right, the **connection [3]** between those neurons becomes stronger.
 If the answer is wrong, that connection becomes weaker.
 
-`This is how learning [4] happens by strengthening the right paths in the network!`
+`This is how learning [4] happens: by strengthening the right paths in the network!`
 
 Just like how you get better at math or cricket the more you practice,
 your brain’s **neural connections [3]** get stronger the more you learn and repeat.
@@ -47,7 +47,7 @@ Scientists looked at how the human brain works and said,
 `Hey, can we teach computers like this?`
 
 That’s how **artificial neural networks (ANNs) [5]** were born!
-They work the same way the computer sees examples, makes guesses, corrects mistakes, and improves over time.
+They work the same way: the computer sees examples, makes guesses, corrects mistakes, and improves over time.
 That’s how computers now recognize your face in photos or suggest songs you might like!
 
 ## In Simple Table
@@ -61,7 +61,7 @@ That’s how computers now recognize your face in photos or suggest songs you mi
 
 ## Real-Life Example
 
-When you learn to ride a bicycle
+When you learn to ride a bicycle:
 
 - At first, you fall.
 - Then your brain figures out balance.
@@ -70,10 +70,10 @@ When you learn to ride a bicycle
 That’s your **neural network [1]** learning through **practice [8]**.
 
 So your brain is the most powerful learning machine ever made.
-Every time you practice something reading, playing an instrument, solving puzzles you’re training your own **neural network [1]**!
+Every time you practice something (reading, playing an instrument, solving puzzles), you’re training your own **neural network [1]**!
 
 So next time you see a computer recognizing a photo or a voice,
-remember it’s just **trying to copy your amazing brain [9]!**
+remember: it’s just **trying to copy your amazing brain [9]!**
 
 ---
 
