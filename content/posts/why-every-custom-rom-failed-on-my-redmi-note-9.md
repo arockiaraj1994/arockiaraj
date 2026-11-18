@@ -82,7 +82,7 @@ I'd spent a whole session debugging the recovery. The recovery was never the pro
 
 Two details that would have saved me hours if I'd known them:
 
-**Read the build code letter.** Xiaomi build names encode the Android version in one character. `Q` = 10, `R` = 11, `S` = 12, `T` = 13. So `V13.0.5.0.**S**JOINXM` is Android 12, and the thing I actually needed was an `**R**JOINXM` build. You can tell whether a firmware is right for your ROM by looking at one letter in the filename.
+**Read the build code letter.** Xiaomi build names encode the Android version in one character. `Q` = 10, `R` = 11, `S` = 12, `T` = 13. So `V13.0.5.0.SJOINXM` (note the **S**) is Android 12, and the thing I actually needed was an `RJOINXM` build. You can tell whether a firmware is right for your ROM by looking at one letter in the filename.
 
 **This device has two names.** LineageOS calls it `merlinx`, not `merlin`. I'd been searching the wrong codename. And when I queried their build API directly:
 

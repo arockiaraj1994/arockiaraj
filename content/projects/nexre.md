@@ -168,5 +168,3 @@ Read duration tracking via a snackbar is blunt. A background timer that starts w
 The problem I started with, links piling up unread in WhatsApp, is genuinely solved. The Save share target is now my default for anything I want to read later. The library gives me back the context I lost when the link was just a URL in a chat. The weekly chart tells me how much I'm actually reading versus just hoarding.
 
 Building the prototype in Claude Design before touching Kotlin made the implementation session feel like execution rather than exploration. The design decisions were already made. The architecture was planned. The only job left was writing the code, which is the easy part once the spec is clear.
-
-NexRe is not on the Play Store yet. When it is, the link goes here.

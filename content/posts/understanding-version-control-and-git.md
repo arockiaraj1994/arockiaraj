@@ -3,12 +3,12 @@ title: "Understanding Version Control and Git"
 date: 2025-05-09T00:00:00Z
 lastmod: 2025-05-09T00:00:00Z
 tags: ["git", "version-control", "development", "collaboration"]
-categories: ["General"]
+categories: ["Programming"]
 description: "A beginner's guide to version control and how Git helps implement it effectively"
 draft: false
 ---
 
-Version control is one of the foundational tools every software developer should master. In this two-part blog, we'll explore what version control is and how Git helps implement it effectively.
+Version control is one of the foundational tools every software developer should master. In this post, in two parts, we'll explore what version control is and how Git helps implement it effectively.
 
 ---
 
@@ -23,7 +23,7 @@ When working on software projects, especially with a team, some common problems 
 - **Reverting changes:** If something breaks, it's not easy to go back to a previous working version.
 - **Managing multiple versions:** Handling different features or fixes at the same time becomes messy.
 
-### How Version Control Solves the Problem?
+### How Does Version Control Solve the Problem?
 
 Version control systems (VCS) are tools that:
 
@@ -136,4 +136,4 @@ git push origin main
 
 Version control is not just for big teams. It's essential for any coding project. Git makes it fast and free to use. Mastering these basics will make you a better collaborator and coder.
 
-In the next blog, we'll cover more advanced Git workflows like branching strategies, resolving merge conflicts, and working with pull requests.
+Once you're comfortable with these, the next things to learn are branching strategies, resolving merge conflicts, and working with pull requests.

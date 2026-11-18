@@ -2,7 +2,7 @@
 title: "Are Traditional Generic Apps Dead?"
 date: 2026-10-15T00:00:00+05:30
 categories: ["Programming"]
-tags: ["Software", "Custom Software", "Maintenance"]
+tags: ["software", "custom-software", "maintenance"]
 description: "We built one app for many customers because building a separate app for each one was too hard. Building is easy now, so does that still make sense?"
 draft: false
 ---

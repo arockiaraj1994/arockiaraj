@@ -8,7 +8,7 @@ description: "How I went from fighting compile errors to shipping Play Store rel
 draft: false
 ---
 
-Last December I started building an Android app. I had one question in mind: with an AI coding
+Last December I started building an Android app, [NexRe](/projects/nexre/). I had one question in mind: with an AI coding
 assistant, can I build an app without knowing the actual programming language?
 
 Here is where I stood. I knew the problem. I knew what I wanted to build. But I had no idea about

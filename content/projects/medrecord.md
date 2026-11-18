@@ -2,8 +2,8 @@
 title: "MedRecord Became FamHeal: Rebuilt for Trust"
 date: 2026-04-21T10:00:00+05:30
 draft: false
-description: "Why a solo, on-device health vault wasn't enough for a family, and why I turned off the AI extraction in favour of plain, trustworthy records."
-tags: ["android", "kotlin", "jetpack-compose", "firebase", "firestore", "room", "hilt", "medrecord", "famheal"]
+description: "Why a solo, on-device health vault wasn't enough for a family, why I moved it to the cloud and then back to the phone, and why I turned off the AI extraction in favour of plain, trustworthy records."
+tags: ["android", "kotlin", "jetpack-compose", "offline-first", "room", "ml-kit", "medrecord", "famheal"]
 featureimage: "/images/medrecord/app/dashboard-app.jpeg"
 images: ["/images/medrecord/app/dashboard-app.jpeg"]  # og:image for link previews
 ---
@@ -12,7 +12,7 @@ Every family ends up as the unpaid record keeper for its own health history. Som
 
 <!--more-->
 
-I built an app to fix that. It has gone through two real shapes so far, and the second one exists because the first one solved the wrong half of the problem.
+I built an app to fix that. It has gone through three real shapes so far. The second one exists because the first one solved the wrong half of the problem, and the third exists because the second one brought problems of its own.
 
 ## Attempt one: a vault on one phone
 
@@ -65,12 +65,24 @@ It also got things wrong in ways that matter more in health data than almost any
 
 So I turned it off. Uploads now go straight to storage as plain, dated documents (a report or a consult note), viewable in-app with pinch-to-zoom, no numbers pulled out and no fields auto-filled. The extraction pipeline still exists in the codebase, dormant, for a version where I trust it enough to re-enable as a genuine assist rather than the default path. Doing the data entry yourself is slower. Being wrong about a lab result is worse.
 
+## Attempt three: back on the phone
+
+After living with the cloud version for a while, I changed my mind again. A cloud app needs an account, a server, an internet connection and a monthly bill, and it puts a family's health reports on someone else's server. For a set of files that a family mostly reads at home or at a doctor's desk, that was more than the problem needed.
+
+So I rebuilt FamHeal as a fully offline app. There is no account, no server and no internet permission at all. Each family member is a folder. You scan a report or import a PDF or photos, give it a title, category and date, and it is stored as a PDF in the app's private storage.
+
+The lost-phone problem from MedRecord still needed an answer, and this time the answer is a backup file, not a server. Everything goes into one password-protected file that you save wherever you like (a USB drive, an SD card, another folder) and restore on a new phone with the same password.
+
+Reading reports came back too, but on the phone and in the shape I promised myself. ML Kit's bundled text recognizer reads the words on each saved file, so search finds words inside reports, such as "creatinine" or "HbA1c". When you add a file, the app suggests a title, date and category from the first page, and you check them before saving. Nothing is filled in without a person seeing it, and nothing is sent anywhere.
+
 ## What the app does today
 
-- **Family profiles**: each person's medications, labs, conditions, and documents kept separate, switchable from the top bar.
-- **Records**: a plain, dated timeline of uploaded reports and consult notes, with an in-app PDF viewer instead of handing the file off to another app.
-- **Dashboard**: trend cards for each lab test, laid out like a small analytics board: reorder them, resize them, hide the ones you don't need. It replaced a fixed summary view that couldn't be adjusted per family member.
-- **Cloud-backed profiles**: one signed-in account, all of that family's data synced to Firestore and Storage so it survives a phone swap and is visible from any device on that account.
+- **Family folders**: one folder per person, with health folders inside (Fever, Diabetes, Dental care) to group related records.
+- **Adding files**: scan with the camera, import PDFs or photos, or share them in from WhatsApp, email or Gallery.
+- **Search inside reports**: the text is read on the phone, so search finds words inside reports, not just titles.
+- **Suggestions**: a title, date and category from the first page, always checked by you before saving.
+- **Backup**: one password-protected file you can restore on a new phone.
+- **Emergency info card**: name, age, blood group, allergies and conditions in large text.
 
 ## Tech stack
 
@@ -78,15 +90,13 @@ So I turned it off. Uploads now go straight to storage as plain, dated documents
 |------|--------|
 | Language | Kotlin |
 | UI | Jetpack Compose, Material 3 |
-| DI | Hilt |
-| Cloud data | Firestore + Firebase Storage, scoped per signed-in account |
-| Local | Room, as an on-device cache |
-| Auth | Firebase Auth via Google Sign-In (Credential Manager) |
+| Storage | Room for records, PDFs in the app's private storage |
 | Capture | ML Kit Document Scanner |
-| Extraction (dormant) | Firebase Functions calling Gemini |
-| Images | Coil |
+| Text reading | ML Kit Text Recognition (bundled, on-device) |
+| Backup | One password-protected file (AES-GCM, key from PBKDF2) |
+| Network | None. The app has no internet permission |
 
-## What actually hurt
+## What hurt along the way
 
 **Person scoping, now with higher stakes.** Every screen that lists medications, labs, or records has to filter by the selected family member. That was true in the on-device version too, but a missed filter used to be a UI bug. In a cloud-synced, multi-person account it's a real privacy bug.
 
@@ -96,8 +106,8 @@ So I turned it off. Uploads now go straight to storage as plain, dated documents
 
 ## What's next
 
-Today, FamHeal is still one signed-in account managing all of that family's data, not yet separate logins for each family member with their own access to a shared record. That's the next real piece: a token-scoped, read-only view so a sibling or a doctor can check a record without holding the primary account's keys. After that, I'd like to bring the extraction pipeline back as an optional assist: suggest the fields, let a person confirm them, never write anything unreviewed.
+Next is reading lab values out of reports on the phone, so a test like HbA1c can show as a trend over time. The rule stays the same as for suggestions: the app proposes, a person confirms, and nothing is written unreviewed.
 
 ## Closing
 
-The lesson from MedRecord wasn't about encryption or architecture. It was that the right unit for a health record is the family, not the device, and that a feature working in a demo isn't the same as a feature worth trusting with your parents' medication list. FamHeal is slower to use in a couple of places than the flashier version would have been. That's the trade I'd make again.
+The lesson from MedRecord wasn't about encryption or architecture. It was that the right unit for a health record is the family, not the device, and that a feature working in a demo isn't the same as a feature worth trusting with your parents' medication list. It took three shapes to learn that a family's record has to survive a lost phone, but it doesn't need a server to do that. FamHeal is slower to use in a couple of places than the flashier version would have been. That's the trade I'd make again.
