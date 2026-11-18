@@ -3,7 +3,7 @@ title: "NexRe: A Read-It-Later App for Links I Never Read"
 date: 2026-05-07T00:01:00+05:30
 draft: false
 description: "How sending links to myself on WhatsApp, and never reading them, turned into an Android read-it-later app with Gemini summaries."
-tags: ["android", "kotlin", "jetpack-compose", "room", "workmanager", "hilt", "gemini", "nexre", "claude-design"]
+tags: ["android", "kotlin", "jetpack-compose", "room", "workmanager", "hilt", "firebase", "gemini", "nexre", "claude-design"]
 featureimage: "/images/nexre/app/app_home_page.png"
 images: ["/images/nexre/app/app_home_page.png"]  # og:image for link previews
 ---
@@ -50,9 +50,9 @@ The most interesting architectural decision in NexRe is having two separate entr
 
 **NexRe Save** is completely silent. You share a URL, the activity receives it, enqueues a WorkManager job, and immediately calls `finish()`. The app never opens. A few seconds later, a quiet notification appears: `Saved: <title>`. The WorkManager job fetches OG tags (title, description, image URL) using Jsoup, detects the source platform from the URL domain, applies keyword-based auto-tags, and writes everything to Room. That is the entire flow.
 
-**NexRe Summarize** opens a transparent activity that hosts a modal bottom sheet over whatever app you were in. It does not feel like launching an app. It feels like a popup. The bottom sheet shows a loading state while it fetches OG tags plus article body text, sends it to **Gemini Flash** with a structured prompt, and parses the JSON response into a 3–5 sentence summary and suggested tags. You see the title, summary, and tag chips. You can tap Save, and it is stored with the summary attributed to Gemini. Then the sheet dismisses and you are back where you started.
+**NexRe Summarize** opens a transparent activity that hosts a modal bottom sheet over whatever app you were in. It does not feel like launching an app. It feels like a popup. The bottom sheet shows a loading state while it sends the link to a Firebase Cloud Function. The function fetches the page itself, asks **Gemini** for a summary with a structured prompt, and returns a few bullet points and suggested tags. You see the title, summary, and tag chips. You can tap Save, and it is stored with the summary attributed to Gemini. Then the sheet dismisses and you are back where you started.
 
-The fallback chain for Summarize matters: no API key configured → warning in the sheet with a link to Settings. No internet → offer to just save without summary. Gemini failure or quota hit → save with the OG description as the summary, flag `summary_source = OG_META`. Paywalled article with no extractable body → use OG description only, auto-tag as `paywalled`.
+The fallback chain for Summarize matters: not signed in → a prompt to sign in. No AI summaries left → an option to add more. No internet → offer to just save without summary. Gemini failure or quota hit → save with the OG description as the summary, flag `summary_source = OG_META`. Paywalled article with no extractable body → use OG description only, auto-tag as `paywalled`.
 
 This two-target design came directly from a real UX observation: most of the time I just want to save something quickly and not think about it. But occasionally I want to understand something before I commit to reading it. Having both modes without having to configure anything per-save is the right default.
 
@@ -85,7 +85,7 @@ Keyword auto-tagging applies when Gemini is not involved. A predefined map check
 
 ## The six screens
 
-**Home** is newest-first: unread and recently read links, a weekly bar chart showing reads per day, and a badge on the bottom nav showing the unread count. Swipe right to mark read (green reveal), swipe left to archive (orange reveal). No FAB. The share sheet is the only way in.
+**Home** is newest-first: unread and recently read links, a weekly bar chart showing reads per day, and a badge on the bottom nav showing the unread count. Swipe right to mark read (green reveal), swipe left to archive (orange reveal). The share sheet is the main way in, but there is also an add button with a Paste option for links you copied.
 
 **Library** has a filter tab bar: All, Unread, Read, Archived, Favourites. A sort toggle switches between date saved and recently opened. Same card layout throughout.
 
@@ -93,9 +93,9 @@ Keyword auto-tagging applies when Gemini is not involved. A predefined map check
 
 **Search** is a full-screen overlay with a SearchBar. It queries across title, description, personal note, URL, and tag names. All local, no server. Recent searches are stored in DataStore.
 
-**Detail** is where the reading context lives: hero thumbnail, source badge, full summary with its provenance label ("Summary by Gemini" or "Auto-summary"), editable tag chips, a personal note text field, favourite toggle, and a stats row showing saved date, open count, and total read time. The primary action is **Open in Browser**, which launches a Chrome Custom Tab. When you return to the app, a snackbar asks "Did you finish reading?" Tap Yes to mark it read, or ignore it to leave it unread. This is the only read-tracking mechanism. No browser hooks, no background timers.
+**Detail** is where the reading context lives: hero thumbnail, source badge, full summary with its provenance label ("Summary by Gemini" or "Auto-summary"), editable tag chips, a personal note text field, favourite toggle, and a stats row showing saved date, open count, and total read time. The primary action is **Read article**, which opens the built-in reader (more on that below). When you return to the app, a snackbar asks "Did you finish reading?" Tap Yes to mark it read, or ignore it to leave it unread. This is the only read-tracking mechanism. No browser hooks, no background timers.
 
-**Settings** covers the Gemini API key (masked input with show/hide toggle, plus a Test Key button that pings the API with a minimal request), daily reminder and weekly digest notification toggles, JSON export to Downloads, tag management, and a data clear option with confirmation dialog.
+**Settings** covers your account and cloud backup, AI summaries, appearance (light, dark or follow the system), reader theme and text size, daily reminder and weekly digest notifications, JSON export to Downloads, and a danger zone at the bottom for the actions that delete data.
 
 The **onboarding carousel** is three screens shown only on first launch, tracked via DataStore. Once you tap Get Started, it never appears again.
 
@@ -128,14 +128,17 @@ The **onboarding carousel** is three screens shown only on first launch, tracked
 | Local DB | Room |
 | Background | WorkManager (custom factory, not Hilt workers) |
 | DI | Hilt |
-| Networking | Retrofit + OkHttp + Moshi |
-| Secure storage | EncryptedSharedPreferences |
-| Browser | Chrome Custom Tabs |
-| HTML parsing | Jsoup |
+| Tablets | Compose adaptive layouts (two-pane) |
+| JSON | Moshi |
+| Browser | Chrome Custom Tabs, for videos and pages the reader can't show |
+| HTML parsing | Jsoup, Readability4J for the reader |
 | Image loading | Coil |
 | Preferences | DataStore |
+| Account and sync | Firebase Auth (Google Sign-In) + Firestore |
+| AI summaries | Python Cloud Functions calling Gemini 2.5 Flash-Lite on Vertex AI |
+| Screenshot tests | Roborazzi |
 
-The Gemini integration uses `gemini-2.0-flash:generateContent` via REST. The API key is stored in `EncryptedSharedPreferences` using AES256-GCM and only read at call time and never held in memory longer than needed.
+There is no API key in the app anymore. The first version asked you to paste your own Gemini key into Settings, which is a lot to ask of someone who just wants to save a link. Now every summary goes through a Cloud Function, `summarize_link`, which calls Gemini 2.5 Flash-Lite on Vertex AI with the function's own service account. Before calling the model it checks a cache, checks that the user has summaries left, and applies a daily limit. Article text is capped at about 6,000 tokens. So nobody needs a key, and one heavy user can't run up the bill.
 
 WorkManager uses a custom `NexReWorkerFactory` rather than Hilt's `@HiltWorker` annotation. The factory instantiates workers directly with their injected dependencies, and `NexReApplication` implements `Configuration.Provider` to hand the factory to WorkManager at startup. The auto-initializer is removed from the manifest so WorkManager does not try to self-initialise before the factory is registered.
 
@@ -155,9 +158,20 @@ WorkManager uses a custom `NexReWorkerFactory` rather than Hilt's `@HiltWorker` 
 
 Every link can be exported as JSON to the Downloads folder. The format includes all fields, including `tags`, `summary_source`, `read_duration_sec`, and `read_count`, so nothing is lost if you want to move to a different tool or analyse your reading habits elsewhere. The filename is `nexre_export_YYYY-MM-DD.json`. Export uses `MediaStore` on Android 10+ and `File` on older versions.
 
-## What I would do differently
+## What changed after V1
 
-The gradient thumbnail works as a placeholder but a real OG image fetch would make the library feel significantly richer. I deliberately left it out of V1 because Jsoup's image URL extraction is unreliable. Many OG images require cookies or JavaScript, and caching remote images adds meaningful complexity. Coil handles it when the URL is available; the infrastructure is there for V2.
+The first version was a single-phone app with your own API key. A lot has changed since then:
+
+- **AI without a key.** Summaries run on the server, as described above. You sign in, and the AI button either summarises or tells you what you need.
+- **Optional account and cloud backup.** You can use NexRe without an account. If you sign in with Google, your links are backed up to Firestore and synced across your devices. Pull down on Home or Library to fetch changes straight away.
+- **A built-in reader.** **Read article** opens the article text inside the app, with Light, Sepia and Dark themes and a text-size slider. The saved text also syncs, so an article still opens if the page has gone or moved behind a paywall.
+- **Highlights.** One tap saves a highlight from the reader. You can add a colour and a note, see a link's highlights on its detail screen, and search finds highlight text too.
+- **Real page images.** Cards show the page's own image when there is one, and the site's first letter when there isn't, instead of the V1 gradient.
+- **A new look.** Navy, coral and cream, a dark theme, and a "Shelf Pick" icon: navy books on a shelf with one coral book leaning out, which is the read NexRe picks for you next.
+- **Tablets.** A two-pane layout on tablets, while onboarding and sign-in stay phone-width.
+- **Tests I can rerun.** Maestro flows and Roborazzi screenshot tests on phone and tablet emulators. I wrote about that, and how releases now work, in [From 3 Days per Feature to 7 Releases in 2 Days](/posts/from-3-days-per-feature-to-7-releases-in-2-days/).
+
+## What I would do differently
 
 The keyword tagger is static. A small trained classifier on the title + description would be more accurate, especially for niche topics the keyword list doesn't cover. Gemini already handles this for Summarize mode. The gap is in Store mode, where you get keyword tags only.
 
