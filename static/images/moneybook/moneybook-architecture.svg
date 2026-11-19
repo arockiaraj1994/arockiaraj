@@ -48,7 +48,7 @@
 <circle r="12" fill="#DB2777" opacity="0.18"><animateMotion dur="5s" begin="-1.5s" repeatCount="indefinite" path="M1320,565 L1290,565 L1290,800 L845,800 L845,560"/></circle>
 <circle r="6" fill="#94A3B8" opacity="0.95"><animateMotion dur="6s" begin="-0s" repeatCount="indefinite" path="M730,610 L685,610 L685,930 L650,930"/></circle>
 <circle r="11" fill="#94A3B8" opacity="0.18"><animateMotion dur="6s" begin="-0s" repeatCount="indefinite" path="M730,610 L685,610 L685,930 L650,930"/></circle>
-<text x="40" y="56" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#1E1B4B" text-anchor="start">MoneyBook: the full setup</text>
+<text x="40" y="56" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#1E1B4B" text-anchor="start">MoneyBook: architecture</text>
 <text x="40" y="88" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="normal" fill="#64748B" text-anchor="start">One small server, one database. The app only reads; every write goes through one command-line tool.</text>
 <rect x="40" y="260" width="240" height="90" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
 <text x="56" y="301.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Bank alert emails</text>

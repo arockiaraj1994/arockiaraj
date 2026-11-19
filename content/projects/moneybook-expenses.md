@@ -1,5 +1,5 @@
 ---
-title: "MoneyBook deep dive: Expenses"
+title: "MoneyBook: Expenses"
 date: 2026-11-19T10:01:00+05:30
 draft: false
 description: "How MoneyBook turns bank alert emails into clean, sorted spending: the parser, the signed push, raw and clean rows, category rules, and the screens."
@@ -9,12 +9,12 @@ build:
 showTableOfContents: true
 ---
 
-This is a deep dive into one part of [MoneyBook](/projects/moneybook/): **expenses**. It covers how a bank alert
+This page covers one part of [MoneyBook](/projects/moneybook/): **expenses**. It covers how a bank alert
 email becomes a sorted row in the app, and what the screens show.
 
 *Screenshots use made-up demo data.*
 
-## The flow
+## Steps
 
 [![Expenses flow: alert email, parser, signed push, raw row, rules, clean row](/images/moneybook/expenses-flow.svg)](/images/moneybook/expenses-flow.svg)
 
@@ -27,7 +27,7 @@ Six steps, from "I paid" to "it's in the app":
 5. **Rules.** A cleaner applies my rules: which account, which category, what kind of money movement.
 6. **Clean row.** The result is what the app shows.
 
-## Step 1–2: the parser
+## Reading the bank emails
 
 The parser still lives in Google Apps Script, like the [first version](/projects/ai-expense-tracker-bank-emails/).
 It is free, it sits next to Gmail, and it works. But it is a full rewrite.
@@ -48,7 +48,7 @@ URL, so it can't leak into a log. Busy or rate-limited answers are tried again a
 
 The parser also writes every transaction to a Google Sheet. That Sheet is a backup log I can always open.
 
-## Step 3: the signed push
+## Sending to my server
 
 The parser sends each transaction to one narrow address on my server. That door only accepts a request that passes
 every check:
@@ -63,9 +63,9 @@ nothing else. No transaction details are written to the logs.
 
 If the same email is sent twice, nothing is doubled. Each row is keyed on the email's own message id.
 
-## Step 4–6: raw rows, rules and clean rows
+## Sorting the payments
 
-This is the most important design choice in the expense part. There are three layers:
+There are three layers:
 
 1. **Raw rows**: exactly what the parser saw. Never edited.
 2. **Rules**: a small file with my accounts, payees and shops.
@@ -74,7 +74,7 @@ This is the most important design choice in the expense part. There are three la
 If a rule changes, the clean rows are simply made again. A dry run shows what would change first, and I back up
 the database before the real run. Rows I have checked by hand are left alone.
 
-### Buckets: not every debit is spending
+### Types of payments
 
 Each clean row goes into one bucket:
 
@@ -103,7 +103,7 @@ Categories come from rules, not from the AI's guess:
 
 Anything the rules can't decide is marked **needs a check**, with a short reason. The Home page counts these.
 
-## The screens
+## Screens
 
 [![MoneyBook expenses page with totals, a day-by-day chart, transactions and categories](/images/moneybook/expenses.webp)](/images/moneybook/expenses.webp)
 <p class="img-caption">The Expenses page on the web</p>
@@ -125,7 +125,7 @@ time of the payment, the category and the account. Filters stay behind one butto
 
 The **home-screen widget** shows Today, Yesterday and the last 7 days, and refreshes on its own.
 
-## What it can't do yet
+## Not done yet
 
 - I can't fix a category from the app. I ask Claude, and it updates the rule.
 - Cash spends are not tracked, because there is no alert for them.

@@ -1,5 +1,5 @@
 ---
-title: "MoneyBook deep dive: Loans and cards"
+title: "MoneyBook: Loans and Cards"
 date: 2026-11-19T10:03:00+05:30
 draft: false
 description: "How MoneyBook tracks family loans and credit cards: what is owed, what is due, card rewards and benefits, and a 'Which card?' advisor written as plain code."
@@ -9,12 +9,12 @@ build:
 showTableOfContents: true
 ---
 
-This is a deep dive into the **loans and cards** part of [MoneyBook](/projects/moneybook/). These have no automatic
+This page covers the **loans and cards** part of [MoneyBook](/projects/moneybook/). These have no automatic
 feed. They come from papers: loan receipts, statements and card terms.
 
 *Screenshots use made-up demo data: the banks, cards and amounts are not real.*
 
-## The flow
+## Steps
 
 [![Loans and cards flow: papers, Claude, td.py, tables, shown to me](/images/moneybook/loans-cards-flow.svg)](/images/moneybook/loans-cards-flow.svg)
 
@@ -45,7 +45,7 @@ For each loan:
 
 Payments due in the next 7 days show on the Home page.
 
-## Cards: rewards and benefits
+## Cards
 
 Every credit card has its own small rule book, and I could never keep them in my head. Now each card's terms are in
 the database:
@@ -66,7 +66,7 @@ them next to the estimate, so I can see how close the estimate is.
 
 ## Which card?
 
-This is my favourite part. I type an amount and a category, and MoneyBook tells me which card to use, how to pay,
+I type an amount and a category, and MoneyBook tells me which card to use, how to pay,
 and why.
 
 [![MoneyBook Which card? page recommending a card for a fuel spend](/images/moneybook/which-card.webp)](/images/moneybook/which-card.webp)
@@ -85,14 +85,14 @@ How it picks:
 - It explains the answer in short lines, like "13 points per ₹100 on fuel", "cap used up this month" or "no points
   on fuel on this card".
 
-**Did it matter?** Before going live, I ran the same code over three months of my real spending: what I earned
+**Result:** before going live, I ran the same code over three months of my real spending: what I earned
 against what the best card would have earned. I had missed a few thousand rupees in rewards. That was enough to
 keep it.
 
 On **Android**, a floating **Which card?** button opens a small popup: amount, category, and optional chips for
 how I am paying. It is quick enough to use at the counter.
 
-## What it can't do yet
+## Not done yet
 
 - Short-term offers from payment apps are not modelled.
 - Welcome bonuses and one-off offers are not counted. The page says so under every answer.

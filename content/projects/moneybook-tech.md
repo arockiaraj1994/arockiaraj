@@ -1,5 +1,5 @@
 ---
-title: "MoneyBook deep dive: The tech"
+title: "MoneyBook: Tech Details"
 date: 2026-11-19T10:04:00+05:30
 draft: false
 description: "The full MoneyBook setup: Apps Script parser, signed push, FastAPI, Postgres, SvelteKit, an Android app, timers, backups, checks, and how Claude Code ships a change."
@@ -9,19 +9,19 @@ build:
 showTableOfContents: true
 ---
 
-This is the technical deep dive for [MoneyBook](/projects/moneybook/): every part of the setup, how the parts talk,
+This page has the tech details of [MoneyBook](/projects/moneybook/): every part of the setup, how the parts talk,
 and how a change goes from an idea to a release.
 
-## The full picture
+## Architecture
 
 The dots show live traffic: an alert coming in, prices being fetched, a change I asked for, and me reading the app.
 
 [![MoneyBook architecture: bank alerts, Google parser, server with Caddy, ingest, login, read API, Postgres, td.py and timers; browser, Android and Claude Code](/images/moneybook/moneybook-architecture.svg)](/images/moneybook/moneybook-architecture.svg)
 
-The idea in one line: **one small server, one database, and the app only reads.** Every write goes through one
+In simple terms: **one small server, one database, and the app only reads.** Every write goes through one
 command-line tool.
 
-## The parts
+## Parts
 
 | Part | Built with | Job |
 |---|---|---|
@@ -40,7 +40,7 @@ command-line tool.
 
 Everything on the server runs in Docker, except the timers.
 
-## The database
+## Database
 
 Postgres is the single source of truth. There are no spreadsheets and no Markdown files holding data on the side.
 
@@ -65,9 +65,7 @@ A few rules keep it honest:
   that can write one table only.
 - **Last 4 digits only.** Full account numbers are never stored.
 
-## Reads and writes are split
-
-This is the biggest design choice.
+## Reading and writing data
 
 - **The app reads.** The API's database user is read-only, with a short time limit on every query. No screen can
   change data.
@@ -78,7 +76,7 @@ This is the biggest design choice.
 
 That keeps the web and Android apps simple. It also means every change is a command I can see.
 
-## Security, in short
+## Security
 
 - HTTPS everywhere. Only my login works, and the API checks the token again behind the proxy.
 - The parser's push is signed, time-checked and can't be replayed. Its service can write one table, nothing more.
@@ -89,7 +87,7 @@ That keeps the web and Android apps simple. It also means every change is a comm
   raw data files.
 - The Android app has an app lock, and its saved copy of the data is stored privately on the phone.
 
-## Checks before every change
+## Checks
 
 One command, `make check`, runs everything:
 
@@ -106,7 +104,7 @@ The Android app has its own pipeline in GitHub Actions: build, unit tests, lint,
 31 screenshot checks. After a release is published, a smoke test downloads the signed APK, installs it and makes sure
 it opens.
 
-## How a change ships
+## Release steps
 
 [![How a change ships: plan, branch and code, checks, pull request, merge and ship](/images/moneybook/shipping-flow.svg)](/images/moneybook/shipping-flow.svg)
 
@@ -132,7 +130,7 @@ A few things make Claude dependable on this project:
 - **Coding standards** from my own dev-playbook server: language rules, patterns and the definition of done.
 - **Plain words**: short bullet points, money amounts written the Indian way, jargon explained the first time.
 
-## Lessons from the first week
+## What I learned
 
 - **Keep raw data raw.** Raw expense rows are never edited, so every rule change is safe to undo.
 - **Split reads and writes early.** A read-only app with one write tool is much easier to trust.
