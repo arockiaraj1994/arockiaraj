@@ -1,0 +1,120 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1600" height="1040" viewBox="0 0 1600 1040" role="img" aria-label="MoneyBook architecture: sources, parser, server, database and apps">
+<title>MoneyBook architecture: sources, parser, server, database and apps</title><defs><marker id="a0891B2" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#0891B2"/></marker><marker id="a475569" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#475569"/></marker><marker id="a7C3AED" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#7C3AED"/></marker><marker id="a94A3B8" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#94A3B8"/></marker><marker id="aDB2777" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DB2777"/></marker></defs>
+<rect width="1600" height="1040" fill="#FFFFFF"/>
+<rect x="20" y="120" width="290" height="760" rx="18" fill="#F8FAFC" stroke="#475569" stroke-width="1.5" stroke-dasharray="8,6"/>
+<text x="38" y="150" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#475569" text-anchor="start">Outside</text>
+<rect x="330" y="190" width="340" height="300" rx="18" fill="#F5F3FF" stroke="#7C3AED" stroke-width="1.5" stroke-dasharray="8,6"/>
+<text x="348" y="220" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#7C3AED" text-anchor="start">Google (free)</text>
+<rect x="700" y="120" width="560" height="700" rx="18" fill="#F8FAFC" stroke="#475569" stroke-width="1.5" stroke-dasharray="8,6"/>
+<text x="718" y="150" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#475569" text-anchor="start">My server (Docker)</text>
+<rect x="1290" y="120" width="290" height="760" rx="18" fill="#FDF2F8" stroke="#DB2777" stroke-width="1.5" stroke-dasharray="8,6"/>
+<text x="1308" y="150" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#DB2777" text-anchor="start">Me</text>
+<path d="M280,305 L315,305 L315,285 L348,285" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a7C3AED)"/>
+<path d="M650,285 L680,285 L680,185 L728,185" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a7C3AED)"/>
+<path d="M845,220 L845,258" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a7C3AED)"/>
+<path d="M845,350 L845,518" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a7C3AED)"/>
+<path d="M490,330 L490,368" fill="none" stroke="#7C3AED" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7,6" marker-end="url(#a7C3AED)"/>
+<path d="M1320,190 L1232,190" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a475569)"/>
+<path d="M1320,295 L1280,295 L1280,205 L1232,205" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a475569)"/>
+<path d="M1115,220 L1115,258" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a475569)"/>
+<path d="M1115,350 L1115,388" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a475569)"/>
+<path d="M1115,480 L1115,518" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a475569)"/>
+<path d="M1115,540 L1115,520" fill="none" stroke="#475569" stroke-width="2.5" stroke-linejoin="round"/>
+<path d="M280,680 L505,680 L505,705 L728,705" fill="none" stroke="#0891B2" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a0891B2)"/>
+<path d="M280,780 L505,780 L505,745 L728,745" fill="none" stroke="#0891B2" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a0891B2)"/>
+<path d="M845,680 L845,642" fill="none" stroke="#0891B2" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a0891B2)"/>
+<path d="M1000,725 L962,725" fill="none" stroke="#0891B2" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#a0891B2)"/>
+<path d="M1320,565 L1290,565 L1290,800 L845,800 L845,772" fill="none" stroke="#DB2777" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#aDB2777)"/>
+<path d="M1445,660 L1445,612" fill="none" stroke="#DB2777" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#aDB2777)"/>
+<path d="M730,610 L685,610 L685,930 L652,930" fill="none" stroke="#94A3B8" stroke-width="2.5" stroke-linejoin="round" stroke-dasharray="7,6" marker-end="url(#a94A3B8)"/>
+<path d="M40,1010 L80,1010" fill="none" stroke="#7C3AED" stroke-width="4" stroke-linejoin="round"/>
+<path d="M340,1010 L380,1010" fill="none" stroke="#0891B2" stroke-width="4" stroke-linejoin="round"/>
+<path d="M640,1010 L680,1010" fill="none" stroke="#DB2777" stroke-width="4" stroke-linejoin="round"/>
+<path d="M940,1010 L980,1010" fill="none" stroke="#475569" stroke-width="4" stroke-linejoin="round"/>
+<path d="M1240,1010 L1280,1010" fill="none" stroke="#94A3B8" stroke-width="4" stroke-linejoin="round" stroke-dasharray="7,6"/>
+<circle r="7" fill="#7C3AED" opacity="0.95"><animateMotion dur="5s" begin="-0s" repeatCount="indefinite" path="M280,305 L315,305 L315,285 L350,285 L680,285 L680,185 L845,185 L845,540"/></circle>
+<circle r="12" fill="#7C3AED" opacity="0.18"><animateMotion dur="5s" begin="-0s" repeatCount="indefinite" path="M280,305 L315,305 L315,285 L350,285 L680,285 L680,185 L845,185 L845,540"/></circle>
+<circle r="7" fill="#475569" opacity="0.95"><animateMotion dur="3.5s" begin="-0.6s" repeatCount="indefinite" path="M1320,190 L1115,190 L1115,540"/></circle>
+<circle r="12" fill="#475569" opacity="0.18"><animateMotion dur="3.5s" begin="-0.6s" repeatCount="indefinite" path="M1320,190 L1115,190 L1115,540"/></circle>
+<circle r="7" fill="#475569" opacity="0.95"><animateMotion dur="3.5s" begin="-2.3s" repeatCount="indefinite" path="M1320,190 L1115,190 L1115,540"/></circle>
+<circle r="12" fill="#475569" opacity="0.18"><animateMotion dur="3.5s" begin="-2.3s" repeatCount="indefinite" path="M1320,190 L1115,190 L1115,540"/></circle>
+<circle r="7" fill="#0891B2" opacity="0.95"><animateMotion dur="4.5s" begin="-1s" repeatCount="indefinite" path="M280,680 L505,680 L505,705 L845,705 L845,560"/></circle>
+<circle r="12" fill="#0891B2" opacity="0.18"><animateMotion dur="4.5s" begin="-1s" repeatCount="indefinite" path="M280,680 L505,680 L505,705 L845,705 L845,560"/></circle>
+<circle r="7" fill="#0891B2" opacity="0.95"><animateMotion dur="4.5s" begin="-3s" repeatCount="indefinite" path="M280,780 L505,780 L505,745 L845,745 L845,560"/></circle>
+<circle r="12" fill="#0891B2" opacity="0.18"><animateMotion dur="4.5s" begin="-3s" repeatCount="indefinite" path="M280,780 L505,780 L505,745 L845,745 L845,560"/></circle>
+<circle r="7" fill="#0891B2" opacity="0.95"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M1115,725 L845,725 L845,560"/></circle>
+<circle r="12" fill="#0891B2" opacity="0.18"><animateMotion dur="4s" begin="-2s" repeatCount="indefinite" path="M1115,725 L845,725 L845,560"/></circle>
+<circle r="7" fill="#DB2777" opacity="0.95"><animateMotion dur="5s" begin="-1.5s" repeatCount="indefinite" path="M1320,565 L1290,565 L1290,800 L845,800 L845,560"/></circle>
+<circle r="12" fill="#DB2777" opacity="0.18"><animateMotion dur="5s" begin="-1.5s" repeatCount="indefinite" path="M1320,565 L1290,565 L1290,800 L845,800 L845,560"/></circle>
+<circle r="6" fill="#94A3B8" opacity="0.95"><animateMotion dur="6s" begin="-0s" repeatCount="indefinite" path="M730,610 L685,610 L685,930 L650,930"/></circle>
+<circle r="11" fill="#94A3B8" opacity="0.18"><animateMotion dur="6s" begin="-0s" repeatCount="indefinite" path="M730,610 L685,610 L685,930 L650,930"/></circle>
+<text x="40" y="56" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#1E1B4B" text-anchor="start">MoneyBook: the full setup</text>
+<text x="40" y="88" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="normal" fill="#64748B" text-anchor="start">One small server, one database. The app only reads; every write goes through one command-line tool.</text>
+<rect x="40" y="260" width="240" height="90" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="56" y="301.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Bank alert emails</text>
+<text x="56" y="323.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">In my Gmail</text>
+<rect x="40" y="640" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="56" y="676.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Broker API</text>
+<text x="56" y="698.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Holdings (read only)</text>
+<rect x="40" y="740" width="240" height="80" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="56" y="776.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Price feed</text>
+<text x="56" y="798.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Daily stock prices</text>
+<rect x="350" y="240" width="300" height="90" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+<text x="366" y="272.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Parser (Apps Script)</text>
+<text x="366" y="294.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Reads each alert email;</text>
+<text x="366" y="313.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Gemini pulls out the details</text>
+<rect x="350" y="370" width="300" height="80" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+<text x="366" y="406.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Google Sheet</text>
+<text x="366" y="428.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">A log of every alert</text>
+<rect x="730" y="160" width="500" height="60" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="746" y="186.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Caddy</text>
+<text x="746" y="208.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">HTTPS in front of everything</text>
+<rect x="730" y="260" width="230" height="90" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
+<text x="746" y="292.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Ingest</text>
+<text x="746" y="314.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Checks the signature,</text>
+<text x="746" y="333.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">saves the raw row</text>
+<rect x="1000" y="260" width="230" height="90" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="1016" y="292.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Login</text>
+<text x="1016" y="314.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Keycloak + oauth2-proxy;</text>
+<text x="1016" y="333.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">only me</text>
+<rect x="1000" y="390" width="230" height="90" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="1016" y="422.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Read API</text>
+<text x="1016" y="444.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">FastAPI, read only;</text>
+<text x="1016" y="463.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">checks login again</text>
+<rect x="730" y="520" width="500" height="120" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="746" y="557.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Postgres</text>
+<text x="746" y="579.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">One database, one schema per area:</text>
+<text x="746" y="598.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">expenses · invest · loans · cards · research · plan · AI notes</text>
+<text x="746" y="617.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Schema changes only through Alembic migrations</text>
+<rect x="730" y="680" width="230" height="90" rx="14" fill="#FFFFFF" stroke="#0891B2" stroke-width="2"/>
+<text x="746" y="712.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">td.py tool</text>
+<text x="746" y="734.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Every write and sync;</text>
+<text x="746" y="753.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">used by Claude and timers</text>
+<rect x="1000" y="680" width="230" height="90" rx="14" fill="#FFFFFF" stroke="#0891B2" stroke-width="2"/>
+<text x="1016" y="712.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Timers</text>
+<text x="1016" y="734.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Clean rows every 15 min,</text>
+<text x="1016" y="753.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">sync 3× on weekdays</text>
+<rect x="1320" y="160" width="240" height="70" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="1336" y="191.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Browser</text>
+<text x="1336" y="213.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Desktop web (SvelteKit)</text>
+<rect x="1320" y="250" width="240" height="90" rx="14" fill="#FFFFFF" stroke="#475569" stroke-width="2"/>
+<text x="1336" y="282.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Android app</text>
+<text x="1336" y="304.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Kotlin + Compose;</text>
+<text x="1336" y="323.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">home-screen widget</text>
+<rect x="1320" y="520" width="240" height="90" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<text x="1336" y="552.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Claude Code</text>
+<text x="1336" y="574.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Runs on the server;</text>
+<text x="1336" y="593.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">I talk to it from my phone</text>
+<rect x="1320" y="660" width="240" height="90" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<text x="1336" y="692.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Reports &amp; papers</text>
+<text x="1336" y="714.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Research PDFs, receipts,</text>
+<text x="1336" y="733.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">card terms</text>
+<rect x="350" y="895" width="300" height="70" rx="14" fill="#FFFFFF" stroke="#94A3B8" stroke-width="2"/>
+<text x="366" y="926.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="18" font-weight="bold" fill="#1E1B4B" text-anchor="start">Cloud backup</text>
+<text x="366" y="948.5" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Nightly server backup job</text>
+<text x="92" y="1015" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1E1B4B" text-anchor="start">A payment alert</text>
+<text x="392" y="1015" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1E1B4B" text-anchor="start">Prices and holdings</text>
+<text x="692" y="1015" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1E1B4B" text-anchor="start">Changes I ask for</text>
+<text x="992" y="1015" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1E1B4B" text-anchor="start">Reading the app</text>
+<text x="1292" y="1015" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="15" font-weight="normal" fill="#1E1B4B" text-anchor="start">Backup</text>
+</svg>
