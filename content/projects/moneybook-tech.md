@@ -65,7 +65,7 @@ A few rules keep it honest:
   that can write one table only.
 - **Last 4 digits only.** Full account numbers are never stored.
 
-## Reading and writing data
+## Reads and writes
 
 - **The app reads.** The API's database user is read-only, with a short time limit on every query. No screen can
   change data.
@@ -130,7 +130,7 @@ A few things make Claude dependable on this project:
 - **Coding standards** from my own dev-playbook server: language rules, patterns and the definition of done.
 - **Plain words**: short bullet points, money amounts written the Indian way, jargon explained the first time.
 
-## What I learned
+## Lessons
 
 - **Keep raw data raw.** Raw expense rows are never edited, so every rule change is safe to undo.
 - **Split reads and writes early.** A read-only app with one write tool is much easier to trust.

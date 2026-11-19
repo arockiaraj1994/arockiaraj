@@ -14,7 +14,7 @@ feed. They come from papers: loan receipts, statements and card terms.
 
 *Screenshots use made-up demo data: the banks, cards and amounts are not real.*
 
-## Steps
+## Simple flow
 
 [![Loans and cards flow: papers, Claude, td.py, tables, shown to me](/images/moneybook/loans-cards-flow.svg)](/images/moneybook/loans-cards-flow.svg)
 

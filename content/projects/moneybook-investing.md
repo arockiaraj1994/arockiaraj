@@ -14,7 +14,7 @@ prices come in, and how Claude helps me read them without placing a single trade
 
 *Screenshots use made-up demo data: the companies and prices are not real.*
 
-## Steps
+## Simple flow
 
 [![Investing flow: timer or me, sync, snapshot, Claude reads, take and cards](/images/moneybook/investing-flow.svg)](/images/moneybook/investing-flow.svg)
 
@@ -25,7 +25,7 @@ prices come in, and how Claude helps me read them without placing a single trade
 4. **Claude reads.** When I ask for an analysis, Claude starts from fresh numbers, never old ones.
 5. **Take and cards.** Claude writes a short take for the Invest page and updates the stock cards.
 
-## Where the data comes from
+## Data sources
 
 - **Holdings** come from my broker's API. The script logs in, reads, and stops. It can't place, change or cancel
   orders, and the rule is written into the project.

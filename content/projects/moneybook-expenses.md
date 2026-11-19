@@ -14,7 +14,7 @@ email becomes a sorted row in the app, and what the screens show.
 
 *Screenshots use made-up demo data.*
 
-## Steps
+## Simple flow
 
 [![Expenses flow: alert email, parser, signed push, raw row, rules, clean row](/images/moneybook/expenses-flow.svg)](/images/moneybook/expenses-flow.svg)
 
@@ -27,7 +27,7 @@ Six steps, from "I paid" to "it's in the app":
 5. **Rules.** A cleaner applies my rules: which account, which category, what kind of money movement.
 6. **Clean row.** The result is what the app shows.
 
-## Reading the bank emails
+## Email parser
 
 The parser still lives in Google Apps Script, like the [first version](/projects/ai-expense-tracker-bank-emails/).
 It is free, it sits next to Gmail, and it works. But it is a full rewrite.
@@ -48,7 +48,7 @@ URL, so it can't leak into a log. Busy or rate-limited answers are tried again a
 
 The parser also writes every transaction to a Google Sheet. That Sheet is a backup log I can always open.
 
-## Sending to my server
+## Sending data
 
 The parser sends each transaction to one narrow address on my server. That door only accepts a request that passes
 every check:
@@ -63,7 +63,7 @@ nothing else. No transaction details are written to the logs.
 
 If the same email is sent twice, nothing is doubled. Each row is keyed on the email's own message id.
 
-## Sorting the payments
+## Sorting
 
 There are three layers:
 
@@ -103,7 +103,7 @@ Categories come from rules, not from the AI's guess:
 
 Anything the rules can't decide is marked **needs a check**, with a short reason. The Home page counts these.
 
-## Screens
+## App screens
 
 [![MoneyBook expenses page with totals, a day-by-day chart, transactions and categories](/images/moneybook/expenses.webp)](/images/moneybook/expenses.webp)
 <p class="img-caption">The Expenses page on the web</p>
