@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1246" height="200" viewBox="0 0 1246 200" role="img" aria-label="Loans and cards: papers in, reminders and advice out">
+<title>Loans and cards: papers in, reminders and advice out</title><defs><marker id="aDB2777" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0,0 L10,5 L0,10 z" fill="#DB2777"/></marker></defs>
+<rect width="1246" height="200" fill="#FFFFFF"/>
+<path d="M240,122.0 L272,122.0" fill="none" stroke="#DB2777" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#aDB2777)"/>
+<path d="M484,122.0 L516,122.0" fill="none" stroke="#DB2777" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#aDB2777)"/>
+<path d="M728,122.0 L760,122.0" fill="none" stroke="#DB2777" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#aDB2777)"/>
+<path d="M972,122.0 L1004,122.0" fill="none" stroke="#DB2777" stroke-width="2.5" stroke-linejoin="round" marker-end="url(#aDB2777)"/>
+<text x="30" y="44" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="22" font-weight="bold" fill="#1E1B4B" text-anchor="start">Loans and cards: papers in, reminders and advice out</text>
+<rect x="30" y="70" width="210" height="104" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<circle cx="56" cy="103.0" r="13" fill="#DB2777"/>
+<text x="56" y="108.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">1</text>
+<text x="78" y="109.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#1E1B4B" text-anchor="start">Papers</text>
+<text x="46" y="131.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Receipt, statement</text>
+<text x="46" y="150.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">or card terms</text>
+<rect x="274" y="70" width="210" height="104" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<circle cx="300" cy="103.0" r="13" fill="#DB2777"/>
+<text x="300" y="108.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">2</text>
+<text x="322" y="109.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#1E1B4B" text-anchor="start">Claude</text>
+<text x="290" y="131.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Reads them and</text>
+<text x="290" y="150.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">picks the command</text>
+<rect x="518" y="70" width="210" height="104" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<circle cx="544" cy="103.0" r="13" fill="#DB2777"/>
+<text x="544" y="108.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">3</text>
+<text x="566" y="109.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#1E1B4B" text-anchor="start">td.py</text>
+<text x="534" y="131.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Writes the loan,</text>
+<text x="534" y="150.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">payment or rule</text>
+<rect x="762" y="70" width="210" height="104" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<circle cx="788" cy="103.0" r="13" fill="#DB2777"/>
+<text x="788" y="108.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">4</text>
+<text x="810" y="109.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#1E1B4B" text-anchor="start">Tables</text>
+<text x="778" y="131.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Loans, plans, cards,</text>
+<text x="778" y="150.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">reward rules</text>
+<rect x="1006" y="70" width="210" height="104" rx="14" fill="#FFFFFF" stroke="#DB2777" stroke-width="2"/>
+<circle cx="1032" cy="103.0" r="13" fill="#DB2777"/>
+<text x="1032" y="108.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="bold" fill="#FFFFFF" text-anchor="middle">5</text>
+<text x="1054" y="109.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="bold" fill="#1E1B4B" text-anchor="start">Shown to me</text>
+<text x="1022" y="131.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Owed, due dates,</text>
+<text x="1022" y="150.0" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="14" font-weight="normal" fill="#64748B" text-anchor="start">Which card?</text>
+</svg>

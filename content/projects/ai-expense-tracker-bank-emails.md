@@ -6,6 +6,9 @@ description: "How I automated expense tracking with Google Apps Script and Gemin
 tags: ["google-apps-script", "gemini", "automation", "personal-finance", "google-sheets"]
 ---
 
+> **Update, November 2026:** this tracker grew into [MoneyBook](/projects/moneybook/), one app for my spending,
+> stocks, loans and cards. The page below is the original version.
+
 Every month I'd spend hours copying transaction details from bank alert emails into a spreadsheet. Multiple credit cards, a savings account, each with its own email format. I finally automated the entire thing using Google's free tools.
 
 <!--more-->
