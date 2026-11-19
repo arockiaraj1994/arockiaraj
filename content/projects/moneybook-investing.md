@@ -1,5 +1,5 @@
 ---
-title: "MoneyBook deep dive: Investing"
+title: "MoneyBook: Investing"
 date: 2026-11-19T10:02:00+05:30
 draft: false
 description: "How MoneyBook tracks my stocks: holdings and prices on a timer, value over time, stock cards in plain words, research reports and a short take from Claude."
@@ -9,12 +9,12 @@ build:
 showTableOfContents: true
 ---
 
-This is a deep dive into the **investing** part of [MoneyBook](/projects/moneybook/). It covers how holdings and
+This page covers the **investing** part of [MoneyBook](/projects/moneybook/). It covers how holdings and
 prices come in, and how Claude helps me read them without placing a single trade.
 
 *Screenshots use made-up demo data: the companies and prices are not real.*
 
-## The flow
+## Steps
 
 [![Investing flow: timer or me, sync, snapshot, Claude reads, take and cards](/images/moneybook/investing-flow.svg)](/images/moneybook/investing-flow.svg)
 
@@ -25,7 +25,7 @@ prices come in, and how Claude helps me read them without placing a single trade
 4. **Claude reads.** When I ask for an analysis, Claude starts from fresh numbers, never old ones.
 5. **Take and cards.** Claude writes a short take for the Invest page and updates the stock cards.
 
-## Holdings, prices and history
+## Where the data comes from
 
 - **Holdings** come from my broker's API. The script logs in, reads, and stops. It can't place, change or cancel
   orders, and the rule is written into the project.
@@ -34,10 +34,10 @@ prices come in, and how Claude helps me read them without placing a single trade
   trade is keyed on its exchange order id, so nothing is doubled.
 - **Other accounts** (a second broker, bonds) still come in from files I export. The page says so when it matters.
 
-One rule I learned the hard way: a price update **always** fetches holdings too. Once, only prices were updated,
+One rule: a price update **always** fetches holdings too. Once, only prices were updated,
 and the page said "holdings fetched 4 days ago". Now there is one command, `sync`, that does both.
 
-## The Invest page
+## Invest page
 
 [![MoneyBook invest page with stock value over time and Claude's take](/images/moneybook/invest.webp)](/images/moneybook/invest.webp)
 <p class="img-caption">The Invest page: value over time, Claude's take, biggest moves, plan levels and overdue reviews</p>
@@ -52,7 +52,7 @@ and the page said "holdings fetched 4 days ago". Now there is one command, `sync
 - **Overdue reviews**: stocks I said I would look at again by a date.
 - **Stocks table** and **stocks by sector**, with a warning if one stock or one sector gets too big a share.
 
-## Stock cards in plain words
+## Stock cards
 
 Each stock has a card. The first versions were full of investment terms and long paragraphs. I asked for plain
 words, and now every card has the same three blocks:
@@ -82,19 +82,19 @@ My broker sends research reports as PDFs. For each one:
 Claude follows a 10-step checklist for every analysis. It is saved as a skill in the project, so every session
 uses the same steps.
 
-## Actions and reminders
+## Reminders
 
 - **Price actions**: "buy 20 more if the price is ₹300 or less". The page shows how far away that is.
 - **Review dates**: "look at this stock again after its results".
 - **Triggers**: things that should make me rethink a stock, like "loans not repaid above 3%".
 
-## On Android
+## Android app
 
 The Android Invest home shows only Claude's take. I found the other cards too busy on a phone, so the take now
 carries the key points as short bullets. Stock pages have proper charts with pins for each buy and sell. Tap a pin
 to see the details.
 
-## What it can't do yet
+## Not done yet
 
 - Mutual funds and bonds have no automatic feed.
 - A second broker's holdings come from files, not an API.

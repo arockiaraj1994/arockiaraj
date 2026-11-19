@@ -1,5 +1,5 @@
 ---
-title: "MoneyBook: From a Free Sheet to My Own Money App"
+title: "MoneyBook: One App for All My Money"
 date: 2026-11-19T10:00:00+05:30
 draft: false
 description: "My free expense tracker grew into one app for spending, stocks, loans and cards. What changed, how it works, and what one week of building with Claude Code looked like."
@@ -15,13 +15,13 @@ It ran on Google's free tools: Apps Script, Gemini and a Google Sheet. For eight
 Then I started to notice the gaps. And my money was not only in expenses. There were stocks, loans, credit cards and
 research reports, each in a different place.
 
-So the tracker grew up. It is now **MoneyBook**: one app for all of my money, built in about a week with Claude Code.
+So I built a bigger app. It is **MoneyBook**: one app for all of my money, built in about a week with Claude Code.
 
 <!--more-->
 
 *All screenshots on this page use made-up demo data. The banks, cards, stocks and amounts are not real.*
 
-## Where the free version fell short
+## Problems with the old tracker
 
 The old tracker was good for a start. Over time, four problems showed up:
 
@@ -35,9 +35,9 @@ The old tracker was good for a start. Over time, four problems showed up:
 
 And it only knew about expenses. My stocks, loans and cards lived in other apps, sheets and PDFs.
 
-## What MoneyBook does
+## What is in MoneyBook
 
-MoneyBook has four parts. Each one has its own deep-dive page.
+MoneyBook has four parts. Each one has its own page.
 
 | Part | What it does for me | Read more |
 |---|---|---|
@@ -46,14 +46,12 @@ MoneyBook has four parts. Each one has its own deep-dive page.
 | **Loans & cards** | What I owe, what is due, card rewards and "which card should I use?" | [Loans & cards →](/projects/moneybook-loans-cards/) |
 | **Tech** | The full setup: parser, server, database, web, Android and how changes ship | [Tech →](/projects/moneybook-tech/) |
 
-## How it works, in one picture
+## User flow
 
 There are three everyday flows: spending, investing, and loans and cards. Each dot in the picture is one item
 moving through the steps.
 
 [![MoneyBook user flow: spending, investing, and loans and cards, each in five steps](/images/moneybook/moneybook-user-flow.svg)](/images/moneybook/moneybook-user-flow.svg)
-
-In short:
 
 - **Spending is automatic.** I pay. The bank emails me. A parser reads the email and sends it to my server. MoneyBook
   sorts it, and I see it in the app a few minutes later.
@@ -62,7 +60,7 @@ In short:
 - **Loans and cards are on request.** I share a receipt or a card's terms with Claude. It saves them through one
   tool. MoneyBook then reminds me what is due and tells me which card to use.
 
-## A look at the app
+## Screenshots
 
 The web app is for the desktop. On the phone I use the Android app and its home-screen widget.
 
@@ -78,7 +76,7 @@ The web app is for the desktop. On the phone I use the Android app and its home-
 [![MoneyBook Which card? page recommending a card for a fuel spend](/images/moneybook/which-card.webp)](/images/moneybook/which-card.webp)
 <p class="img-caption">Which card?: the best card for a spend, the reward, and why</p>
 
-## One week with Claude
+## Built in one week with Claude
 
 MoneyBook did not start from zero. A few weeks earlier I had built a small stock journal with Claude: a database,
 some scripts and a simple web page. MoneyBook took that in on day one and grew from there.
@@ -105,7 +103,7 @@ Like with [NexRe](/posts/from-3-days-per-feature-to-7-releases-in-2-days/), most
 talk to Claude Code over Remote Control. It writes the code, runs the checks, takes screenshots and opens the pull
 request. I read and approve.
 
-## What stays in my hands
+## Safety rules
 
 This is my money, so a few rules are fixed:
 
@@ -118,13 +116,13 @@ This is my money, so a few rules are fixed:
 - **It is all written down.** Every task has a ticket in my Redmine tracker with the plan, the work and the test
   results.
 
-## What's next
+## Not done yet
 
 - Mutual funds and bonds don't have an automatic feed yet.
 - A "Plan" area for goals, budgets and bills is still to be designed.
 - Small edits from the app itself, like fixing a category, are still an open question.
 
-## Built with
+## Tools used
 
 Google Apps Script and Gemini (the parser), FastAPI and Postgres (the server), SvelteKit (the web app), Kotlin and
 Jetpack Compose (the Android app), Caddy, Keycloak and Docker on one small server, and Claude Code for almost all of

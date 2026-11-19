@@ -34,7 +34,7 @@
 <circle r="12" fill="#DB2777" opacity="0.18"><animateMotion dur="8s" begin="-2.6s" repeatCount="indefinite" path="M230,720.0 L1550,720.0"/></circle>
 <circle r="7" fill="#DB2777" opacity="0.95"><animateMotion dur="8s" begin="-6.6s" repeatCount="indefinite" path="M230,720.0 L1550,720.0"/></circle>
 <circle r="12" fill="#DB2777" opacity="0.18"><animateMotion dur="8s" begin="-6.6s" repeatCount="indefinite" path="M230,720.0 L1550,720.0"/></circle>
-<text x="40" y="56" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#1E1B4B" text-anchor="start">MoneyBook: how it works for me</text>
+<text x="40" y="56" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="32" font-weight="bold" fill="#1E1B4B" text-anchor="start">MoneyBook: user flow</text>
 <text x="40" y="88" font-family="Inter, 'Segoe UI', Helvetica, Arial, sans-serif" font-size="17" font-weight="normal" fill="#64748B" text-anchor="start">Three everyday flows. The app only shows things; changes go through Claude, and I approve them.</text>
 <rect x="230" y="172" width="240" height="116" rx="14" fill="#FFFFFF" stroke="#7C3AED" stroke-width="2"/>
 <circle cx="256" cy="211.0" r="13" fill="#7C3AED"/>
