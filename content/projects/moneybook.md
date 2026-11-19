@@ -21,7 +21,7 @@ So I built a bigger app. It is **MoneyBook**: one app for all of my money, built
 
 *All screenshots on this page use made-up demo data. The banks, cards, stocks and amounts are not real.*
 
-## Problems with the old tracker
+## Old version
 
 The old tracker was good for a start. Over time, four problems showed up:
 
@@ -35,7 +35,7 @@ The old tracker was good for a start. Over time, four problems showed up:
 
 And it only knew about expenses. My stocks, loans and cards lived in other apps, sheets and PDFs.
 
-## What is in MoneyBook
+## Features
 
 MoneyBook has four parts. Each one has its own page.
 
@@ -46,7 +46,7 @@ MoneyBook has four parts. Each one has its own page.
 | **Loans & cards** | What I owe, what is due, card rewards and "which card should I use?" | [Loans & cards →](/projects/moneybook-loans-cards/) |
 | **Tech** | The full setup: parser, server, database, web, Android and how changes ship | [Tech →](/projects/moneybook-tech/) |
 
-## User flow
+## Simple flow
 
 There are three everyday flows: spending, investing, and loans and cards. Each dot in the picture is one item
 moving through the steps.
@@ -60,7 +60,7 @@ moving through the steps.
 - **Loans and cards are on request.** I share a receipt or a card's terms with Claude. It saves them through one
   tool. MoneyBook then reminds me what is due and tells me which card to use.
 
-## Screenshots
+## App screens
 
 The web app is for the desktop. On the phone I use the Android app and its home-screen widget.
 
@@ -76,7 +76,7 @@ The web app is for the desktop. On the phone I use the Android app and its home-
 [![MoneyBook Which card? page recommending a card for a fuel spend](/images/moneybook/which-card.webp)](/images/moneybook/which-card.webp)
 <p class="img-caption">Which card?: the best card for a spend, the reward, and why</p>
 
-## Built in one week with Claude
+## One week of work
 
 MoneyBook did not start from zero. A few weeks earlier I had built a small stock journal with Claude: a database,
 some scripts and a simple web page. MoneyBook took that in on day one and grew from there.
